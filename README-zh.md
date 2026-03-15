@@ -40,7 +40,6 @@ AgentUse Skills 支持以下 AI Agent 框架：
 
 ## 👑 Agent-Ready SKILLs
 
-> [!NOTE]
 > [Agent-Ready](agent-ready/README-zh.md) 是一项认证计划，确保技能和软件能够与 AI Agent 平台无缝协作。
 
 | 技能名称 | 描述 | 状态 |
@@ -49,7 +48,6 @@ AgentUse Skills 支持以下 AI Agent 框架：
 
 ## 🎯 SKILL 列表
 
-> [!NOTE]
 > 技能库正在加速整理中，更多高质量技能即将上线！
 
 ### 文档与办公

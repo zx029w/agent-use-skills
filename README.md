@@ -40,7 +40,6 @@ Each framework provides its own skill loading mechanism. Please refer to the ins
 
 ## 👑 Agent-Ready SKILLs
 
-> [!NOTE]
 > [Agent-Ready](agent-ready/README.md) is a certification program ensuring skills and software work seamlessly with AI Agent platforms.
 
 | Skill Name | Description | Status |
@@ -49,7 +48,6 @@ Each framework provides its own skill loading mechanism. Please refer to the ins
 
 ## 🎯 SKILL List
 
-> [!NOTE]
 > The skill library is being rapidly organized, and more high-quality skills will be available soon!
 
 ### Document & Office
