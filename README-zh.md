@@ -61,7 +61,6 @@ AgentUse Skills 支持以下 AI Agent 框架：
 | **[humanizer](awesome-skills/introductions/zh/humanizer.md)** | 识别并消除文本中的 AI 写作痕迹，使文字听起来更自然、更具人情味。 | ✅ 已验证 |
 | **[tavily-search](awesome-skills/introductions/zh/tavily-search.md)** | 利用 Tavily API 为 AI Agent 优化的网络搜索技能。返回干净、相关的搜索结果。 | ✅ 已验证 |
 | **[multi-search-engine](awesome-skills/introductions/zh/multi-search-engine.md)** | 集成 17 个搜索引擎（8 个国内 + 9 个国际），支持高级搜索语法与 WolframAlpha 知识计算。 | 🔍 待验证 |
-| **[obsidian](awesome-skills/introductions/zh/obsidian.md)** | Obsidian 笔记管理技能，支持本地 Markdown 仓库的搜索、创建及链接同步重构。 | 🔍 待验证 |
 
 ### 设计与创意
 
