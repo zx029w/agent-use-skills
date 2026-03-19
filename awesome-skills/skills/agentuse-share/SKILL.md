@@ -91,9 +91,17 @@ If no `SKILL.md` exists under `awesome-skills/skills/<skill-name>/`:
 
 **<Skill Name>** is ... (one-line summary)
 
-## Tags
+## Tags (or ## 标签 for zh)
 
-Category | Status
+[Emoji] [Category] | [Emoji] [Status]
+
+> **Strict Formatting Rules for Tags**:
+> 1. Use a second-level heading: `## 标签` for Chinese documents, `## Tags` for English documents.
+> 2. Leave exactly one blank line between the heading and the tags.
+> 3. The tags content must be a single line in the format: `[Emoji] [Category] | [Emoji] [Status]`.
+> 4. Use a pipe character with exactly one space on each side (` | `) as the separator.
+> 5. **Common Categories (zh/en)**: `🗂️ 文档与办公` / `🗂️ Documents & Office`, `🎨 设计与创意` / `🎨 Design & Creativity`, `💻 开发与测试` / `💻 Development & Testing`, `🛠️ 效率工具` / `🛠️ Productivity Tools`.
+> 6. **Common Statuses (zh/en)**: `✅ 已验证` / `✅ Verified`, `🔍 待验证` / `🔍 Pending Verification`.
 
 ## Core Philosophy
 - Point 1
@@ -130,7 +138,9 @@ For more information, visit: [GitHub - <repo>](<url>)
 
 - **File path**: `awesome-skills/introductions/en/<skill-name>.md`
 - Content should be the English translation of the Chinese version from Step 2.
-- Ensure the `## Tags` section uses English terms (e.g., "Category | Status").
+- Ensure the `## Tags` section uses English terms and matching emojis, following the same strict format as the Chinese version:
+  - Format: `[Emoji] [Category] | [Emoji] [Status]`
+  - Example: `💻 Development & Testing | ✅ Verified` or `🗂️ Documents & Office | 🔍 Pending Verification`
 - Installation links should point to `INSTALL-en.md` files.
 
 ### Step 4: Create Platform-Specific Installation Guides
