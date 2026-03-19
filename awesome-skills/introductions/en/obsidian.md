@@ -1,35 +1,76 @@
-# Obsidian
+# Obsidian Skills
 
-**Obsidian** is a skill designed to work with Obsidian vaults (plain Markdown notes) and automate tasks via `obsidian-cli`. It enables AI agents to manage, search, and update content within a local knowledge base.
+**Obsidian Skills** is a collection of Agent Skills designed specifically for the Obsidian knowledge management tool. It follows the [Agent Skills specification](https://agentskills.io/specification) and works with Claude Code, Codex CLI, and other Skills-compatible AI coding agents.
 
 ## Tags
 
-🗂️ Document & Office | 🔍 Pending Verification
+Obsidian | Knowledge Management | Markdown | Multi-platform
 
 ## Core Philosophy
 
-- **Local-First**: An Obsidian vault is just a normal folder on disk. This skill respects this by directly operating on `.md` files or interacting with the Obsidian desktop app via URI protocols.
-- **Link Integrity**: When moving or renaming notes, it uses `obsidian-cli` to automatically update `[[wikilinks]]` across the entire vault, ensuring your knowledge graph remains intact.
-- **Config-Aware**: Automatically identifies active vault paths from `obsidian.json`, avoiding the need for hardcoded paths.
+- **Standardization**: Strictly adheres to the Agent Skills specification for cross-platform compatibility
+- **Modularity**: Each Skill is independent and can be used on-demand, providing flexibility and efficiency
+- **Native Experience**: Deeply integrated with Obsidian's unique features for a native-level user experience
+- **Developer-Friendly**: Supports Obsidian plugin and theme development with a complete development toolchain
 
 ## Key Features & Workflow
 
-1. **Smart Search**: Supports searching by note titles (`search`) and full-text content retrieval (`search-content`).
-2. **Automated Creation**: Quickly create notes with specific content through commands and optionally open them in the desktop client.
-3. **Safe Refactoring**: Provides secure move and rename functionality that automatically handles link updates between notes.
-4. **Flexible Editing**: Supports direct modification of `.md` files using file editors; Obsidian will pick up changes in real-time.
+### 1. Obsidian Markdown Editing
+Create and edit Obsidian Flavored Markdown with support for:
+- **Wikilinks**: Internal linking using `[[Note Name]]`
+- **Embeds**: Inline embedding with `![[embed]]` for notes, images, and PDFs
+- **Callouts**: Highlighted information displays with types like `note`, `warning`, `tip`
+- **Properties**: YAML frontmatter management supporting tags, aliases, and custom properties
+- **Comments & Highlights**: `%%hidden comments%%` and `==highlighted text==`
+
+### 2. Obsidian Bases Database
+Create and edit `.base` files for Notion-like database functionality:
+- **Multiple Views**: Table, cards, list, and map views
+- **Filters**: Filter by tags, folders, properties, or dates
+- **Formulas**: Support arithmetic operations, conditional logic, and date calculations
+- **Summaries**: Statistical functions like average, sum, min/max
+
+### 3. JSON Canvas Visualization
+Create and edit `.canvas` files with infinite canvas support:
+- **Node Types**: Text, file, link, and group nodes
+- **Edge Connections**: Labeled connectors with directional arrows
+- **Free Layout**: Negative coordinate support for infinitely expandable canvas
+- **Color Presets**: 6 brand colors + custom HEX values
+
+### 4. Obsidian CLI Integration
+Interact with Obsidian Vault via command line:
+- **Note Management**: Create, read, search, and append content
+- **Task Management**: Todo list operations
+- **Property Operations**: Set and modify frontmatter properties
+- **Development Tools**: Plugin reload, error capture, screenshots, DOM inspection
+
+### 5. Defuddle Web Extraction
+Extract clean Markdown from web pages using Defuddle CLI:
+- **Noise Removal**: Automatically strips navigation, ads, and clutter
+- **Token Saving**: Extracts core content, reducing unnecessary data transfer
+- **Metadata Extraction**: Supports title, description, domain, and other fields
 
 ## Skills Library Overview
 
-- **Core Commands**: Full encapsulation of `obsidian-cli` features.
-- **Vault Management**: Automatic identification and switching between different Obsidian vaults.
-- **Link Maintenance**: Handles complex note movement and renaming logic.
+| Skill | Description |
+|-------|-------------|
+| **obsidian-markdown** | Create and edit Obsidian Flavored Markdown (.md) with wikilinks, embeds, callouts, properties |
+| **obsidian-bases** | Create and edit Obsidian Bases (.base) with views, filters, formulas, summaries |
+| **json-canvas** | Create and edit JSON Canvas files (.canvas) with nodes, edges, groups, connections |
+| **obsidian-cli** | Interact with Obsidian vaults via CLI including plugin and theme development |
+| **defuddle** | Extract clean markdown from web pages using Defuddle, removing clutter to save tokens |
 
 ## Installation & Support
 
-The Obsidian skill currently supports the following platform:
+Obsidian Skills supports the following AI editors and platforms:
 
+- [Claude Code](../../claudecode/obsidian/INSTALL-en.md)
+- [Cursor](../../cursor/obsidian/INSTALL-en.md)
+- [Codex CLI](../../codex/obsidian/INSTALL-en.md)
+- [OpenCode](../../opencode/obsidian/INSTALL-en.md)
 - [OpenClaw](../../openclaw/obsidian/INSTALL-en.md)
+- [Qoder](../../qoder/obsidian/INSTALL-en.md)
 
 ---
-For more information, visit: [Obsidian Official Help](https://help.obsidian.md)
+
+For more information, visit: [GitHub - kepano/obsidian-skills](https://github.com/kepano/obsidian-skills)

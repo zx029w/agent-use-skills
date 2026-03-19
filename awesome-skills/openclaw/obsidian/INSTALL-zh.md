@@ -1,63 +1,48 @@
-# 在 OpenClaw 中安装 Obsidian 技能
+# 在 OpenClaw 中安装 Obsidian Skills
 
 ## 前置条件
 
 - 已安装 [OpenClaw](https://github.com/nicepkg/openclaw)
-- 已安装 [Obsidian 桌面客户端](https://obsidian.md/)
-- 已安装 Homebrew (macOS)
 - 已安装 Git
 
 ## 安装步骤
 
-### 1. 安装 obsidian-cli
-
-该技能依赖于 `obsidian-cli` 工具，请先通过 Homebrew 安装：
+### 1. 克隆 obsidian-skills 仓库
 
 ```bash
-brew tap yakitrak/yakitrak
-brew install obsidian-cli
+git clone https://github.com/kepano/obsidian-skills.git ~/.openclaw/obsidian-skills
 ```
 
-### 2. 克隆 agent-use-skills 仓库
+### 2. 创建符号链接
 
-将技能库克隆到本地（如果尚未克隆）：
-
-```bash
-git clone https://github.com/Zerone-Agent/agent-use-skills.git ~/.openclaw/agent-use-skills
-```
-
-### 3. 在 OpenClaw 中配置技能
-
-创建符号链接，使 OpenClaw 能够调用该技能：
+创建符号链接，使 OpenClaw 能够发现所有 Obsidian 技能：
 
 ```bash
 mkdir -p ~/.openclaw/skills
-rm -rf ~/.openclaw/skills/obsidian
-ln -s ~/.openclaw/agent-use-skills/awesome-skills/skills/obsidian ~/.openclaw/skills/obsidian
+ln -s ~/.openclaw/obsidian-skills/skills/obsidian-markdown ~/.openclaw/skills/obsidian-markdown
+ln -s ~/.openclaw/obsidian-skills/skills/obsidian-bases ~/.openclaw/skills/obsidian-bases
+ln -s ~/.openclaw/obsidian-skills/skills/json-canvas ~/.openclaw/skills/json-canvas
+ln -s ~/.openclaw/obsidian-skills/skills/obsidian-cli ~/.openclaw/skills/obsidian-cli
+ln -s ~/.openclaw/obsidian-skills/skills/defuddle ~/.openclaw/skills/defuddle
 ```
 
-### 4. 设置默认仓库 (Vault)
+### 3. 验证安装
 
-运行以下命令，将您常用的文件夹设置为默认仓库：
+重启 OpenClaw，然后尝试询问：
 
-```bash
-obsidian-cli set-default "您的仓库文件夹名称"
-```
+- "创建一个包含 wikilinks 的笔记：[[Another Note]]"
+- "do you have obsidian-markdown skill?"
 
-## 验证安装
-
-重启 OpenClaw，尝试提问：
-
-- "我的 Obsidian 仓库在哪里？"
-- "在我的笔记里搜索关于 'AI' 的内容"
-- "do you have obsidian skill?"
+如果安装成功，OpenClaw 会自动识别并调用 Obsidian Skills。
 
 ## 更新
 
-1. **更新 CLI**: `brew upgrade obsidian-cli`
-2. **更新技能库**: `cd ~/.openclaw/agent-use-skills && git pull`
+```bash
+cd ~/.openclaw/obsidian-skills
+git pull
+```
 
 ## 获取帮助
 
-- 技能逻辑问题：https://github.com/Zerone-Agent/agent-use-skills/issues
-- CLI 工具问题：https://github.com/yakitrak/obsidian-cli/issues
+- Obsidian Skills GitHub: https://github.com/kepano/obsidian-skills
+- Agent Skills 规范: https://agentskills.io/specification

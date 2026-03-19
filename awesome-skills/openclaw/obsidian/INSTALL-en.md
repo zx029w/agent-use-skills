@@ -1,63 +1,48 @@
-# Install Obsidian Skill in OpenClaw
+# Installing Obsidian Skills for OpenClaw
 
 ## Prerequisites
 
 - [OpenClaw](https://github.com/nicepkg/openclaw) installed
-- [Obsidian Desktop App](https://obsidian.md/) installed
-- Homebrew installed (macOS)
 - Git installed
 
 ## Installation Steps
 
-### 1. Install obsidian-cli
-
-This skill depends on the `obsidian-cli` tool. Install it via Homebrew first:
+### 1. Clone obsidian-skills
 
 ```bash
-brew tap yakitrak/yakitrak
-brew install obsidian-cli
+git clone https://github.com/kepano/obsidian-skills.git ~/.openclaw/obsidian-skills
 ```
 
-### 2. Clone agent-use-skills repository
+### 2. Symlink Skills
 
-Clone the skills library to your local machine (if not already done):
-
-```bash
-git clone https://github.com/Zerone-Agent/agent-use-skills.git ~/.openclaw/agent-use-skills
-```
-
-### 3. Configure Skill in OpenClaw
-
-Create a symbolic link so OpenClaw can find and use the skill:
+Create symlinks so OpenClaw discovers all Obsidian skills:
 
 ```bash
 mkdir -p ~/.openclaw/skills
-rm -rf ~/.openclaw/skills/obsidian
-ln -s ~/.openclaw/agent-use-skills/awesome-skills/skills/obsidian ~/.openclaw/skills/obsidian
+ln -s ~/.openclaw/obsidian-skills/skills/obsidian-markdown ~/.openclaw/skills/obsidian-markdown
+ln -s ~/.openclaw/obsidian-skills/skills/obsidian-bases ~/.openclaw/skills/obsidian-bases
+ln -s ~/.openclaw/obsidian-skills/skills/json-canvas ~/.openclaw/skills/json-canvas
+ln -s ~/.openclaw/obsidian-skills/skills/obsidian-cli ~/.openclaw/skills/obsidian-cli
+ln -s ~/.openclaw/obsidian-skills/skills/defuddle ~/.openclaw/skills/defuddle
 ```
 
-### 4. Set Default Vault
+### 3. Verify Installation
 
-Run the following command to set your primary vault as default:
+Restart OpenClaw, then try asking:
+
+- "Create a note with wikilinks: [[Another Note]]"
+- "do you have obsidian-markdown skill?"
+
+If successful, OpenClaw will automatically recognize and invoke the Obsidian Skills.
+
+## Updating
 
 ```bash
-obsidian-cli set-default "your-vault-folder-name"
+cd ~/.openclaw/obsidian-skills
+git pull
 ```
 
-## Verify Installation
+## Getting Help
 
-Restart OpenClaw and try:
-
-- "Where is my Obsidian vault located?"
-- "Search my notes for 'AI' content"
-- "do you have obsidian skill?"
-
-## Update
-
-1. **Update CLI**: `brew upgrade obsidian-cli`
-2. **Update Skill Library**: `cd ~/.openclaw/agent-use-skills && git pull`
-
-## Get Help
-
-- Skill issues: https://github.com/Zerone-Agent/agent-use-skills/issues
-- CLI tool issues: https://github.com/yakitrak/obsidian-cli/issues
+- Obsidian Skills GitHub: https://github.com/kepano/obsidian-skills
+- Agent Skills Specification: https://agentskills.io/specification
