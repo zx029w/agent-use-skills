@@ -11,7 +11,7 @@
 ### 1. Clone the agent-use-skills repository
 
 ```bash
-git clone https://github.com/Zerone-Agent/agent-use-skills.git ~/.opencode/agent-use-skills
+git clone https://github.com/Zerone-Agent/agent-use-skills.git ~/.config/opencode/agent-use-skills
 ```
 
 ### 2. Create a symbolic link
@@ -19,9 +19,9 @@ git clone https://github.com/Zerone-Agent/agent-use-skills.git ~/.opencode/agent
 Create a symbolic link so that OpenCode can discover the reports-summary skill:
 
 ```bash
-mkdir -p ~/.opencode/skills
-rm -rf ~/.opencode/skills/reports-summary
-ln -s ~/.opencode/agent-use-skills/awesome-skills/skills/reports-summary ~/.opencode/skills/reports-summary
+mkdir -p ~/.config/opencode/skills
+rm -rf ~/.config/opencode/skills/reports-summary
+ln -s ~/.config/opencode/agent-use-skills/awesome-skills/skills/reports-summary ~/.config/opencode/skills/reports-summary
 ```
 
 ### 3. Install Python Dependencies
@@ -42,7 +42,7 @@ If successful, OpenCode will recognize and invoke the Reports Summary skill work
 ## Update
 
 ```bash
-cd ~/.opencode/agent-use-skills
+cd ~/.config/opencode/agent-use-skills
 git pull
 ```
 

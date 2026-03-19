@@ -11,7 +11,7 @@
 ### 1. 克隆 agent-use-skills 仓库
 
 ```bash
-git clone https://github.com/Zerone-Agent/agent-use-skills.git ~/.opencode/agent-use-skills
+git clone https://github.com/Zerone-Agent/agent-use-skills.git ~/.config/opencode/agent-use-skills
 ```
 
 ### 2. 创建符号链接
@@ -19,9 +19,9 @@ git clone https://github.com/Zerone-Agent/agent-use-skills.git ~/.opencode/agent
 创建符号链接，使 OpenCode 能够发现 reports-summary 技能：
 
 ```bash
-mkdir -p ~/.opencode/skills
-rm -rf ~/.opencode/skills/reports-summary
-ln -s ~/.opencode/agent-use-skills/awesome-skills/skills/reports-summary ~/.opencode/skills/reports-summary
+mkdir -p ~/.config/opencode/skills
+rm -rf ~/.config/opencode/skills/reports-summary
+ln -s ~/.config/opencode/agent-use-skills/awesome-skills/skills/reports-summary ~/.config/opencode/skills/reports-summary
 ```
 
 ### 3. 安装 Python 依赖
@@ -42,7 +42,7 @@ pip install python-docx markdown beautifulsoup4
 ## 更新
 
 ```bash
-cd ~/.opencode/agent-use-skills
+cd ~/.config/opencode/agent-use-skills
 git pull
 ```
 
