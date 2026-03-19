@@ -4,7 +4,7 @@
 
 ## Tags
 
-Obsidian | Knowledge Management | Markdown | Multi-platform
+🛠️ Productivity Tools | 🔍 Pending Verification
 
 ## Core Philosophy
 
