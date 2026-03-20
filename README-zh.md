@@ -45,6 +45,7 @@ AgentUse Skills 支持以下 AI Agent 框架：
 | 技能名称 | 描述 | 状态 |
 | :--- | :--- | :--- |
 | **[skill-market](agent-ready/zh/skill-market.md)** | 从 Zerone Skill Market 自动发现并安装专业 Agent 技能。 | 👑 已认证 |
+| **[Obsidian](agent-ready/zh/obsidian.md)** | 知识库管理软件，Obsidian 1.12 引入官方 CLI，支持语义搜索、图谱查询与日志管理，Token 消耗减少高达 70,000 倍。 | 👑 已认证 |
 
 ## 🎯 SKILL 列表
 

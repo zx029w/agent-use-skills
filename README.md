@@ -45,6 +45,7 @@ Each framework provides its own skill loading mechanism. Please refer to the ins
 | Skill Name | Description | Status |
 | :--- | :--- | :--- |
 | **[skill-market](agent-ready/en/skill-market.md)** | Automated discovery and installation of specialized agent skills from the Zerone Skill Market. | 👑 Certified |
+| **[Obsidian](agent-ready/en/obsidian.md)** | Knowledge management app with an official CLI (v1.12+) supporting semantic search, graph queries, and vault management — up to 70,000x fewer tokens than traditional MCP approaches. | 👑 Certified |
 
 ## 🎯 SKILL List
 
