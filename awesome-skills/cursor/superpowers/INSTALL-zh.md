@@ -1,25 +1,49 @@
 # 在 Cursor 中安装 Superpowers
 
-要在 Cursor 的 Agent 模式下启用 Superpowers 技能框架，请按照以下简单步骤操作：
+## 前置条件
 
-## 1. 使用插件添加命令
-打开 Cursor 的 **Agent Chat**（确保处于 Agent 模式），然后直接输入以下命令：
+- 已安装 [Cursor](https://cursor.sh)
+- 已安装 Git
 
-```text
-/plugin-add superpowers
+## 安装步骤
+
+### 1. 克隆 Superpowers 仓库
+
+```bash
+git clone https://github.com/obra/superpowers.git ~/.cursor/superpowers
 ```
 
-## 2. 验证安装
-安装完成后，你可以通过输入以下任何提示词来测试 Superpowers 是否已激活：
+### 2. 创建符号链接
 
-- "help me plan this feature"（触发 `brainstorming` 技能）
-- "let's debug this issue"（触发 `systematic-debugging` 技能）
+创建符号链接，使 Cursor 能够发现 Superpowers 技能：
 
-如果安装成功，Cursor Agent 会自动识别并根据 Superpowers 的技能规范开始执行任务。
+```bash
+mkdir -p ~/.cursor/skills
 
-## 3. 注意事项
-- 确保你使用的是 Cursor 的最新版本，并且已开启 **Agent** 模式。
-- Superpowers 技能是自动触发的，一旦安装完成，它们将作为 Agent 的扩展能力存在。
+for skill in $(ls ~/.cursor/superpowers/skills); do
+  rm -rf ~/.cursor/skills/$skill
+  ln -s ~/.cursor/superpowers/skills/$skill ~/.cursor/skills/$skill
+done
+```
 
----
-更多详情请参考：[Superpowers GitHub 仓库](https://github.com/obra/superpowers)
+### 3. 验证安装
+
+重启 Cursor，然后尝试询问以下问题来验证是否安装成功：
+
+- "Help me plan this feature" (触发 `brainstorming`)
+- "Let's debug this issue" (触发 `systematic-debugging`)
+- "do you have brainstorming?"
+
+如果安装成功，Cursor 会自动识别并调用相关的 Superpowers 技能工作流。
+
+## 更新
+
+```bash
+cd ~/.cursor/superpowers
+git pull
+```
+
+## 获取帮助
+
+- GitHub: https://github.com/obra/superpowers
+- 提交问题: https://github.com/obra/superpowers/issues

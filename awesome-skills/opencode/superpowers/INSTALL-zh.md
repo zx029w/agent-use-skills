@@ -1,26 +1,49 @@
 # 在 OpenCode 中安装 Superpowers
 
-要在 OpenCode 环境中配置并使用 Superpowers 技能框架，请按照以下步骤操作：
+## 前置条件
 
-## 1. 快速安装指令
-在 OpenCode 的对话界面中直接输入以下指令：
+- 已安装 [OpenCode.ai](https://opencode.ai)
+- 已安装 Git
 
-```text
-Fetch and follow instructions from https://raw.githubusercontent.com/obra/superpowers/refs/heads/main/.opencode/INSTALL.md
+## 安装步骤
+
+### 1. 克隆 Superpowers 仓库
+
+```bash
+git clone https://github.com/obra/superpowers.git ~/.config/opencode/superpowers
 ```
 
-这条指令会引导 OpenCode 获取并执行最新的安装和配置脚本。
+### 2. 创建符号链接
 
-## 2. 验证安装
-安装完成后，你可以通过尝试触发一个核心技能来验证是否成功启用。例如：
+创建符号链接，使 OpenCode 的原生技能工具能够发现 Superpowers 技能：
 
-- 输入：`help me plan this feature`（应触发 `brainstorming` 技能）
-- 输入：`let's debug this issue`（应启动 `systematic-debugging` 流程）
+```bash
+mkdir -p ~/.config/opencode/skills
 
-## 3. 详细文档
-如果你遇到任何问题或需要手动配置的详细指引，可以查阅官方提供的 OpenCode 专用文档：
+for skill in $(ls ~/.config/opencode/superpowers/skills); do
+  rm -rf ~/.config/opencode/skills/$skill
+  ln -s ~/.config/opencode/superpowers/skills/$skill ~/.config/opencode/skills/$skill
+done
+```
 
-- [README.opencode.md](https://github.com/obra/superpowers/blob/main/docs/README.opencode.md)
+### 3. 验证安装
 
----
-更多信息请访问：[Superpowers GitHub 仓库](https://github.com/obra/superpowers)
+重启 OpenCode，然后尝试询问以下问题来验证是否安装成功：
+
+- "Help me plan this feature" (触发 `brainstorming`)
+- "Let's debug this issue" (触发 `systematic-debugging`)
+- "do you have brainstorming?"
+
+如果安装成功，OpenCode 会自动识别并调用相关的 Superpowers 技能工作流。
+
+## 更新
+
+```bash
+cd ~/.config/opencode/superpowers
+git pull
+```
+
+## 获取帮助
+
+- GitHub: https://github.com/obra/superpowers
+- 提交问题: https://github.com/obra/superpowers/issues

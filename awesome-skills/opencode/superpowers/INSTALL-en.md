@@ -1,26 +1,49 @@
-# Installing Superpowers in OpenCode
+# Installing Superpowers for OpenCode
 
-Follow these steps to configure and use the Superpowers skills framework in OpenCode:
+## Prerequisites
 
-## 1. Fast Installation Command
-Enter the following command directly in the OpenCode chat interface:
+- [OpenCode.ai](https://opencode.ai) installed
+- Git installed
 
-```text
-Fetch and follow instructions from https://raw.githubusercontent.com/obra/superpowers/refs/heads/main/.opencode/INSTALL.md
+## Installation Steps
+
+### 1. Clone Superpowers
+
+```bash
+git clone https://github.com/obra/superpowers.git ~/.config/opencode/superpowers
 ```
 
-This command guides OpenCode to fetch and run the latest installation and configuration scripts.
+### 2. Symlink Skills
 
-## 2. Verify Installation
-Once installed, verify the setup by triggering a core skill:
+Create symlinks so OpenCode's native skill tool discovers Superpowers skills:
 
-- Prompt: `help me plan this feature` (should trigger the `brainstorming` skill)
-- Prompt: `let's debug this issue` (should start the `systematic-debugging` process)
+```bash
+mkdir -p ~/.config/opencode/skills
 
-## 3. Detailed Documentation
-For any issues or manual configuration guidance, check the official OpenCode documentation:
+for skill in $(ls ~/.config/opencode/superpowers/skills); do
+  rm -rf ~/.config/opencode/skills/$skill
+  ln -s ~/.config/opencode/superpowers/skills/$skill ~/.config/opencode/skills/$skill
+done
+```
 
-- [README.opencode.md](https://github.com/obra/superpowers/blob/main/docs/README.opencode.md)
+### 3. Verify Installation
 
----
-For more information, visit: [Superpowers GitHub Repository](https://github.com/obra/superpowers)
+Restart OpenCode, then try asking the following to verify the installation:
+
+- "Help me plan this feature" (triggers `brainstorming`)
+- "Let's debug this issue" (triggers `systematic-debugging`)
+- "do you have brainstorming?"
+
+If successful, OpenCode will automatically recognize and invoke the relevant Superpowers workflow.
+
+## Updating
+
+```bash
+cd ~/.config/opencode/superpowers
+git pull
+```
+
+## Getting Help
+
+- GitHub: https://github.com/obra/superpowers
+- Report issues: https://github.com/obra/superpowers/issues

@@ -1,35 +1,49 @@
 # 在 Claude Code 中安装 Superpowers
 
-要在 Claude Code 环境中安装并启用 Superpowers 技能框架，请按照以下步骤操作：
+## 前置条件
 
-## 1. 注册插件市场
-首先，你需要将 Superpowers 的 marketplace 添加到你的 Claude Code 中。在 Claude Code 的对话界面输入：
+- 已安装 [Claude Code](https://claude.ai/code)
+- 已安装 Git
 
-```bash
-/plugin marketplace add obra/superpowers-marketplace
-```
+## 安装步骤
 
-## 2. 安装 Superpowers 插件
-注册好市场后，运行以下命令完成插件安装：
+### 1. 克隆 Superpowers 仓库
 
 ```bash
-/plugin install superpowers@superpowers-marketplace
+git clone https://github.com/obra/superpowers.git ~/.claude/superpowers
 ```
 
-## 3. 验证安装
-安装完成后，你可以通过开启一个新会话并尝试触发某个技能来验证是否成功。例如，你可以尝试输入：
+### 2. 创建符号链接
 
-- "帮我规划一个新功能" (triggering `brainstorming`)
-- "让我们调试一下这个错误" (triggering `systematic-debugging`)
-
-如果安装成功，Claude 会自动识别并调用相关的 Superpowers 技能工作流。
-
-## 4. 后续更新
-如果需要更新插件到最新版本，可以使用：
+创建符号链接，使 Claude Code 能够发现 Superpowers 技能：
 
 ```bash
-/plugin update superpowers
+mkdir -p ~/.claude/skills
+
+for skill in $(ls ~/.claude/superpowers/skills); do
+  rm -rf ~/.claude/skills/$skill
+  ln -s ~/.claude/superpowers/skills/$skill ~/.claude/skills/$skill
+done
 ```
 
----
-更多详情请参考：[Superpowers GitHub 仓库](https://github.com/obra/superpowers)
+### 3. 验证安装
+
+重启 Claude Code，然后尝试询问以下问题来验证是否安装成功：
+
+- "帮我规划一个新功能" (触发 `brainstorming`)
+- "让我们调试一下这个错误" (触发 `systematic-debugging`)
+- "do you have brainstorming?"
+
+如果安装成功，Claude Code 会自动识别并调用相关的 Superpowers 技能工作流。
+
+## 更新
+
+```bash
+cd ~/.claude/superpowers
+git pull
+```
+
+## 获取帮助
+
+- GitHub: https://github.com/obra/superpowers
+- 提交问题: https://github.com/obra/superpowers/issues

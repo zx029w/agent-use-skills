@@ -1,35 +1,49 @@
-# Installing Superpowers in Claude Code
+# Installing Superpowers for Claude Code
 
-Follow these steps to install and enable the Superpowers skills framework in your Claude Code environment:
+## Prerequisites
 
-## 1. Register the Marketplace
-First, add the Superpowers marketplace to your Claude Code. Run the following command in the Claude Code chat:
+- [Claude Code](https://claude.ai/code) installed
+- Git installed
 
-```bash
-/plugin marketplace add obra/superpowers-marketplace
-```
+## Installation Steps
 
-## 2. Install the Superpowers Plugin
-Once the marketplace is registered, run this command to install the plugin:
+### 1. Clone Superpowers
 
 ```bash
-/plugin install superpowers@superpowers-marketplace
+git clone https://github.com/obra/superpowers.git ~/.claude/superpowers
 ```
 
-## 3. Verify Installation
-To verify, start a new session and try to trigger a skill. For example, you can say:
+### 2. Symlink Skills
+
+Create symlinks so Claude Code discovers the Superpowers skills:
+
+```bash
+mkdir -p ~/.claude/skills
+
+for skill in $(ls ~/.claude/superpowers/skills); do
+  rm -rf ~/.claude/skills/$skill
+  ln -s ~/.claude/superpowers/skills/$skill ~/.claude/skills/$skill
+done
+```
+
+### 3. Verify Installation
+
+Restart Claude Code, then try asking the following to verify the installation:
 
 - "Help me plan this feature" (triggers `brainstorming`)
 - "Let's debug this issue" (triggers `systematic-debugging`)
+- "do you have brainstorming?"
 
-If successful, Claude will automatically recognize and invoke the relevant Superpowers workflow.
+If successful, Claude Code will automatically recognize and invoke the relevant Superpowers workflow.
 
-## 4. Updates
-To update the plugin to the latest version, use:
+## Updating
 
 ```bash
-/plugin update superpowers
+cd ~/.claude/superpowers
+git pull
 ```
 
----
-For more details, visit: [Superpowers GitHub Repository](https://github.com/obra/superpowers)
+## Getting Help
+
+- GitHub: https://github.com/obra/superpowers
+- Report issues: https://github.com/obra/superpowers/issues

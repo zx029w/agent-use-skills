@@ -1,25 +1,49 @@
 # Installing Superpowers in Cursor
 
-Follow these simple steps to enable the Superpowers skills framework in Cursor's Agent mode:
+## Prerequisites
 
-## 1. Add Plugin via Command
-Open **Cursor Agent Chat** (ensure you are in Agent mode) and enter the following command:
+- [Cursor](https://cursor.sh) installed
+- Git installed
 
-```text
-/plugin-add superpowers
+## Installation Steps
+
+### 1. Clone Superpowers
+
+```bash
+git clone https://github.com/obra/superpowers.git ~/.cursor/superpowers
 ```
 
-## 2. Verify Installation
-Once installed, test if Superpowers is active by using any of the following prompts:
+### 2. Symlink Skills
 
-- "Help me plan this feature" (triggers the `brainstorming` skill)
-- "Let's debug this issue" (triggers the `systematic-debugging` skill)
+Create symlinks so Cursor discovers the Superpowers skills:
 
-If successful, the Cursor Agent will automatically recognize the prompt and begin execution based on Superpowers' standardized workflows.
+```bash
+mkdir -p ~/.cursor/skills
 
-## 3. Important Notes
-- Ensure you are using the latest version of Cursor and that **Agent** mode is active.
-- Superpowers skills are triggered automatically once installed; they act as an extension of the Agent's capabilities.
+for skill in $(ls ~/.cursor/superpowers/skills); do
+  rm -rf ~/.cursor/skills/$skill
+  ln -s ~/.cursor/superpowers/skills/$skill ~/.cursor/skills/$skill
+done
+```
 
----
-For more details, visit: [Superpowers GitHub Repository](https://github.com/obra/superpowers)
+### 3. Verify Installation
+
+Restart Cursor, then try asking the following to verify the installation:
+
+- "Help me plan this feature" (triggers `brainstorming`)
+- "Let's debug this issue" (triggers `systematic-debugging`)
+- "do you have brainstorming?"
+
+If successful, Cursor will automatically recognize and invoke the relevant Superpowers workflow.
+
+## Updating
+
+```bash
+cd ~/.cursor/superpowers
+git pull
+```
+
+## Getting Help
+
+- GitHub: https://github.com/obra/superpowers
+- Report issues: https://github.com/obra/superpowers/issues

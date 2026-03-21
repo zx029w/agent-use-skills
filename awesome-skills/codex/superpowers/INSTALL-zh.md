@@ -1,24 +1,49 @@
 # 在 Codex 中安装 Superpowers
 
-要在 Codex 环境中安装并使用 Superpowers 技能系统，请按照以下步骤操作：
+## 前置条件
 
-## 1. 快速安装指令
-直接在 Codex 对话框中输入以下指令，让 Codex 自动获取并执行安装脚本：
+- 已安装 [Codex](https://openai.com/index/codex/)
+- 已安装 Git
 
-```text
-Fetch and follow instructions from https://raw.githubusercontent.com/obra/superpowers/refs/heads/main/.codex/INSTALL.md
+## 安装步骤
+
+### 1. 克隆 Superpowers 仓库
+
+```bash
+git clone https://github.com/obra/superpowers.git ~/.codex/superpowers
 ```
 
-## 2. 验证安装
-安装完成后，你可以通过尝试启动一个典型的 Superpowers 工作流来验证是否成功。例如：
+### 2. 创建符号链接
 
-- 输入：`help me plan this feature` (它应该会触发 `brainstorming` 技能)
-- 输入：`let's debug this issue` (它应该会启动 `systematic-debugging` 流程)
+创建符号链接，使 Codex 能够发现 Superpowers 技能：
 
-## 3. 详细文档
-如果你需要更深入地了解 Codex 下的集成细节或手动配置方法，可以参考官方提供的详细文档：
+```bash
+mkdir -p ~/.codex/skills
 
-- [README.codex.md](https://github.com/obra/superpowers/blob/main/docs/README.codex.md)
+for skill in $(ls ~/.codex/superpowers/skills); do
+  rm -rf ~/.codex/skills/$skill
+  ln -s ~/.codex/superpowers/skills/$skill ~/.codex/skills/$skill
+done
+```
 
----
-更多信息请访问：[Superpowers GitHub 仓库](https://github.com/obra/superpowers)
+### 3. 验证安装
+
+重启 Codex，然后尝试询问以下问题来验证是否安装成功：
+
+- "Help me plan this feature" (触发 `brainstorming`)
+- "Let's debug this issue" (触发 `systematic-debugging`)
+- "do you have brainstorming?"
+
+如果安装成功，Codex 会自动识别并调用相关的 Superpowers 技能工作流。
+
+## 更新
+
+```bash
+cd ~/.codex/superpowers
+git pull
+```
+
+## 获取帮助
+
+- GitHub: https://github.com/obra/superpowers
+- 提交问题: https://github.com/obra/superpowers/issues

@@ -1,24 +1,49 @@
-# Installing Superpowers in Codex
+# Installing Superpowers for Codex
 
-Follow these steps to install and use the Superpowers skills system in your Codex environment:
+## Prerequisites
 
-## 1. Fast Installation Command
-Enter the following command directly into the Codex chat to let it fetch and execute the installation script:
+- [Codex](https://openai.com/index/codex/) installed
+- Git installed
 
-```text
-Fetch and follow instructions from https://raw.githubusercontent.com/obra/superpowers/refs/heads/main/.codex/INSTALL.md
+## Installation Steps
+
+### 1. Clone Superpowers
+
+```bash
+git clone https://github.com/obra/superpowers.git ~/.codex/superpowers
 ```
 
-## 2. Verify Installation
-After installation, verify it by attempting to start a typical Superpowers workflow:
+### 2. Symlink Skills
 
-- Prompt: `help me plan this feature` (should trigger the `brainstorming` skill)
-- Prompt: `let's debug this issue` (should start the `systematic-debugging` process)
+Create symlinks so Codex discovers the Superpowers skills:
 
-## 3. Detailed Documentation
-For deep integration details or manual configuration, refer to the official documentation:
+```bash
+mkdir -p ~/.codex/skills
 
-- [README.codex.md](https://github.com/obra/superpowers/blob/main/docs/README.codex.md)
+for skill in $(ls ~/.codex/superpowers/skills); do
+  rm -rf ~/.codex/skills/$skill
+  ln -s ~/.codex/superpowers/skills/$skill ~/.codex/skills/$skill
+done
+```
 
----
-For more information, visit: [Superpowers GitHub Repository](https://github.com/obra/superpowers)
+### 3. Verify Installation
+
+Restart Codex, then try asking the following to verify the installation:
+
+- "Help me plan this feature" (triggers `brainstorming`)
+- "Let's debug this issue" (triggers `systematic-debugging`)
+- "do you have brainstorming?"
+
+If successful, Codex will automatically recognize and invoke the relevant Superpowers workflow.
+
+## Updating
+
+```bash
+cd ~/.codex/superpowers
+git pull
+```
+
+## Getting Help
+
+- GitHub: https://github.com/obra/superpowers
+- Report issues: https://github.com/obra/superpowers/issues

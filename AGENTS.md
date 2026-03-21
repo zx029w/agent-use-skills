@@ -6,23 +6,52 @@ AgentUse Skills is a curated library of reusable procedural knowledge for AI Age
 
 ## Build/Lint/Test Commands
 
-This is a documentation-only repository with no build or test pipeline. The repository structure is validated through the following:
-
-### Repository Validation
+### Repository Structure Validation
 ```bash
 # List all markdown files to verify structure
 find . -name "*.md" -type f
 
-# Verify skill file structure
-ls -la .agent/skills/*/SKILL.md
-ls -la awesome-skills/*/superpowers/INSTALL-*.md
+# Verify skill directories have required files
+ls -la awesome-skills/skills/*/SKILL.md
+
+# Verify introduction files exist for both languages
+ls -la awesome-skills/introductions/zh/*.md
+ls -la awesome-skills/introductions/en/*.md
 ```
 
-### Running Single Validation Checks
-There are no automated tests. Manual validation includes:
-1. Verify each skill has both Chinese (`-zh.md`) and English (`-en.md`) versions
-2. Verify installation guides exist for each supported platform
-3. Check that all internal links are valid
+### Python Scripts
+Some skills include Python scripts for automation:
+
+```bash
+# Install dependencies for a specific skill
+cd awesome-skills/skills/<skill-name>
+pip install -r requirements.txt
+
+# Run a Python script directly
+python3 scripts/<script-name>.py [args]
+
+# Example: Run the skill market CLI
+python3 awesome-skills/skills/skill-market/scripts/market.py list
+python3 awesome-skills/skills/skill-market/scripts/market.py info <skill-name>
+```
+
+### Node.js Scripts
+Skills with Node.js dependencies (e.g., playwright-skill):
+
+```bash
+# Install dependencies
+cd awesome-skills/skills/playwright-skill
+npm install && npx playwright install chromium
+
+# Run Playwright tests
+node run.js /tmp/playwright-test-*.js
+```
+
+### Manual Validation Checklist
+1. Verify each skill has both Chinese (`-zh.md`) and English (`-en.md`) installation guides
+2. Verify SKILL.md has valid YAML frontmatter with `name` and `description`
+3. Check all internal links are valid relative paths
+4. Ensure kebab-case naming for all files and directories
 
 ## Code Style Guidelines
 
@@ -30,10 +59,22 @@ There are no automated tests. Manual validation includes:
 
 **Directory Structure:**
 ```
+.agent/
+└── skills/                     # Installed skills location
+
 awesome-skills/
 ├── skills/
-│   ├── zh/<skill-name>.md      # Chinese introduction
-│   └── en/<skill-name>.md      # English introduction
+│   └── <skill-name>/
+│       ├── SKILL.md            # Required: Skill definition with YAML frontmatter
+│       ├── _meta.json          # Optional: Metadata for skill market
+│       ├── scripts/            # Optional: Python/JS/Shell scripts
+│       ├── assets/             # Optional: Static files (templates, images)
+│       ├── references/         # Optional: Reference documentation
+│       ├── agents/             # Optional: Agent configuration files
+│       └── requirements.txt    # Optional: Python dependencies
+├── introductions/
+│   ├── zh/<skill-name>.md      # Chinese skill introduction
+│   └── en/<skill-name>.md      # English skill introduction
 ├── claudecode/<skill-name>/
 │   ├── INSTALL-zh.md
 │   └── INSTALL-en.md
@@ -42,12 +83,17 @@ awesome-skills/
 ├── opencode/<skill-name>/
 ├── openclaw/<skill-name>/
 └── qoder/<skill-name>/
+
+agent-ready/
+├── zh/                         # Agent-ready Chinese guides
+└── en/                         # Agent-ready English guides
 ```
 
 **Naming Conventions:**
 - Use **kebab-case** for all file and directory names (e.g., `superpowers`, `ui-ux-pro-max-skill`)
 - Skill names in `SKILL.md` use lowercase with hyphens
 - Platform directories are lowercase (e.g., `claudecode`, `opencode`)
+- Script files use kebab-case (e.g., `md_to_docx.py`, `generate_image.py`)
 
 ### Documentation Style
 
@@ -127,6 +173,61 @@ description: A standardized workflow for...
 - Use conventional commits format: `type(scope): description`
 - Types: `feat`, `docs`, `fix`, `refactor`, `chore`
 - Scope: skill name or affected area
+
+### Script Code Style (Python)
+
+Scripts in `awesome-skills/skills/*/scripts/` should follow these conventions:
+
+```python
+#!/usr/bin/env python3
+"""Module docstring describing purpose."""
+
+import argparse
+import sys
+from pathlib import Path
+
+# Constants at top (UPPER_SNAKE_CASE)
+DEFAULT_TIMEOUT = 30
+API_ENDPOINT = "https://api.example.com"
+
+def main_function(arg: str) -> dict:
+    """Function docstring with Args/Returns."""
+    pass
+
+if __name__ == "__main__":
+    main()
+```
+
+**Python Conventions:**
+- Use `#!/usr/bin/env python3` shebang for executable scripts
+- Prefer standard library (`urllib`, `json`, `pathlib`) over third-party dependencies
+- External dependencies documented in `requirements.txt` with version pins
+- Use `argparse` for CLI argument parsing
+- Print errors to `sys.stderr`, not stdout
+- Exit with `sys.exit(1)` on errors
+- Type hints encouraged for function signatures
+
+### Script Code Style (JavaScript/Node.js)
+
+```javascript
+#!/usr/bin/env node
+// Brief description at top
+
+const args = process.argv.slice(2);
+
+function processQuery(query, options) {
+  // Implementation
+}
+
+await main();  // Use top-level await for async
+```
+
+**JavaScript Conventions:**
+- Use `#!/usr/bin/env node` shebang for executable scripts
+- Use ES modules (`.mjs` extension or `"type": "module"` in package.json)
+- Use `const`/`let`, avoid `var`
+- Async/await preferred over `.then()` chains
+- Use `console.error()` for errors, `console.log()` for output
 
 ### Content Guidelines
 
