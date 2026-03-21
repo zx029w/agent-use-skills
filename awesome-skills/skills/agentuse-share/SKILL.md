@@ -147,11 +147,123 @@ For more information, visit: [GitHub - <repo>](<url>)
 
 Based on the supported platforms identified in **Step 1**, create bilingual installation guides **only** for those platforms. Skip any platform that the Skill does not support.
 
+#### Installation Guide Format Requirements
+
+**CRITICAL**: All installation guides MUST use bash commands that AI agents can execute. Do NOT use plugin commands like `/plugin install` or `/plugin marketplace add` because AI agents cannot execute these commands.
+
+**Required Format** (for skills from external repositories):
+
+```markdown
+# Installing <Skill Name> for <Platform>
+
+## Prerequisites
+
+- [<Platform>](<platform-url>) installed
+- Git installed
+
+## Installation Steps
+
+### 1. Clone <skill-repo>
+
+```bash
+git clone https://github.com/<org>/<skill-repo>.git ~/.<platform>/<skill-repo>
+```
+
+### 2. Symlink Skills
+
+Create symlinks so <Platform> discovers the skills:
+
+```bash
+mkdir -p ~/.<platform>/skills
+
+for skill in $(ls ~/.<platform>/<skill-repo>/skills); do
+  rm -rf ~/.<platform>/skills/$skill
+  ln -s ~/.<platform>/<skill-repo>/skills/$skill ~/.<platform>/skills/$skill
+done
+```
+
+### 3. Verify Installation
+
+Restart <Platform>, then try asking:
+- "do you have <skill-name>?"
+
+If successful, <Platform> will automatically recognize and invoke the skill.
+
+## Updating
+
+```bash
+cd ~/.<platform>/<skill-repo>
+git pull
+```
+
+## Getting Help
+
+- GitHub: https://github.com/<org>/<skill-repo>
+- Report issues: https://github.com/<org>/<skill-repo>/issues
+```
+
+**For skills from the agent-use-skills repository** (internal skills):
+
+```markdown
+# Installing <Skill Name> for <Platform>
+
+## Prerequisites
+
+- [<Platform>](<platform-url>) installed
+- Git installed
+
+## Installation Steps
+
+### 1. Clone agent-use-skills
+
+```bash
+git clone https://github.com/Zerone-Agent/agent-use-skills.git ~/.<platform>/agent-use-skills
+```
+
+### 2. Symlink Skills
+
+Create a symlink so <Platform> discovers the skill:
+
+```bash
+mkdir -p ~/.<platform>/skills
+rm -rf ~/.<platform>/skills/<skill-name>
+ln -s ~/.<platform>/agent-use-skills/awesome-skills/skills/<skill-name> ~/.<platform>/skills/<skill-name>
+```
+
+### 3. Verify Installation
+
+Restart <Platform>, then try asking:
+- "do you have <skill-name>?"
+
+## Updating
+
+```bash
+cd ~/.<platform>/agent-use-skills
+git pull
+```
+
+## Getting Help
+
+- Report issues: https://github.com/Zerone-Agent/agent-use-skills/issues
+```
+
+**Platform-specific directories**:
+
+| Platform    | Skills Directory          | Clone Directory                    |
+|-------------|---------------------------|-------------------------------------|
+| Claude Code | `~/.claude/skills/`       | `~/.claude/` or `~/.claude/agent-use-skills/` |
+| Cursor      | `~/.cursor/skills/`       | `~/.cursor/`                        |
+| Codex       | `~/.codex/skills/`        | `~/.codex/`                         |
+| OpenCode    | `~/.config/opencode/skills/` | `~/.config/opencode/`           |
+| OpenClaw    | `~/.openclaw/skills/`     | `~/.openclaw/`                      |
+| Qoder       | `~/.qoder/skills/`        | `~/.qoder/`                         |
+
 Each installation guide should include:
-1. **Installation steps**: Specific commands or operations.
-2. **Verify installation**: How to confirm the installation was successful.
-3. **Update method** (if applicable): How to update to the latest version.
-4. **Detailed documentation links** (if applicable): Links to further official documentation.
+1. **Prerequisites**: Required software and dependencies
+2. **Installation steps**: Bash commands that AI agents can execute
+3. **Verify installation**: How to confirm the installation was successful
+4. **Update method**: How to update to the latest version
+5. **Getting Help**: Links to GitHub repository and issue tracker
 
 All available platforms and their corresponding file paths:
 
