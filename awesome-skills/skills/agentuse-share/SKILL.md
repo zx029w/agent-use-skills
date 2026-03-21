@@ -1,6 +1,6 @@
 ---
 name: agentuse-share
-description: A standardized workflow for adding a new AI coding skill to the awesome-skills repository, including research, writing introduction docs, creating platform-specific installation guides, and generating bilingual (Chinese & English) versions.
+description: Use this skill whenever you need to add a new skill to awesome-skills, document an existing skill, create installation guides, or set up bilingual documentation. Trigger when user mentions "add skill", "document skill", "create install guide", "write skill introduction", "add to awesome-skills", or when working with the awesome-skills repository structure. Also trigger when asked to create bilingual (Chinese/English) documentation for any skill.
 ---
 
 # AgentUse Share Skill
@@ -12,37 +12,37 @@ This skill defines the complete standardized workflow for adding a new Skill to 
 ```
 awesome-skills/
 ├── skills/                        # Skill SKILL.md & scripts
-│   ├── <skill-name>/              # (Optional) Skill source directory
-│   │   └── SKILL.md               #   Original SKILL.md provided by the skill author
+│   └── <skill-name>/              # (Optional) Skill source directory
+│       └── SKILL.md               #   Original SKILL.md provided by the skill author
 ├── introductions/                 # Skill introduction documents
-│   └── en/                        # English introductions
-│       └── <skill-name>.md
-│   ├── zh/                        # Chinese introductions
+│   ├── en/                        # English introductions
 │   │   └── <skill-name>.md
+│   └── zh/                        # Chinese introductions
+│       └── <skill-name>.md
 ├── claudecode/                    # Claude Code platform install guides
 │   └── <skill-name>/
-│       ├── INSTALL-zh.md
-│       └── INSTALL-en.md
+│       ├── INSTALL-en.md
+│       └── INSTALL-zh.md
 ├── codex/                         # Codex platform install guides
 │   └── <skill-name>/
-│       └── INSTALL-en.md
-│       ├── INSTALL-zh.md
+│       ├── INSTALL-en.md
+│       └── INSTALL-zh.md
 ├── cursor/                        # Cursor platform install guides
 │   └── <skill-name>/
-│       └── INSTALL-en.md
-│       ├── INSTALL-zh.md
+│       ├── INSTALL-en.md
+│       └── INSTALL-zh.md
 ├── openclaw/                      # OpenClaw platform install guides
 │   └── <skill-name>/
-│       └── INSTALL-en.md
-│       ├── INSTALL-zh.md
+│       ├── INSTALL-en.md
+│       └── INSTALL-zh.md
 ├── opencode/                      # OpenCode platform install guides
 │   └── <skill-name>/
-│       └── INSTALL-en.md
-│       ├── INSTALL-zh.md
+│       ├── INSTALL-en.md
+│       └── INSTALL-zh.md
 └── qoder/                         # Qoder platform install guides
     └── <skill-name>/
-        └── INSTALL-en.md
-        ├── INSTALL-zh.md
+        ├── INSTALL-en.md
+        └── INSTALL-zh.md
 ```
 
 ## Workflow
@@ -64,14 +64,14 @@ If `awesome-skills/skills/<skill-name>/SKILL.md` exists, use it as the **primary
   - **Skills library composition**: What sub-skills are included.
   - **Supported platforms**: Determine exactly which AI coding agents/platforms the Skill supports. This is critical — only create installation guides for platforms that are explicitly supported. Skip any unsupported platforms entirely.
 
-> **Tip**: The SKILL.md is typically more detailed and authoritative than a README. Use it as the foundation for writing the introduction documents in Steps 2 and 3 and the installation guides (INSTALL.md) in Step 4. **Please refer to the `content-research-writer` skill's writing style to ensure the generated documentation is professional, structured, and includes clear action items.**
+> **Tip**: The SKILL.md is typically more detailed and authoritative than a README. Use it as the foundation for writing the introduction documents in Steps 2 and 3 and the installation guides (INSTALL.md) in Step 4. **Please refer to the `content-research-writer` skill's writing style to ensure the generated documentation is professional, structured, and includes clear action items.** The content-research-writer skill is located at `awesome-skills/skills/content-research-writer/SKILL.md`.
 
 #### Case B: No SKILL.md in the Repository
 
 If no `SKILL.md` exists under `awesome-skills/skills/<skill-name>/`:
 
 - Visit the target Skill's **GitHub repository** or official documentation.
-- Use the `read_url_content` tool to fetch the README page content.
+- Use the `webfetch` tool (or equivalent URL fetching tool available in your environment) to fetch the README page content.
 - Focus on gathering the following information:
   - **What it is**: The core definition and positioning of the Skill.
   - **Core philosophy**: What are the design principles.
