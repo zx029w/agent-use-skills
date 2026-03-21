@@ -1,84 +1,48 @@
-# Obsidian Skills Installation Guide (Claude Code)
+# Installing Obsidian Skills for Claude Code
 
-This guide explains how to install and configure Obsidian Skills in Claude Code.
+## Prerequisites
 
-## Installation Methods
+- [Claude Code](https://claude.ai/code) installed
+- Git installed
 
-### Method 1: Via Marketplace (Recommended)
+## Installation Steps
 
-Execute the following commands in Claude Code:
+### 1. Clone obsidian-skills
 
 ```bash
-/plugin marketplace add kepano/obsidian-skills
-/plugin install obsidian@obsidian-skills
+git clone https://github.com/kepano/obsidian-skills.git ~/.claude/obsidian-skills
 ```
 
-### Method 2: Using npx
+### 2. Symlink Skills
+
+Create symlinks so Claude Code discovers all Obsidian skills:
 
 ```bash
-npx skills add git@github.com:kepano/obsidian-skills.git
+mkdir -p ~/.claude/skills
+ln -s ~/.claude/obsidian-skills/skills/obsidian-markdown ~/.claude/skills/obsidian-markdown
+ln -s ~/.claude/obsidian-skills/skills/obsidian-bases ~/.claude/skills/obsidian-bases
+ln -s ~/.claude/obsidian-skills/skills/json-canvas ~/.claude/skills/json-canvas
+ln -s ~/.claude/obsidian-skills/skills/obsidian-cli ~/.claude/skills/obsidian-cli
+ln -s ~/.claude/obsidian-skills/skills/defuddle ~/.claude/skills/defuddle
 ```
 
-### Method 3: Manual Installation
+### 3. Verify Installation
 
-1. Clone the repository locally:
+Restart Claude Code, then try asking:
 
-```bash
-git clone https://github.com/kepano/obsidian-skills.git
-```
+- "Create a note with wikilinks: [[Another Note]]"
+- "do you have obsidian-markdown skill?"
 
-2. Copy the repository contents to the `/.claude` folder in your Obsidian Vault root:
+If successful, Claude Code will automatically recognize and invoke the Obsidian Skills.
 
-```bash
-cp -r obsidian-skills/* /path/to/your/vault/.claude/
-```
-
-Or create a symbolic link (recommended for easy updates):
+## Updating
 
 ```bash
-ln -s /path/to/obsidian-skills /path/to/your/vault/.claude
-```
-
-## Verify Installation
-
-After installation, restart Claude Code and test the following features:
-
-1. **Test Markdown Skill**:
-   - Try creating a note with wikilinks: `[[Another Note]]`
-   - Test callouts: Use `> [!note]` syntax
-
-2. **Test Bases Skill**:
-   - Create a `.base` file
-   - Define views and filters
-
-3. **Test Canvas Skill**:
-   - Create a `.canvas` file
-   - Add nodes and edges
-
-4. **Test CLI Skill**:
-   - Run `obsidian help` to see available commands
-
-## Update Method
-
-### Update via Marketplace
-
-```bash
-/plugin update obsidian@obsidian-skills
-```
-
-### Manual Update
-
-If installed via git clone:
-
-```bash
-cd /path/to/obsidian-skills
+cd ~/.claude/obsidian-skills
 git pull
 ```
 
-If using a symbolic link, updates will automatically sync to Claude Code.
+## Getting Help
 
-## Detailed Documentation
-
-- [Claude Code Official Skills Documentation](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview)
-- [Obsidian Skills GitHub](https://github.com/kepano/obsidian-skills)
-- [Agent Skills Specification](https://agentskills.io/specification)
+- Obsidian Skills GitHub: https://github.com/kepano/obsidian-skills
+- Agent Skills Specification: https://agentskills.io/specification
