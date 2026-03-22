@@ -13,7 +13,7 @@ English | [中文](README-zh.md)
 
 > **AgentUse Skills** provide a set of **reusable and standardized procedural knowledge** for AI Agents.
 
-We have deeply organized existing AI Skills, provided the most convenient installation tutorials, further enhanced and verified compatibility for mainstream Agent frameworks (e.g., Claude Code, Open Hands), ensuring that every skill is "ready-to-use" out of the box.
+We have deeply organized existing AI Skills, provided the most convenient installation tutorials, further enhanced and verified compatibility for mainstream Agent frameworks (e.g., Claude Code, Cursor, OpenCode), ensuring that every skill is "ready-to-use" out of the box.
 
 ### ✨ Key Advantages
 

@@ -13,7 +13,7 @@
 
 > **AgentUse Skills** 为 AI Agent 提供了一套**可复用、可标准化的程序化知识**。
 
-我们对现有的 AI Skill 进行了深度整理，提供了最为便捷的安装教程，并针对主流的 Agent 框架（如 Claude Code, Open Hands 等）进行了性能增强与兼容性验证，确保每个技能都能“开箱即用”。
+我们对现有的 AI Skill 进行了深度整理，提供了最为便捷的安装教程，并针对主流的 Agent 框架（如 Claude Code, Cursor, OpenCode 等）进行了性能增强与兼容性验证，确保每个技能都能“开箱即用”。
 
 ### ✨ 核心优势
 
