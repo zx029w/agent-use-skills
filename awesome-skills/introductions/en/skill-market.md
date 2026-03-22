@@ -1,6 +1,6 @@
 # Skill Market
 
-**Skill Market** is an automated skill discovery and installation skill that enables AI Agents to find, explore, and install new skills directly from the Zerone Skill Market (https://api.zerone.market/api).
+**Skill Market** is an automated skill discovery and installation skill that enables AI Agents to find, explore, and install new skills directly from the [AgentUse Skill Market](https://www.zerone.market).
 
 ## Tags
 

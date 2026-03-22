@@ -1,6 +1,6 @@
 # Skill Market
 
-**Skill Market** 是一个自动化的技能发现与安装技能，允许 AI Agent 从 Zerone Skill Market (https://api.zerone.market/api) 查找、浏览并安装全新的技能。
+**Skill Market** 是一个自动化的技能发现与安装技能，允许 AI Agent 从 [AgentUse Skill Market](https://www.zerone.market) 查找、浏览并安装全新的技能。
 
 ## 标签
 
