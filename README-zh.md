@@ -127,8 +127,10 @@ AgentUse Skills 支持以下 AI Agent 框架：
 
 非常感谢所有为 AI 生态做出贡献的开发者！特别感谢以下开源社区为 AI 技能领域提供的灵感与贡献：
 
-- [ai-skills](https://github.com/sanjay3290/ai-skills)
-- [awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills)
+- [ClawHub](https://clawhub.ai/) — 面向 AI Agent 的开放式技能平台，支持技能的版本化分发与一键安装。
+- [LobeHub](https://lobehub.com/) — 开源协作式 Agent 平台，用于发现、构建和进化 AI Agent 队友。
+- [ai-skills](https://github.com/sanjay3290/ai-skills) — 面向编码助手的即用型 AI 技能合集。
+- [awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills) — 社区贡献的 Claude Code 技能精选列表。
 
 ---
 © 2026 AgentUse Team. Released under the GPL-3.0 License.

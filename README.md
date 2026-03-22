@@ -127,8 +127,10 @@ For detailed instructions, please see our **[Contributing Guide](CONTRIBUTING.md
 
 A huge thanks to all developers contributing to the AI ecosystem! Special thanks to the following open-source communities for their inspiration and contributions to the field of AI skills:
 
-- [ai-skills](https://github.com/sanjay3290/ai-skills)
-- [awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills)
+- [ClawHub](https://clawhub.ai/) — An open skill dock for AI agents, enabling versioned distribution and one-click installation of agent skills.
+- [LobeHub](https://lobehub.com/) — An open-source collaborative agent platform for finding, building, and evolving AI agent teammates.
+- [ai-skills](https://github.com/sanjay3290/ai-skills) — A collection of ready-to-use AI skills for coding assistants.
+- [awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills) — A curated list of community-contributed skills for Claude Code.
 
 ---
 © 2026 AgentUse Team. Released under the GPL-3.0 License.
