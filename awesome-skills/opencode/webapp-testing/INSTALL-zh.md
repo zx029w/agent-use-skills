@@ -20,10 +20,8 @@ git clone https://github.com/anthropics/skills.git ~/.config/opencode/anthropics
 ```bash
 mkdir -p ~/.config/opencode/skills
 
-for skill in $(ls ~/.config/opencode/anthropics-skills/skills); do
-  rm -rf ~/.config/opencode/skills/$skill
-  ln -s ~/.config/opencode/anthropics-skills/skills/$skill ~/.config/opencode/skills/$skill
-done
+rm -rf ~/.config/opencode/skills/webapp-testing
+ln -s ~/.config/opencode/anthropics-skills/skills/webapp-testing ~/.config/opencode/skills/webapp-testing
 ```
 
 ### 3. 验证安装

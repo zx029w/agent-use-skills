@@ -20,10 +20,8 @@ Create symlinks so Cursor discovers the skills:
 ```bash
 mkdir -p ~/.cursor/skills
 
-for skill in $(ls ~/.cursor/anthropics-skills/skills); do
-  rm -rf ~/.cursor/skills/$skill
-  ln -s ~/.cursor/anthropics-skills/skills/$skill ~/.cursor/skills/$skill
-done
+rm -rf ~/.cursor/skills/webapp-testing
+ln -s ~/.cursor/anthropics-skills/skills/webapp-testing ~/.cursor/skills/webapp-testing
 ```
 
 ### 3. Verify Installation
