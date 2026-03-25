@@ -11,7 +11,7 @@
 ### 1. Clone anthropics/skills Repository
 
 ```bash
-git clone https://github.com/anthropics/skills.git ~/.cursor/skills-repo
+git clone https://github.com/anthropics/skills.git ~/.cursor/anthropics-skills
 ```
 
 ### 2. Create Symlink
@@ -21,7 +21,7 @@ Create a symlink so Cursor discovers the skill-creator skill:
 ```bash
 mkdir -p ~/.cursor/skills
 rm -rf ~/.cursor/skills/skill-creator
-ln -s ~/.cursor/skills-repo/skills/skill-creator ~/.cursor/skills/skill-creator
+ln -s ~/.cursor/anthropics-skills/skills/skill-creator ~/.cursor/skills/skill-creator
 ```
 
 ### 3. Verify Installation
@@ -35,7 +35,7 @@ If successful, Cursor will automatically recognize and invoke the Skill Creator 
 ## Updating
 
 ```bash
-cd ~/.cursor/skills-repo
+cd ~/.cursor/anthropics-skills
 git pull
 ```
 

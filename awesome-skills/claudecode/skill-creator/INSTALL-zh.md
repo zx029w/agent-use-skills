@@ -11,7 +11,7 @@
 ### 1. 克隆 anthropics/skills 仓库
 
 ```bash
-git clone https://github.com/anthropics/skills.git ~/.claude/skills-repo
+git clone https://github.com/anthropics/skills.git ~/.claude/anthropics-skills
 ```
 
 ### 2. 创建符号链接
@@ -21,7 +21,7 @@ git clone https://github.com/anthropics/skills.git ~/.claude/skills-repo
 ```bash
 mkdir -p ~/.claude/skills
 rm -rf ~/.claude/skills/skill-creator
-ln -s ~/.claude/skills-repo/skills/skill-creator ~/.claude/skills/skill-creator
+ln -s ~/.claude/anthropics-skills/skills/skill-creator ~/.claude/skills/skill-creator
 ```
 
 ### 3. 验证安装
@@ -43,7 +43,7 @@ Skill Creator 是一个用于创建和改进技能的技能，主要功能包括
 ## 更新
 
 ```bash
-cd ~/.claude/skills-repo
+cd ~/.claude/anthropics-skills
 git pull
 ```
 

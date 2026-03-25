@@ -11,7 +11,7 @@
 ### 1. Clone anthropics/skills Repository
 
 ```bash
-git clone https://github.com/anthropics/skills.git ~/.codex/skills-repo
+git clone https://github.com/anthropics/skills.git ~/.codex/anthropics-skills
 ```
 
 ### 2. Create Symlink
@@ -21,7 +21,7 @@ Create a symlink so Codex discovers the skill-creator skill:
 ```bash
 mkdir -p ~/.codex/skills
 rm -rf ~/.codex/skills/skill-creator
-ln -s ~/.codex/skills-repo/skills/skill-creator ~/.codex/skills/skill-creator
+ln -s ~/.codex/anthropics-skills/skills/skill-creator ~/.codex/skills/skill-creator
 ```
 
 ### 3. Verify Installation
@@ -35,7 +35,7 @@ If successful, Codex will automatically recognize and invoke the Skill Creator s
 ## Updating
 
 ```bash
-cd ~/.codex/skills-repo
+cd ~/.codex/anthropics-skills
 git pull
 ```
 

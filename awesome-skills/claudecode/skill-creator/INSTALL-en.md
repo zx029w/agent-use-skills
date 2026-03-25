@@ -11,7 +11,7 @@
 ### 1. Clone anthropics/skills Repository
 
 ```bash
-git clone https://github.com/anthropics/skills.git ~/.claude/skills-repo
+git clone https://github.com/anthropics/skills.git ~/.claude/anthropics-skills
 ```
 
 ### 2. Create Symlink
@@ -21,7 +21,7 @@ Create a symlink so Claude Code discovers the skill-creator skill:
 ```bash
 mkdir -p ~/.claude/skills
 rm -rf ~/.claude/skills/skill-creator
-ln -s ~/.claude/skills-repo/skills/skill-creator ~/.claude/skills/skill-creator
+ln -s ~/.claude/anthropics-skills/skills/skill-creator ~/.claude/skills/skill-creator
 ```
 
 ### 3. Verify Installation
@@ -44,7 +44,7 @@ Skill Creator is a skill for creating and improving skills. Its main features in
 ## Updating
 
 ```bash
-cd ~/.claude/skills-repo
+cd ~/.claude/anthropics-skills
 git pull
 ```
 

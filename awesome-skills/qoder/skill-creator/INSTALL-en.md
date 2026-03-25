@@ -11,7 +11,7 @@
 ### 1. Clone anthropics/skills Repository
 
 ```bash
-git clone https://github.com/anthropics/skills.git ~/.qoder/skills-repo
+git clone https://github.com/anthropics/skills.git ~/.qoder/anthropics-skills
 ```
 
 ### 2. Create Symlink
@@ -21,7 +21,7 @@ Create a symlink so Qoder discovers the skill-creator skill:
 ```bash
 mkdir -p ~/.qoder/skills
 rm -rf ~/.qoder/skills/skill-creator
-ln -s ~/.qoder/skills-repo/skills/skill-creator ~/.qoder/skills/skill-creator
+ln -s ~/.qoder/anthropics-skills/skills/skill-creator ~/.qoder/skills/skill-creator
 ```
 
 ### 3. Verify Installation
@@ -35,7 +35,7 @@ If successful, Qoder will automatically recognize and invoke the Skill Creator s
 ## Updating
 
 ```bash
-cd ~/.qoder/skills-repo
+cd ~/.qoder/anthropics-skills
 git pull
 ```
 
