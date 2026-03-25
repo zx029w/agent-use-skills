@@ -20,10 +20,8 @@ git clone https://github.com/anthropics/skills.git ~/.claude/anthropics-skills
 ```bash
 mkdir -p ~/.claude/skills
 
-for skill in $(ls ~/.claude/anthropics-skills/skills); do
-  rm -rf ~/.claude/skills/$skill
-  ln -s ~/.claude/anthropics-skills/skills/$skill ~/.claude/skills/$skill
-done
+rm -rf ~/.claude/skills/webapp-testing
+ln -s ~/.claude/anthropics-skills/skills/webapp-testing ~/.claude/skills/webapp-testing
 ```
 
 ### 3. 验证安装

@@ -20,10 +20,8 @@ git clone https://github.com/anthropics/skills.git ~/.qoder/anthropics-skills
 ```bash
 mkdir -p ~/.qoder/skills
 
-for skill in $(ls ~/.qoder/anthropics-skills/skills); do
-  rm -rf ~/.qoder/skills/$skill
-  ln -s ~/.qoder/anthropics-skills/skills/$skill ~/.qoder/skills/$skill
-done
+rm -rf ~/.qoder/skills/webapp-testing
+ln -s ~/.qoder/anthropics-skills/skills/webapp-testing ~/.qoder/skills/webapp-testing
 ```
 
 ### 3. 验证安装
