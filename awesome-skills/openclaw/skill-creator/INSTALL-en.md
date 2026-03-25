@@ -11,7 +11,7 @@
 ### 1. Clone anthropics/skills Repository
 
 ```bash
-git clone https://github.com/anthropics/skills.git ~/.openclaw/skills-repo
+git clone https://github.com/anthropics/skills.git ~/.openclaw/anthropics-skills
 ```
 
 ### 2. Create Symlink
@@ -21,7 +21,7 @@ Create a symlink so OpenClaw discovers the skill-creator skill:
 ```bash
 mkdir -p ~/.openclaw/skills
 rm -rf ~/.openclaw/skills/skill-creator
-ln -s ~/.openclaw/skills-repo/skills/skill-creator ~/.openclaw/skills/skill-creator
+ln -s ~/.openclaw/anthropics-skills/skills/skill-creator ~/.openclaw/skills/skill-creator
 ```
 
 ### 3. Verify Installation
@@ -35,7 +35,7 @@ If successful, OpenClaw will automatically recognize and invoke the Skill Creato
 ## Updating
 
 ```bash
-cd ~/.openclaw/skills-repo
+cd ~/.openclaw/anthropics-skills
 git pull
 ```
 

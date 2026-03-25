@@ -11,7 +11,7 @@
 ### 1. 克隆 anthropics/skills 仓库
 
 ```bash
-git clone https://github.com/anthropics/skills.git ~/.openclaw/skills-repo
+git clone https://github.com/anthropics/skills.git ~/.openclaw/anthropics-skills
 ```
 
 ### 2. 创建符号链接
@@ -21,7 +21,7 @@ git clone https://github.com/anthropics/skills.git ~/.openclaw/skills-repo
 ```bash
 mkdir -p ~/.openclaw/skills
 rm -rf ~/.openclaw/skills/skill-creator
-ln -s ~/.openclaw/skills-repo/skills/skill-creator ~/.openclaw/skills/skill-creator
+ln -s ~/.openclaw/anthropics-skills/skills/skill-creator ~/.openclaw/skills/skill-creator
 ```
 
 ### 3. 验证安装
@@ -36,7 +36,7 @@ ln -s ~/.openclaw/skills-repo/skills/skill-creator ~/.openclaw/skills/skill-crea
 ## 更新
 
 ```bash
-cd ~/.openclaw/skills-repo
+cd ~/.openclaw/anthropics-skills
 git pull
 ```
 

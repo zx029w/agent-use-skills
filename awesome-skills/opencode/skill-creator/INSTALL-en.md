@@ -11,7 +11,7 @@
 ### 1. Clone anthropics/skills Repository
 
 ```bash
-git clone https://github.com/anthropics/skills.git ~/.config/opencode/skills-repo
+git clone https://github.com/anthropics/skills.git ~/.config/opencode/anthropics-skills
 ```
 
 ### 2. Create Symlink
@@ -21,7 +21,7 @@ Create a symlink so OpenCode discovers the skill-creator skill:
 ```bash
 mkdir -p ~/.config/opencode/skills
 rm -rf ~/.config/opencode/skills/skill-creator
-ln -s ~/.config/opencode/skills-repo/skills/skill-creator ~/.config/opencode/skills/skill-creator
+ln -s ~/.config/opencode/anthropics-skills/skills/skill-creator ~/.config/opencode/skills/skill-creator
 ```
 
 ### 3. Verify Installation
@@ -44,7 +44,7 @@ Skill Creator is a skill for creating and improving skills. Its main features in
 ## Updating
 
 ```bash
-cd ~/.config/opencode/skills-repo
+cd ~/.config/opencode/anthropics-skills
 git pull
 ```
 
