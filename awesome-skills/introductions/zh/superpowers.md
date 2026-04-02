@@ -35,6 +35,8 @@ Superpowers 支持多种主流 AI 编辑器和平台：
 - [Cursor](../../cursor/superpowers/INSTALL-zh.md)
 - [Codex](../../codex/superpowers/INSTALL-zh.md)
 - [OpenCode](../../opencode/superpowers/INSTALL-zh.md)
+- [OpenClaw](../../openclaw/superpowers/INSTALL-zh.md)
+- [Qoder](../../qoder/superpowers/INSTALL-zh.md)
 
 
 ---

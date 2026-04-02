@@ -35,6 +35,8 @@ Superpowers supports major AI-powered editors and platforms:
 - [Cursor](../../cursor/superpowers/INSTALL-en.md)
 - [Codex](../../codex/superpowers/INSTALL-en.md)
 - [OpenCode](../../opencode/superpowers/INSTALL-en.md)
+- [OpenClaw](../../openclaw/superpowers/INSTALL-en.md)
+- [Qoder](../../qoder/superpowers/INSTALL-en.md)
 
 
 ---
