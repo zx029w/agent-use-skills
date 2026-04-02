@@ -4,7 +4,7 @@
 
 ## Tags
 
-💻 Dev & Testing | 🎨 UI/UX | 📱 Mobile Dev | 📄 Document Processing | ✅ Verified
+💻 Dev & Testing | ✅ Verified
 
 ## Core Philosophy
 
