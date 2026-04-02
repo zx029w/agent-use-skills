@@ -19,11 +19,7 @@ Create symlinks so Qoder discovers all Obsidian skills:
 
 ```bash
 mkdir -p ~/.qoder/skills
-ln -s ~/.qoder/obsidian-skills/skills/obsidian-markdown ~/.qoder/skills/obsidian-markdown
-ln -s ~/.qoder/obsidian-skills/skills/obsidian-bases ~/.qoder/skills/obsidian-bases
-ln -s ~/.qoder/obsidian-skills/skills/json-canvas ~/.qoder/skills/json-canvas
-ln -s ~/.qoder/obsidian-skills/skills/obsidian-cli ~/.qoder/skills/obsidian-cli
-ln -s ~/.qoder/obsidian-skills/skills/defuddle ~/.qoder/skills/defuddle
+ln -s ~/.qoder/obsidian-skills/skills ~/.qoder/skills/obsidian
 ```
 
 ### 3. Verify Installation

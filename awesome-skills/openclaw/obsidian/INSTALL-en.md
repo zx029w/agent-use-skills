@@ -19,11 +19,7 @@ Create symlinks so OpenClaw discovers all Obsidian skills:
 
 ```bash
 mkdir -p ~/.openclaw/skills
-ln -s ~/.openclaw/obsidian-skills/skills/obsidian-markdown ~/.openclaw/skills/obsidian-markdown
-ln -s ~/.openclaw/obsidian-skills/skills/obsidian-bases ~/.openclaw/skills/obsidian-bases
-ln -s ~/.openclaw/obsidian-skills/skills/json-canvas ~/.openclaw/skills/json-canvas
-ln -s ~/.openclaw/obsidian-skills/skills/obsidian-cli ~/.openclaw/skills/obsidian-cli
-ln -s ~/.openclaw/obsidian-skills/skills/defuddle ~/.openclaw/skills/defuddle
+ln -s ~/.openclaw/obsidian-skills/skills ~/.openclaw/skills/obsidian
 ```
 
 ### 3. Verify Installation

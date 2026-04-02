@@ -19,11 +19,7 @@ Create symlinks so Codex discovers the obsidian skills:
 
 ```bash
 mkdir -p ~/.codex/skills
-ln -s ~/.codex/obsidian-skills/skills/obsidian-markdown ~/.codex/skills/obsidian-markdown
-ln -s ~/.codex/obsidian-skills/skills/obsidian-bases ~/.codex/skills/obsidian-bases
-ln -s ~/.codex/obsidian-skills/skills/json-canvas ~/.codex/skills/json-canvas
-ln -s ~/.codex/obsidian-skills/skills/obsidian-cli ~/.codex/skills/obsidian-cli
-ln -s ~/.codex/obsidian-skills/skills/defuddle ~/.codex/skills/defuddle
+ln -s ~/.codex/obsidian-skills/skills ~/.codex/skills/obsidian
 ```
 
 ### 3. Verify Installation

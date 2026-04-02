@@ -19,11 +19,7 @@ git clone https://github.com/kepano/obsidian-skills.git ~/.config/opencode/obsid
 
 ```bash
 mkdir -p ~/.config/opencode/skills
-ln -s ~/.config/opencode/obsidian-skills/skills/obsidian-markdown ~/.config/opencode/skills/obsidian-markdown
-ln -s ~/.config/opencode/obsidian-skills/skills/obsidian-bases ~/.config/opencode/skills/obsidian-bases
-ln -s ~/.config/opencode/obsidian-skills/skills/json-canvas ~/.config/opencode/skills/json-canvas
-ln -s ~/.config/opencode/obsidian-skills/skills/obsidian-cli ~/.config/opencode/skills/obsidian-cli
-ln -s ~/.config/opencode/obsidian-skills/skills/defuddle ~/.config/opencode/skills/defuddle
+ln -s ~/.config/opencode/obsidian-skills/skills ~/.config/opencode/skills/obsidian
 ```
 
 ### 3. 重启 OpenCode

@@ -19,11 +19,7 @@ git clone https://github.com/kepano/obsidian-skills.git ~/.cursor/obsidian-skill
 
 ```bash
 mkdir -p ~/.cursor/skills
-ln -s ~/.cursor/obsidian-skills/skills/obsidian-markdown ~/.cursor/skills/obsidian-markdown
-ln -s ~/.cursor/obsidian-skills/skills/obsidian-bases ~/.cursor/skills/obsidian-bases
-ln -s ~/.cursor/obsidian-skills/skills/json-canvas ~/.cursor/skills/json-canvas
-ln -s ~/.cursor/obsidian-skills/skills/obsidian-cli ~/.cursor/skills/obsidian-cli
-ln -s ~/.cursor/obsidian-skills/skills/defuddle ~/.cursor/skills/defuddle
+ln -s ~/.cursor/obsidian-skills/skills ~/.cursor/skills/obsidian
 ```
 
 ### 3. 验证安装

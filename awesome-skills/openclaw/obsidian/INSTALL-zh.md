@@ -19,11 +19,7 @@ git clone https://github.com/kepano/obsidian-skills.git ~/.openclaw/obsidian-ski
 
 ```bash
 mkdir -p ~/.openclaw/skills
-ln -s ~/.openclaw/obsidian-skills/skills/obsidian-markdown ~/.openclaw/skills/obsidian-markdown
-ln -s ~/.openclaw/obsidian-skills/skills/obsidian-bases ~/.openclaw/skills/obsidian-bases
-ln -s ~/.openclaw/obsidian-skills/skills/json-canvas ~/.openclaw/skills/json-canvas
-ln -s ~/.openclaw/obsidian-skills/skills/obsidian-cli ~/.openclaw/skills/obsidian-cli
-ln -s ~/.openclaw/obsidian-skills/skills/defuddle ~/.openclaw/skills/defuddle
+ln -s ~/.openclaw/obsidian-skills/skills ~/.openclaw/skills/obsidian
 ```
 
 ### 3. 验证安装

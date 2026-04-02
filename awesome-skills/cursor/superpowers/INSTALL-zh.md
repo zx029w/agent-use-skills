@@ -19,11 +19,7 @@ git clone https://github.com/obra/superpowers.git ~/.cursor/superpowers
 
 ```bash
 mkdir -p ~/.cursor/skills
-
-for skill in $(ls ~/.cursor/superpowers/skills); do
-  rm -rf ~/.cursor/skills/$skill
-  ln -s ~/.cursor/superpowers/skills/$skill ~/.cursor/skills/$skill
-done
+ln -s ~/.cursor/superpowers/skills ~/.cursor/skills/superpowers
 ```
 
 ### 3. 验证安装

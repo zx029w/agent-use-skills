@@ -19,11 +19,7 @@ git clone https://github.com/obra/superpowers.git ~/.config/opencode/superpowers
 
 ```bash
 mkdir -p ~/.config/opencode/skills
-
-for skill in $(ls ~/.config/opencode/superpowers/skills); do
-  rm -rf ~/.config/opencode/skills/$skill
-  ln -s ~/.config/opencode/superpowers/skills/$skill ~/.config/opencode/skills/$skill
-done
+ln -s ~/.config/opencode/superpowers/skills ~/.config/opencode/skills/superpowers
 ```
 
 ### 3. 验证安装

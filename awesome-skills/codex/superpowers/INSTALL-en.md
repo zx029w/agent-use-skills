@@ -19,11 +19,7 @@ Create symlinks so Codex discovers the Superpowers skills:
 
 ```bash
 mkdir -p ~/.codex/skills
-
-for skill in $(ls ~/.codex/superpowers/skills); do
-  rm -rf ~/.codex/skills/$skill
-  ln -s ~/.codex/superpowers/skills/$skill ~/.codex/skills/$skill
-done
+ln -s ~/.codex/superpowers/skills ~/.codex/skills/superpowers
 ```
 
 ### 3. Verify Installation
