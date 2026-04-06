@@ -19,7 +19,7 @@ Create symlinks so Claude Code discovers all Obsidian skills:
 
 ```bash
 mkdir -p ~/.claude/skills
-ln -s ~/.claude/obsidian-skills/skills ~/.claude/skills/obsidian
+ln -s ~/.claude/obsidian-skills ~/.claude/skills/obsidian-skills
 ```
 
 ### 3. Verify Installation

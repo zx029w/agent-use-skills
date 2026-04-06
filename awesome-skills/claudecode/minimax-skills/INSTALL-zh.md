@@ -24,7 +24,7 @@ git clone https://github.com/MiniMax-AI/skills.git $env:USERPROFILE\.claude\mini
 **macOS / Linux:**
 ```bash
 mkdir -p ~/.claude/skills
-ln -s ~/.claude/minimax-skills/skills ~/.claude/skills/minimax-skills
+ln -s ~/.claude/minimax-skills ~/.claude/skills/minimax-skills
 ```
 
 **Windows (PowerShell, 以管理员身份运行):**

@@ -19,7 +19,7 @@ git clone https://github.com/obra/superpowers.git ~/.claude/superpowers
 
 ```bash
 mkdir -p ~/.claude/skills
-ln -s ~/.claude/superpowers/skills ~/.claude/skills/superpowers
+ln -s ~/.claude/superpowers ~/.claude/skills/superpowers
 ```
 
 ### 3. 验证安装

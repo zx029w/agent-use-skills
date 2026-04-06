@@ -19,7 +19,7 @@ git clone https://github.com/kepano/obsidian-skills.git ~/.claude/obsidian-skill
 
 ```bash
 mkdir -p ~/.claude/skills
-ln -s ~/.claude/obsidian-skills/skills ~/.claude/skills/obsidian
+ln -s ~/.claude/obsidian-skills ~/.claude/skills/obsidian-skills
 ```
 
 ### 3. 验证安装
