@@ -173,13 +173,29 @@ git clone https://github.com/<org>/<skill-repo>.git ~/.<platform>/<skill-repo>
 
 Create symlinks so <Platform> discovers the skills:
 
+**For Claude Code**:
+
+- Multi-skill repository (e.g., superpowers):
+```bash
+mkdir -p ~/.claude/skills
+for skill in $(ls ~/.claude/<skill-repo>/skills); do
+  rm -rf ~/.claude/skills/$skill
+  ln -s ~/.claude/<skill-repo>/skills/$skill ~/.claude/skills/$skill
+done
+```
+
+- Single-skill repository:
+```bash
+mkdir -p ~/.claude/skills
+rm -rf ~/.claude/skills/<skill-name>
+ln -s ~/.claude/<skill-repo>/skills/<skill-name> ~/.claude/skills/<skill-name>
+```
+
+**For other platforms (Cursor, Codex, etc.)**:
 ```bash
 mkdir -p ~/.<platform>/skills
-
-for skill in $(ls ~/.<platform>/<skill-repo>/skills); do
-  rm -rf ~/.<platform>/skills/$skill
-  ln -s ~/.<platform>/<skill-repo>/skills/$skill ~/.<platform>/skills/$skill
-done
+rm -rf ~/.<platform>/skills/<skill-repo>
+ln -s ~/.<platform>/<skill-repo>/skills ~/.<platform>/skills/<skill-repo>
 ```
 
 ### 3. Verify Installation
@@ -194,6 +210,27 @@ If successful, <Platform> will automatically recognize and invoke the skill.
 ```bash
 cd ~/.<platform>/<skill-repo>
 git pull
+```
+
+## Uninstallation
+
+**For Claude Code**:
+
+- Multi-skill repository:
+```bash
+for skill in $(ls ~/.claude/<skill-repo>/skills); do
+  rm -rf ~/.claude/skills/$skill
+done
+```
+
+- Single-skill repository:
+```bash
+rm -rf ~/.claude/skills/<skill-name>
+```
+
+**For other platforms**:
+```bash
+rm -rf ~/.<platform>/skills/<skill-repo>
 ```
 
 ## Getting Help
@@ -240,6 +277,12 @@ Restart <Platform>, then try asking:
 ```bash
 cd ~/.<platform>/agent-use-skills
 git pull
+```
+
+## Uninstallation
+
+```bash
+rm -rf ~/.<platform>/skills/<skill-name>
 ```
 
 ## Getting Help
