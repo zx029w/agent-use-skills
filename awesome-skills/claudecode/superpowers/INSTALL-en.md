@@ -19,7 +19,10 @@ Create symlinks so Claude Code discovers the Superpowers skills:
 
 ```bash
 mkdir -p ~/.claude/skills
-ln -s ~/.claude/superpowers/skills ~/.claude/skills/superpowers
+for skill in $(ls ~/.claude/superpowers/skills); do
+  rm -rf ~/.claude/skills/$skill
+  ln -s ~/.claude/superpowers/skills/$skill ~/.claude/skills/$skill
+done
 ```
 
 ### 3. Verify Installation

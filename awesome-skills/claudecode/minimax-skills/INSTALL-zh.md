@@ -24,13 +24,20 @@ git clone https://github.com/MiniMax-AI/skills.git $env:USERPROFILE\.claude\mini
 **macOS / Linux:**
 ```bash
 mkdir -p ~/.claude/skills
-ln -s ~/.claude/minimax-skills/skills ~/.claude/skills/minimax-skills
+for skill in $(ls ~/.claude/minimax-skills/skills); do
+  rm -rf ~/.claude/skills/$skill
+  ln -s ~/.claude/minimax-skills/skills/$skill ~/.claude/skills/$skill
+done
 ```
 
 **Windows (PowerShell, 以管理员身份运行):**
 ```powershell
 New-Item -ItemType Directory -Force -Path "$env:USERPROFILE\.claude\skills"
-New-Item -ItemType SymbolicLink -Path "$env:USERPROFILE\.claude\skills\minimax-skills" -Target "$env:USERPROFILE\.claude\minimax-skills\skills"
+Get-ChildItem -Directory "$env:USERPROFILE\.claude\minimax-skills\skills" | ForEach-Object {
+    $targetPath = "$env:USERPROFILE\.claude\skills\$($_.Name)"
+    if (Test-Path $targetPath) { Remove-Item -Recurse -Force $targetPath }
+    New-Item -ItemType SymbolicLink -Path $targetPath -Target $_.FullName
+}
 ```
 
 ### 3. 验证安装

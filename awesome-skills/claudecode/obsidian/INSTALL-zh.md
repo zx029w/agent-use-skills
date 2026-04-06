@@ -19,7 +19,10 @@ git clone https://github.com/kepano/obsidian-skills.git ~/.claude/obsidian-skill
 
 ```bash
 mkdir -p ~/.claude/skills
-ln -s ~/.claude/obsidian-skills/skills ~/.claude/skills/obsidian
+for skill in $(ls ~/.claude/obsidian-skills/skills); do
+  rm -rf ~/.claude/skills/$skill
+  ln -s ~/.claude/obsidian-skills/skills/$skill ~/.claude/skills/$skill
+done
 ```
 
 ### 3. 验证安装

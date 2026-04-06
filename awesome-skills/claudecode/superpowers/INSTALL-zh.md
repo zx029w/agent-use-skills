@@ -19,7 +19,10 @@ git clone https://github.com/obra/superpowers.git ~/.claude/superpowers
 
 ```bash
 mkdir -p ~/.claude/skills
-ln -s ~/.claude/superpowers/skills ~/.claude/skills/superpowers
+for skill in $(ls ~/.claude/superpowers/skills); do
+  rm -rf ~/.claude/skills/$skill
+  ln -s ~/.claude/superpowers/skills/$skill ~/.claude/skills/$skill
+done
 ```
 
 ### 3. 验证安装
