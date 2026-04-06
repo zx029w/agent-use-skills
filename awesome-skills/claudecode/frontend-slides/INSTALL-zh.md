@@ -67,6 +67,14 @@ cd ~/.claude/skills/frontend-slides
 git pull
 ```
 
+## 卸载
+
+删除符号链接即可卸载：
+
+```bash
+rm -rf ~/.claude/skills/frontend-slides
+```
+
 ## 获取帮助
 
 - 提交问题：https://github.com/zarazhangrui/frontend-slides/issues

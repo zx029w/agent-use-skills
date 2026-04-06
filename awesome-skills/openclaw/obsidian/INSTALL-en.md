@@ -38,6 +38,14 @@ cd ~/.openclaw/obsidian-skills
 git pull
 ```
 
+## Uninstallation
+
+Just remove the symbolic link to uninstall:
+
+```bash
+rm -rf ~/.openclaw/skills/obsidian
+```
+
 ## Getting Help
 
 - Obsidian Skills GitHub: https://github.com/kepano/obsidian-skills

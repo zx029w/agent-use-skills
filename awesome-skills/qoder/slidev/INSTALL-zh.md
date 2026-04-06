@@ -19,11 +19,7 @@ git clone https://github.com/slidevjs/slidev.git ~/.qoder/slidevjs-slidev
 
 ```bash
 mkdir -p ~/.qoder/skills
-
-for skill in $(ls ~/.qoder/slidevjs-slidev/skills); do
-  rm -rf ~/.qoder/skills/$skill
-  ln -s ~/.qoder/slidevjs-slidev/skills/$skill ~/.qoder/skills/$skill
-done
+ln -s ~/.qoder/slidevjs-slidev/skills ~/.qoder/skills/slidev
 ```
 
 ### 3. 验证安装
@@ -38,6 +34,14 @@ done
 ```bash
 cd ~/.qoder/slidevjs-slidev
 git pull
+```
+
+## 卸载
+
+删除符号链接即可卸载：
+
+```bash
+rm -rf ~/.qoder/skills/slidev
 ```
 
 ## 获取帮助

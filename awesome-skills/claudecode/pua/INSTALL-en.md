@@ -110,3 +110,11 @@ A: Debugging, implementation, configuration, deployment, operations, API integra
 ---
 
 **Detailed Documentation**: [GitHub - tanweai/pua](https://github.com/tanweai/pua)
+
+## Uninstallation
+
+Just remove the symbolic link to uninstall:
+
+```bash
+rm -rf ~/.claude/skills/pua
+```

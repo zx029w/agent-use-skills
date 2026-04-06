@@ -64,6 +64,22 @@ cd $env:USERPROFILE\.claude\minimax-skills
 git pull
 ```
 
+## 卸载
+
+删除符号链接即可卸载：
+
+**macOS / Linux:**
+```bash
+for skill in $(ls ~/.claude/minimax-skills/skills); do
+  rm -rf ~/.claude/skills/$skill
+done
+```
+
+**Windows (PowerShell):**
+```powershell
+Get-ChildItem "$env:USERPROFILE\.claude\minimax-skills\skills" | ForEach-Object { Remove-Item -Recurse -Force "$env:USERPROFILE\.claude\skills\$($_.Name)" }
+```
+
 ## 获取帮助
 
 - GitHub: https://github.com/MiniMax-AI/skills

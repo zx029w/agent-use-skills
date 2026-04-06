@@ -37,6 +37,14 @@ cd ~/.openclaw/colleague-skill
 git pull
 ```
 
+## Uninstallation
+
+Just remove the symbolic link to uninstall:
+
+```bash
+rm -rf ~/.openclaw/skills/create-colleague
+```
+
 ## Getting Help
 
 - GitHub: https://github.com/titanwings/colleague-skill

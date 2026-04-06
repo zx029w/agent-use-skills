@@ -39,6 +39,14 @@ cd ~/.openclaw/agent-use-skills
 git pull
 ```
 
+## Uninstallation
+
+Just remove the symbolic link to uninstall:
+
+```bash
+rm -rf ~/.openclaw/skills/content-research-writer
+```
+
 ## Getting Help
 
 - Report issues: https://github.com/Zerone-Agent/agent-use-skills/issues

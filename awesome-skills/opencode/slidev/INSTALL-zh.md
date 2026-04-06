@@ -19,11 +19,7 @@ git clone https://github.com/slidevjs/slidev.git ~/.config/opencode/slidevjs-sli
 
 ```bash
 mkdir -p ~/.config/opencode/skills
-
-for skill in $(ls ~/.config/opencode/slidevjs-slidev/skills); do
-  rm -rf ~/.config/opencode/skills/$skill
-  ln -s ~/.config/opencode/slidevjs-slidev/skills/$skill ~/.config/opencode/skills/$skill
-done
+ln -s ~/.config/opencode/slidevjs-slidev/skills ~/.config/opencode/skills/slidev
 ```
 
 ### 3. 验证安装
@@ -38,6 +34,14 @@ done
 ```bash
 cd ~/.config/opencode/slidevjs-slidev
 git pull
+```
+
+## 卸载
+
+删除符号链接即可卸载：
+
+```bash
+rm -rf ~/.config/opencode/skills/slidev
 ```
 
 ## 获取帮助

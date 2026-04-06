@@ -19,11 +19,7 @@ Create symlinks so Qoder discovers the skills:
 
 ```bash
 mkdir -p ~/.qoder/skills
-
-for skill in $(ls ~/.qoder/slidevjs-slidev/skills); do
-  rm -rf ~/.qoder/skills/$skill
-  ln -s ~/.qoder/slidevjs-slidev/skills/$skill ~/.qoder/skills/$skill
-done
+ln -s ~/.qoder/slidevjs-slidev/skills ~/.qoder/skills/slidev
 ```
 
 ### 3. Verify Installation
@@ -38,6 +34,14 @@ If successful, Qoder will automatically recognize and invoke the skill.
 ```bash
 cd ~/.qoder/slidevjs-slidev
 git pull
+```
+
+## Uninstallation
+
+Just remove the symbolic link to uninstall:
+
+```bash
+rm -rf ~/.qoder/skills/slidev
 ```
 
 ## Getting Help

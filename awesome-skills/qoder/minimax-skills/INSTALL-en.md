@@ -61,6 +61,14 @@ cd $env:USERPROFILE\.qoder\minimax-skills
 git pull
 ```
 
+## Uninstallation
+
+Just remove the symbolic link to uninstall:
+
+```bash
+rm -rf ~/.qoder/skills/minimax-skills
+```
+
 ## Getting Help
 
 - GitHub: https://github.com/MiniMax-AI/skills

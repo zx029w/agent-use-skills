@@ -62,6 +62,14 @@ git pull
 cp -r ~/agent-use-skills/awesome-skills/skills/video-summarizer ~/.openclaw/skills/
 ```
 
+## Uninstallation
+
+Just remove the symbolic link to uninstall:
+
+```bash
+rm -rf ~/.openclaw/skills/video-summarizer
+```
+
 ## Get Help
 
 - Submit issues: https://github.com/Zerone-Agent/agent-use-skills/issues

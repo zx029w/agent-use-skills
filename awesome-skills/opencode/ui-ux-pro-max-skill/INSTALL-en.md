@@ -62,3 +62,11 @@ uipro init --ai opencode
 
 - [GitHub Repository](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill)
 - [Official Website](https://uupm.cc)
+
+## Uninstallation
+
+Just remove the symbolic link to uninstall:
+
+```bash
+rm -rf ~/.config/opencode/skills/ui-ux-pro-max-skill
+```

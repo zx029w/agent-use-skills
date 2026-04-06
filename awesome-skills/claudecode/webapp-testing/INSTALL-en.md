@@ -38,6 +38,14 @@ cd ~/.claude/anthropics-skills
 git pull
 ```
 
+## Uninstallation
+
+Just remove the symbolic link to uninstall:
+
+```bash
+rm -rf ~/.claude/skills/webapp-testing
+```
+
 ## Getting Help
 
 - GitHub: https://github.com/anthropics/skills

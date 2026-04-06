@@ -64,6 +64,14 @@ openclaw hooks enable self-improvement
 cd ~/.openclaw/agent-use-skills && git pull
 ```
 
+## Uninstallation
+
+Just remove the symbolic link to uninstall:
+
+```bash
+rm -rf ~/.openclaw/skills/self-improving-agent
+```
+
 ## Get Help
 
 - File an issue: https://github.com/Zerone-Agent/agent-use-skills/issues

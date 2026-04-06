@@ -62,3 +62,11 @@ uipro init --ai openclaw
 
 - [GitHub Repository](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill)
 - [Official Website](https://uupm.cc)
+
+## Uninstallation
+
+Just remove the symbolic link to uninstall:
+
+```bash
+rm -rf ~/.openclaw/skills/ui-ux-pro-max-skill
+```

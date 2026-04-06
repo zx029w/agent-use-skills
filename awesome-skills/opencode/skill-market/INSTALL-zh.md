@@ -45,6 +45,14 @@ cd ~/.config/opencode/agent-use-skills
 git pull
 ```
 
+## 卸载
+
+删除符号链接即可卸载：
+
+```bash
+rm -rf ~/.config/opencode/skills/skill-market
+```
+
 ## 获取帮助
 
 - 提交问题：https://github.com/Zerone-Agent/agent-use-skills/issues

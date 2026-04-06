@@ -61,6 +61,14 @@ git pull
 pip install -r awesome-skills/skills/deep-research/requirements.txt
 ```
 
+## 卸载
+
+删除符号链接即可卸载：
+
+```bash
+rm -rf ~/.config/opencode/skills/deep-research
+```
+
 ## 获取帮助
 
 - 提交问题：https://github.com/Zerone-Agent/agent-use-skills/issues

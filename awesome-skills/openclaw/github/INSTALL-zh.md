@@ -50,6 +50,14 @@ ln -s ~/.openclaw/agent-use-skills/awesome-skills/skills/github ~/.openclaw/skil
 1. **更新 CLI**: `brew upgrade gh`
 2. **更新技能库**: `cd ~/.openclaw/agent-use-skills && git pull`
 
+## 卸载
+
+删除符号链接即可卸载：
+
+```bash
+rm -rf ~/.openclaw/skills/github
+```
+
 ## 获取帮助
 
 - 技能逻辑问题：https://github.com/Zerone-Agent/agent-use-skills/issues

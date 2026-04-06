@@ -134,3 +134,11 @@ curl -o .agents/skills/pua/SKILL.md \
 ---
 
 **详细文档**: [GitHub - tanweai/pua](https://github.com/tanweai/pua)
+
+## 卸载
+
+删除符号链接即可卸载：
+
+```bash
+rm -rf ~/.codex/skills/pua
+```

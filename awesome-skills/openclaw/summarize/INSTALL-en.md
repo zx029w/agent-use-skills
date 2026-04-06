@@ -57,6 +57,14 @@ Restart OpenClaw and try:
 1. **Update CLI**: `brew upgrade summarize`
 2. **Update Skill Library**: `cd ~/.openclaw/agent-use-skills && git pull`
 
+## Uninstallation
+
+Just remove the symbolic link to uninstall:
+
+```bash
+rm -rf ~/.openclaw/skills/summarize
+```
+
 ## Get Help
 
 - Skill issues: https://github.com/Zerone-Agent/agent-use-skills/issues

@@ -22,3 +22,11 @@ ln -s ~/.config/opencode/agent-use-skills/awesome-skills/skills/prompt-engineeri
 ```bash
 cd ~/.config/opencode/agent-use-skills && git pull
 ```
+
+## 卸载
+
+删除符号链接即可卸载：
+
+```bash
+rm -rf ~/.config/opencode/skills/prompt-engineering
+```

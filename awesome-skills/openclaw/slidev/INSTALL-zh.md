@@ -19,11 +19,7 @@ git clone https://github.com/slidevjs/slidev.git ~/.openclaw/slidevjs-slidev
 
 ```bash
 mkdir -p ~/.openclaw/skills
-
-for skill in $(ls ~/.openclaw/slidevjs-slidev/skills); do
-  rm -rf ~/.openclaw/skills/$skill
-  ln -s ~/.openclaw/slidevjs-slidev/skills/$skill ~/.openclaw/skills/$skill
-done
+ln -s ~/.openclaw/slidevjs-slidev/skills ~/.openclaw/skills/slidev
 ```
 
 ### 3. 验证安装
@@ -38,6 +34,14 @@ done
 ```bash
 cd ~/.openclaw/slidevjs-slidev
 git pull
+```
+
+## 卸载
+
+删除符号链接即可卸载：
+
+```bash
+rm -rf ~/.openclaw/skills/slidev
 ```
 
 ## 获取帮助

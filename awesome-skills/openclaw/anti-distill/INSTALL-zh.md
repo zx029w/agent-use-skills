@@ -37,6 +37,14 @@ cd ~/.openclaw/anti-distill
 git pull
 ```
 
+## 卸载
+
+删除符号链接即可卸载：
+
+```bash
+rm -rf ~/.openclaw/skills/anti-distill
+```
+
 ## 获取帮助
 
 - GitHub：https://github.com/leilei926524-tech/anti-distill

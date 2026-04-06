@@ -37,6 +37,14 @@ cd ~/.qoder/colleague-skill
 git pull
 ```
 
+## Uninstallation
+
+Just remove the symbolic link to uninstall:
+
+```bash
+rm -rf ~/.qoder/skills/create-colleague
+```
+
 ## Getting Help
 
 - GitHub: https://github.com/titanwings/colleague-skill

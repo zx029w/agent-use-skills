@@ -36,5 +36,13 @@
 cd ~/.claude/agent-use-skills && git pull
 ```
 
+## 卸载
+
+删除符号链接即可卸载：
+
+```bash
+rm -rf ~/.claude/skills/twitter-algorithm-optimizer
+```
+
 ## 详细文档
 - [GitHub 仓库](https://github.com/Zerone-Agent/agent-use-skills)

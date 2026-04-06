@@ -54,6 +54,14 @@ git pull
 cp -r ~/agent-use-skills/awesome-skills/skills/weekly-report ~/.qoder/skills/
 ```
 
+## Uninstallation
+
+Just remove the symbolic link to uninstall:
+
+```bash
+rm -rf ~/.qoder/skills/weekly-report
+```
+
 ## Get Help
 
 - Submit issues: https://github.com/Zerone-Agent/agent-use-skills/issues

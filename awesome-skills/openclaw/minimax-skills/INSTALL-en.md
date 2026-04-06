@@ -61,6 +61,14 @@ cd $env:USERPROFILE\.openclaw\minimax-skills
 git pull
 ```
 
+## Uninstallation
+
+Just remove the symbolic link to uninstall:
+
+```bash
+rm -rf ~/.openclaw/skills/minimax-skills
+```
+
 ## Getting Help
 
 - GitHub: https://github.com/MiniMax-AI/skills

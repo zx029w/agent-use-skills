@@ -45,6 +45,14 @@ ln -s ~/.openclaw/agent-use-skills/awesome-skills/skills/tavily-search ~/.opencl
 cd ~/.openclaw/agent-use-skills && git pull
 ```
 
+## 卸载
+
+删除符号链接即可卸载：
+
+```bash
+rm -rf ~/.openclaw/skills/tavily-search
+```
+
 ## 获取帮助
 
 - 提交问题：https://github.com/Zerone-Agent/agent-use-skills/issues

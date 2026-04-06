@@ -19,11 +19,7 @@ git clone https://github.com/slidevjs/slidev.git ~/.codex/slidevjs-slidev
 
 ```bash
 mkdir -p ~/.codex/skills
-
-for skill in $(ls ~/.codex/slidevjs-slidev/skills); do
-  rm -rf ~/.codex/skills/$skill
-  ln -s ~/.codex/slidevjs-slidev/skills/$skill ~/.codex/skills/$skill
-done
+ln -s ~/.codex/slidevjs-slidev/skills ~/.codex/skills/slidev
 ```
 
 ### 3. 验证安装
@@ -38,6 +34,14 @@ done
 ```bash
 cd ~/.codex/slidevjs-slidev
 git pull
+```
+
+## 卸载
+
+删除符号链接即可卸载：
+
+```bash
+rm -rf ~/.codex/skills/slidev
 ```
 
 ## 获取帮助

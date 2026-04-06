@@ -42,6 +42,14 @@ cd ~/.cursor/agent-use-skills
 git pull
 ```
 
+## Uninstallation
+
+Just remove the symbolic link to uninstall:
+
+```bash
+rm -rf ~/.cursor/skills/imagen
+```
+
 ## Get Help
 
 - File an issue: https://github.com/Zerone-Agent/agent-use-skills/issues

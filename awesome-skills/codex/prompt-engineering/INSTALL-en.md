@@ -22,3 +22,11 @@ Restart Codex and try:
 ```bash
 cd ~/.codex/agent-use-skills && git pull
 ```
+
+## Uninstallation
+
+Just remove the symbolic link to uninstall:
+
+```bash
+rm -rf ~/.codex/skills/prompt-engineering
+```

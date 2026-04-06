@@ -19,11 +19,7 @@ Create symlinks so OpenClaw discovers the skills:
 
 ```bash
 mkdir -p ~/.openclaw/skills
-
-for skill in $(ls ~/.openclaw/slidevjs-slidev/skills); do
-  rm -rf ~/.openclaw/skills/$skill
-  ln -s ~/.openclaw/slidevjs-slidev/skills/$skill ~/.openclaw/skills/$skill
-done
+ln -s ~/.openclaw/slidevjs-slidev/skills ~/.openclaw/skills/slidev
 ```
 
 ### 3. Verify Installation
@@ -38,6 +34,14 @@ If successful, OpenClaw will automatically recognize and invoke the skill.
 ```bash
 cd ~/.openclaw/slidevjs-slidev
 git pull
+```
+
+## Uninstallation
+
+Just remove the symbolic link to uninstall:
+
+```bash
+rm -rf ~/.openclaw/skills/slidev
 ```
 
 ## Getting Help

@@ -19,11 +19,7 @@ Create symlinks so Codex discovers the skills:
 
 ```bash
 mkdir -p ~/.codex/skills
-
-for skill in $(ls ~/.codex/slidevjs-slidev/skills); do
-  rm -rf ~/.codex/skills/$skill
-  ln -s ~/.codex/slidevjs-slidev/skills/$skill ~/.codex/skills/$skill
-done
+ln -s ~/.codex/slidevjs-slidev/skills ~/.codex/skills/slidev
 ```
 
 ### 3. Verify Installation
@@ -38,6 +34,14 @@ If successful, Codex will automatically recognize and invoke the skill.
 ```bash
 cd ~/.codex/slidevjs-slidev
 git pull
+```
+
+## Uninstallation
+
+Just remove the symbolic link to uninstall:
+
+```bash
+rm -rf ~/.codex/skills/slidev
 ```
 
 ## Getting Help

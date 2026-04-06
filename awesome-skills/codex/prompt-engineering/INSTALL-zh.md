@@ -22,3 +22,11 @@ ln -s ~/.codex/agent-use-skills/awesome-skills/skills/prompt-engineering ~/.code
 ```bash
 cd ~/.codex/agent-use-skills && git pull
 ```
+
+## 卸载
+
+删除符号链接即可卸载：
+
+```bash
+rm -rf ~/.codex/skills/prompt-engineering
+```

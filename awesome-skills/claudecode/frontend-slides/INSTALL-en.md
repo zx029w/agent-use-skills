@@ -67,6 +67,14 @@ cd ~/.claude/skills/frontend-slides
 git pull
 ```
 
+## Uninstallation
+
+Just remove the symbolic link to uninstall:
+
+```bash
+rm -rf ~/.claude/skills/frontend-slides
+```
+
 ## Getting Help
 
 - Report issues: https://github.com/zarazhangrui/frontend-slides/issues

@@ -22,3 +22,11 @@ Restart Qoder and try:
 ```bash
 cd ~/.qoder/agent-use-skills && git pull
 ```
+
+## Uninstallation
+
+Just remove the symbolic link to uninstall:
+
+```bash
+rm -rf ~/.qoder/skills/twitter-algorithm-optimizer
+```

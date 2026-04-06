@@ -38,3 +38,11 @@ cd ~/.claude/agent-use-skills && git pull
 
 ## Detailed Documentation
 - [GitHub Repository](https://github.com/Zerone-Agent/agent-use-skills)
+
+## Uninstallation
+
+Just remove the symbolic link to uninstall:
+
+```bash
+rm -rf ~/.claude/skills/twitter-algorithm-optimizer
+```

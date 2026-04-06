@@ -19,11 +19,7 @@ Create symlinks so Cursor discovers the skills:
 
 ```bash
 mkdir -p ~/.cursor/skills
-
-for skill in $(ls ~/.cursor/slidevjs-slidev/skills); do
-  rm -rf ~/.cursor/skills/$skill
-  ln -s ~/.cursor/slidevjs-slidev/skills/$skill ~/.cursor/skills/$skill
-done
+ln -s ~/.cursor/slidevjs-slidev/skills ~/.cursor/skills/slidev
 ```
 
 ### 3. Verify Installation
@@ -38,6 +34,14 @@ If successful, Cursor will automatically recognize and invoke the skill.
 ```bash
 cd ~/.cursor/slidevjs-slidev
 git pull
+```
+
+## Uninstallation
+
+Just remove the symbolic link to uninstall:
+
+```bash
+rm -rf ~/.cursor/skills/slidev
 ```
 
 ## Getting Help

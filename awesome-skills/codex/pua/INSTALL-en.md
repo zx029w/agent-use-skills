@@ -134,3 +134,11 @@ Or project-level:
 ---
 
 **Detailed Documentation**: [GitHub - tanweai/pua](https://github.com/tanweai/pua)
+
+## Uninstallation
+
+Just remove the symbolic link to uninstall:
+
+```bash
+rm -rf ~/.codex/skills/pua
+```

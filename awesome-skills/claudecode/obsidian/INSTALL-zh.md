@@ -41,6 +41,16 @@ cd ~/.claude/obsidian-skills
 git pull
 ```
 
+## 卸载
+
+删除符号链接即可卸载：
+
+```bash
+for skill in $(ls ~/.claude/obsidian-skills/skills); do
+  rm -rf ~/.claude/skills/$skill
+done
+```
+
 ## 获取帮助
 
 - Obsidian Skills GitHub: https://github.com/kepano/obsidian-skills

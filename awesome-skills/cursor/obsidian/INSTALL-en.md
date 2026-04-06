@@ -38,6 +38,14 @@ cd ~/.cursor/obsidian-skills
 git pull
 ```
 
+## Uninstallation
+
+Just remove the symbolic link to uninstall:
+
+```bash
+rm -rf ~/.cursor/skills/obsidian
+```
+
 ## Getting Help
 
 - Obsidian Skills GitHub: https://github.com/kepano/obsidian-skills

@@ -39,6 +39,14 @@ cd ~/.openclaw/anthropics-skills
 git pull
 ```
 
+## Uninstallation
+
+Just remove the symbolic link to uninstall:
+
+```bash
+rm -rf ~/.openclaw/skills/skill-creator
+```
+
 ## Getting Help
 
 - GitHub Repository: https://github.com/anthropics/skills

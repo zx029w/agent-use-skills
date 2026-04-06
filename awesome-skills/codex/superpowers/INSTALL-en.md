@@ -39,6 +39,14 @@ cd ~/.codex/superpowers
 git pull
 ```
 
+## Uninstallation
+
+Just remove the symbolic link to uninstall:
+
+```bash
+rm -rf ~/.codex/skills/superpowers
+```
+
 ## Getting Help
 
 - GitHub: https://github.com/obra/superpowers

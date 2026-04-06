@@ -42,6 +42,16 @@ cd ~/.claude/superpowers
 git pull
 ```
 
+## Uninstallation
+
+Just remove the symbolic link to uninstall:
+
+```bash
+for skill in $(ls ~/.claude/superpowers/skills); do
+  rm -rf ~/.claude/skills/$skill
+done
+```
+
 ## Getting Help
 
 - GitHub: https://github.com/obra/superpowers

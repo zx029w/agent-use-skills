@@ -22,3 +22,11 @@ ln -s ~/.openclaw/agent-use-skills/awesome-skills/skills/twitter-algorithm-optim
 ```bash
 cd ~/.openclaw/agent-use-skills && git pull
 ```
+
+## 卸载
+
+删除符号链接即可卸载：
+
+```bash
+rm -rf ~/.openclaw/skills/twitter-algorithm-optimizer
+```

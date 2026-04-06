@@ -61,6 +61,14 @@ cd $env:USERPROFILE\.openclaw\minimax-skills
 git pull
 ```
 
+## 卸载
+
+删除符号链接即可卸载：
+
+```bash
+rm -rf ~/.openclaw/skills/minimax-skills
+```
+
 ## 获取帮助
 
 - GitHub: https://github.com/MiniMax-AI/skills

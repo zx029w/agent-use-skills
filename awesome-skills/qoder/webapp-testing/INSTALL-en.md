@@ -38,6 +38,14 @@ cd ~/.qoder/anthropics-skills
 git pull
 ```
 
+## Uninstallation
+
+Just remove the symbolic link to uninstall:
+
+```bash
+rm -rf ~/.qoder/skills/webapp-testing
+```
+
 ## Getting Help
 
 - GitHub: https://github.com/anthropics/skills

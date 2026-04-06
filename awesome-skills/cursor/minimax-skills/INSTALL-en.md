@@ -65,6 +65,14 @@ cd $env:USERPROFILE\.cursor\minimax-skills
 git pull
 ```
 
+## Uninstallation
+
+Just remove the symbolic link to uninstall:
+
+```bash
+rm -rf ~/.cursor/skills/minimax-skills
+```
+
 ## Getting Help
 
 - GitHub: https://github.com/MiniMax-AI/skills

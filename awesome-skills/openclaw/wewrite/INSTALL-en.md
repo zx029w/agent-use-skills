@@ -62,6 +62,14 @@ git pull origin main
 
 WeWrite automatically checks for new versions on each run. Say "update" to upgrade when available.
 
+## Uninstallation
+
+Just remove the symbolic link to uninstall:
+
+```bash
+rm -rf ~/.openclaw/skills/wewrite
+```
+
 ## Quick Start
 
 ```

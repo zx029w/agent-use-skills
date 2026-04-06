@@ -55,6 +55,14 @@ cd ~/.openclaw/agent-use-skills
 git pull
 ```
 
+## 卸载
+
+删除符号链接即可卸载：
+
+```bash
+rm -rf ~/.openclaw/skills/openclaw-config-guard
+```
+
 ## 获取帮助
 
 - 技能问题反馈：https://github.com/Zerone-Agent/agent-use-skills/issues

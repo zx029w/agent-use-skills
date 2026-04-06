@@ -48,6 +48,14 @@ cd ~/.config/opencode/anthropics-skills
 git pull
 ```
 
+## Uninstallation
+
+Just remove the symbolic link to uninstall:
+
+```bash
+rm -rf ~/.config/opencode/skills/skill-creator
+```
+
 ## Getting Help
 
 - GitHub Repository: https://github.com/anthropics/skills

@@ -39,6 +39,14 @@ cd ~/.config/opencode/superpowers
 git pull
 ```
 
+## Uninstallation
+
+Just remove the symbolic link to uninstall:
+
+```bash
+rm -rf ~/.config/opencode/skills/superpowers
+```
+
 ## Getting Help
 
 - GitHub: https://github.com/obra/superpowers

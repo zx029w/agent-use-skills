@@ -38,3 +38,11 @@ Generate an image of a serene mountain lake
 
 ## Detailed Documentation
 - [GitHub Repository](https://github.com/sanjay3290/ai-skills)
+
+## Uninstallation
+
+Just remove the symbolic link to uninstall:
+
+```bash
+rm -rf ~/.claude/skills/imagen
+```

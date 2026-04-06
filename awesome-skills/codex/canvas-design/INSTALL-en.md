@@ -35,6 +35,14 @@ cd ~/.codex/agent-use-skills
 git pull
 ```
 
+## Uninstallation
+
+Just remove the symbolic link to uninstall:
+
+```bash
+rm -rf ~/.codex/skills/canvas-design
+```
+
 ## Get Help
 
 - Submit issues: https://github.com/Zerone-Agent/agent-use-skills/issues

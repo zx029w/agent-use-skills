@@ -179,3 +179,11 @@ AI: [Trigger L3] After careful consideration, I'm giving you a 3.25. Now executi
 
 **Detailed Documentation**: [GitHub - tanweai/pua](https://github.com/tanweai/pua)  
 **Official Website**: [openpua.ai](https://openpua.ai)
+
+## Uninstallation
+
+Just remove the symbolic link to uninstall:
+
+```bash
+rm -rf ~/.config/opencode/skills/pua
+```

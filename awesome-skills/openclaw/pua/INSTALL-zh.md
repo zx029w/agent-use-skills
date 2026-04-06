@@ -159,3 +159,11 @@ export PUA_LANGUAGE=zh  # 可选: zh, en, ja
 ---
 
 **详细文档**: [GitHub - tanweai/pua](https://github.com/tanweai/pua)
+
+## 卸载
+
+删除符号链接即可卸载：
+
+```bash
+rm -rf ~/.openclaw/skills/pua
+```

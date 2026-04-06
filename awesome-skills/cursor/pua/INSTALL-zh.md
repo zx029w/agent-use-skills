@@ -92,3 +92,11 @@ Cursor 的 `.mdc` 规则文件包含：
 ---
 
 **详细文档**: [GitHub - tanweai/pua](https://github.com/tanweai/pua)
+
+## 卸载
+
+删除符号链接即可卸载：
+
+```bash
+rm -rf ~/.cursor/skills/pua
+```

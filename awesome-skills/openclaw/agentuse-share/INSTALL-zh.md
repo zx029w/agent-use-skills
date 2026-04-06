@@ -39,6 +39,14 @@ cd ~/.openclaw/agent-use-skills
 git pull
 ```
 
+## 卸载
+
+删除符号链接即可卸载：
+
+```bash
+rm -rf ~/.openclaw/skills/agentuse-share
+```
+
 ## 获取帮助
 
 - 提交问题：https://github.com/Zerone-Agent/agent-use-skills/issues

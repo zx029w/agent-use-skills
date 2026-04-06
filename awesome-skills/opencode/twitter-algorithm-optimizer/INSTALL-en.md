@@ -22,3 +22,11 @@ Restart OpenCode and try:
 ```bash
 cd ~/.config/opencode/agent-use-skills && git pull
 ```
+
+## Uninstallation
+
+Just remove the symbolic link to uninstall:
+
+```bash
+rm -rf ~/.config/opencode/skills/twitter-algorithm-optimizer
+```

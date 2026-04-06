@@ -22,3 +22,11 @@ ln -s ~/.qoder/agent-use-skills/awesome-skills/skills/prompt-engineering ~/.qode
 ```bash
 cd ~/.qoder/agent-use-skills && git pull
 ```
+
+## 卸载
+
+删除符号链接即可卸载：
+
+```bash
+rm -rf ~/.qoder/skills/prompt-engineering
+```

@@ -67,6 +67,14 @@ npm update -g uipro-cli
 uipro init --ai claude
 ```
 
+## 卸载
+
+删除符号链接即可卸载：
+
+```bash
+rm -rf ~/.claude/skills/ui-ux-pro-max-skill
+```
+
 ## 详细文档
 
 - [GitHub 仓库](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill)

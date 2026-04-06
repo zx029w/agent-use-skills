@@ -39,6 +39,14 @@ cd ~/.qoder/agent-use-skills
 git pull
 ```
 
+## Uninstallation
+
+Just remove the symbolic link to uninstall:
+
+```bash
+rm -rf ~/.qoder/skills/multi-search-engine
+```
+
 ## Get Help
 
 - Submit issues: https://github.com/Zerone-Agent/agent-use-skills/issues

@@ -39,6 +39,14 @@ cd ~/.claude/agent-use-skills
 git pull
 ```
 
+## Uninstallation
+
+Just remove the symbolic link to uninstall:
+
+```bash
+rm -rf ~/.claude/skills/agentuse-share
+```
+
 ## Get Help
 
 - Submit issues: https://github.com/Zerone-Agent/agent-use-skills/issues

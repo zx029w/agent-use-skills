@@ -39,6 +39,14 @@ cd ~/.openclaw/superpowers
 git pull
 ```
 
+## Uninstallation
+
+Just remove the symbolic link to uninstall:
+
+```bash
+rm -rf ~/.openclaw/skills/superpowers
+```
+
 ## Getting Help
 
 - GitHub: https://github.com/obra/superpowers

@@ -35,6 +35,14 @@ cd ~/.config/opencode/obsidian-skills
 git pull
 ```
 
+## Uninstallation
+
+Just remove the symbolic link to uninstall:
+
+```bash
+rm -rf ~/.config/opencode/skills/obsidian
+```
+
 ## Getting Help
 
 - Obsidian Skills GitHub: https://github.com/kepano/obsidian-skills

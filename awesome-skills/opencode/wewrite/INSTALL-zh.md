@@ -62,6 +62,14 @@ git pull origin main
 
 WeWrite 会在每次运行时自动检查新版本。有更新时说"更新"即可升级。
 
+## 卸载
+
+删除符号链接即可卸载：
+
+```bash
+rm -rf ~/.config/opencode/skills/wewrite
+```
+
 ## 快速开始
 
 ```

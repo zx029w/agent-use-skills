@@ -22,3 +22,11 @@ Restart Cursor, ensure you are in **Agent** mode, and try:
 ```bash
 cd ~/.cursor/agent-use-skills && git pull
 ```
+
+## Uninstallation
+
+Just remove the symbolic link to uninstall:
+
+```bash
+rm -rf ~/.cursor/skills/prompt-engineering
+```

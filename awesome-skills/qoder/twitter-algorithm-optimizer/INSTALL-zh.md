@@ -22,3 +22,11 @@ ln -s ~/.qoder/agent-use-skills/awesome-skills/skills/twitter-algorithm-optimize
 ```bash
 cd ~/.qoder/agent-use-skills && git pull
 ```
+
+## 卸载
+
+删除符号链接即可卸载：
+
+```bash
+rm -rf ~/.qoder/skills/twitter-algorithm-optimizer
+```

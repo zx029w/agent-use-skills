@@ -64,6 +64,22 @@ cd $env:USERPROFILE\.claude\minimax-skills
 git pull
 ```
 
+## Uninstallation
+
+Just remove the symbolic link to uninstall:
+
+**macOS / Linux:**
+```bash
+for skill in $(ls ~/.claude/minimax-skills/skills); do
+  rm -rf ~/.claude/skills/$skill
+done
+```
+
+**Windows (PowerShell):**
+```powershell
+Get-ChildItem "$env:USERPROFILE\.claude\minimax-skills\skills" | ForEach-Object { Remove-Item -Recurse -Force "$env:USERPROFILE\.claude\skills\$($_.Name)" }
+```
+
 ## Getting Help
 
 - GitHub: https://github.com/MiniMax-AI/skills

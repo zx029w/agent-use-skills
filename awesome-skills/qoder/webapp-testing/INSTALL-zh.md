@@ -38,6 +38,14 @@ cd ~/.qoder/anthropics-skills
 git pull
 ```
 
+## 卸载
+
+删除符号链接即可卸载：
+
+```bash
+rm -rf ~/.qoder/skills/webapp-testing
+```
+
 ## 获取帮助
 
 - GitHub: https://github.com/anthropics/skills

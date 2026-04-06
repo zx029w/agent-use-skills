@@ -37,6 +37,14 @@ cd ~/.cursor/anti-distill
 git pull
 ```
 
+## Uninstallation
+
+Just remove the symbolic link to uninstall:
+
+```bash
+rm -rf ~/.cursor/skills/anti-distill
+```
+
 ## Getting Help
 
 - GitHub: https://github.com/leilei926524-tech/anti-distill

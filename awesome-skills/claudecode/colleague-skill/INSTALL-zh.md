@@ -37,6 +37,14 @@ cd ~/.claude/colleague-skill
 git pull
 ```
 
+## 卸载
+
+删除符号链接即可卸载：
+
+```bash
+rm -rf ~/.claude/skills/create-colleague
+```
+
 ## 获取帮助
 
 - GitHub：https://github.com/titanwings/colleague-skill

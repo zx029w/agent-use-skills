@@ -38,6 +38,14 @@ cd ~/.config/opencode/anthropics-skills
 git pull
 ```
 
+## Uninstallation
+
+Just remove the symbolic link to uninstall:
+
+```bash
+rm -rf ~/.config/opencode/skills/webapp-testing
+```
+
 ## Getting Help
 
 - GitHub: https://github.com/anthropics/skills

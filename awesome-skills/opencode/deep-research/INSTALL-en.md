@@ -61,6 +61,14 @@ git pull
 pip install -r awesome-skills/skills/deep-research/requirements.txt
 ```
 
+## Uninstallation
+
+Just remove the symbolic link to uninstall:
+
+```bash
+rm -rf ~/.config/opencode/skills/deep-research
+```
+
 ## Getting Help
 
 - Report issues: https://github.com/Zerone-Agent/agent-use-skills/issues

@@ -179,3 +179,11 @@ AI: [触发 L3] 经过慎重考虑，这次给你打 3.25。现在开始执行 7
 
 **详细文档**: [GitHub - tanweai/pua](https://github.com/tanweai/pua)  
 **官方网站**: [openpua.ai](https://openpua.ai)
+
+## 卸载
+
+删除符号链接即可卸载：
+
+```bash
+rm -rf ~/.config/opencode/skills/pua
+```

@@ -37,6 +37,14 @@ cd ~/.claude/colleague-skill
 git pull
 ```
 
+## Uninstallation
+
+Just remove the symbolic link to uninstall:
+
+```bash
+rm -rf ~/.claude/skills/create-colleague
+```
+
 ## Getting Help
 
 - GitHub: https://github.com/titanwings/colleague-skill

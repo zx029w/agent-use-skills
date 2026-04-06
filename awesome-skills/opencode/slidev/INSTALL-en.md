@@ -19,11 +19,7 @@ Create symlinks so OpenCode discovers the skills:
 
 ```bash
 mkdir -p ~/.config/opencode/skills
-
-for skill in $(ls ~/.config/opencode/slidevjs-slidev/skills); do
-  rm -rf ~/.config/opencode/skills/$skill
-  ln -s ~/.config/opencode/slidevjs-slidev/skills/$skill ~/.config/opencode/skills/$skill
-done
+ln -s ~/.config/opencode/slidevjs-slidev/skills ~/.config/opencode/skills/slidev
 ```
 
 ### 3. Verify Installation
@@ -38,6 +34,14 @@ If successful, OpenCode will automatically recognize and invoke the skill.
 ```bash
 cd ~/.config/opencode/slidevjs-slidev
 git pull
+```
+
+## Uninstallation
+
+Just remove the symbolic link to uninstall:
+
+```bash
+rm -rf ~/.config/opencode/skills/slidev
 ```
 
 ## Getting Help

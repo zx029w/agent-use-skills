@@ -63,6 +63,14 @@ cd $env:USERPROFILE\.minimax-skills
 git pull
 ```
 
+## Uninstallation
+
+Just remove the symbolic link to uninstall:
+
+```bash
+rm -rf ~/.config/opencode/skills/
+```
+
 ## Getting Help
 
 - GitHub: https://github.com/MiniMax-AI/skills
