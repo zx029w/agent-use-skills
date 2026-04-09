@@ -55,13 +55,12 @@ Each framework provides its own skill loading mechanism. Please refer to the ins
 
 | Skill Name | Description | Status |
 | :--- | :--- | :--- |
+| **[minimax-skills](awesome-skills/introductions/en/minimax-skills.md)** | A comprehensive skill library covering frontend, fullstack, mobile, shader programming, and document processing (PDF, PPTX, XLSX, DOCX). | ✅ Verified |
 | **[agent-browser](awesome-skills/introductions/en/agent-browser.md)** | A fast Rust-based headless browser automation CLI with Node.js fallback. Enables Agent navigation, interaction, and snapshots. | 🔍 Pending Verification |
 | **[github](awesome-skills/introductions/en/github.md)** | Official GitHub CLI integration for managing Issues, PRs, and monitoring CI/CD Action runs. | 🔍 Pending Verification |
 | **[content-research-writer](awesome-skills/introductions/en/content-research-writer.md)** | A collaborative writing partner that helps research, outline, draft, and refine content with proper citations while preserving your voice. | ✅ Verified |
 | **[deep-research](awesome-skills/introductions/en/deep-research.md)** | Autonomous multi-step deep research skill powered by Gemini Deep Research Agent for market analysis, literature reviews, due diligence, and more — producing detailed, cited reports. | ✅ Verified |
 | **[humanizer](awesome-skills/introductions/en/humanizer.md)** | Remove signs of AI-generated writing from text to make it sound more natural and human-written. | ✅ Verified |
-| **[tavily-search](awesome-skills/introductions/en/tavily-search.md)** | AI-optimized web search via Tavily API. Returns concise, relevant results for AI agents. | ✅ Verified |
-| **[multi-search-engine](awesome-skills/introductions/en/multi-search-engine.md)** | Multi search engine integration with 17 engines (8 CN + 9 Global). Supports advanced search operators, time filters, and WolframAlpha knowledge queries. | 🔍 Pending Verification |
 
 ### Design & Creative
 
@@ -69,13 +68,14 @@ Each framework provides its own skill loading mechanism. Please refer to the ins
 | :--- | :--- | :--- |
 | **[ui-ux-pro-max-skill](awesome-skills/introductions/en/ui-ux-pro-max-skill.md)** | AI-powered design intelligence with 67 UI styles, 96 color palettes, and 100 industry-specific reasoning rules. | ✅ Verified |
 | **[imagen](awesome-skills/introductions/en/imagen.md)** | Generate images using Google Gemini's image generation capabilities. Pure Python implementation with zero dependencies. | 🔍 Pending Verification |
+| **[baoyu-skills](awesome-skills/introductions/en/baoyu-skills.md)** | A practical skill collection for AI coding agents covering content creation, image generation, social media publishing, and document processing. | ✅ Verified |
+| **[slidev](awesome-skills/introductions/en/slidev.md)** | A presentation slides maker tailored for developers, built on Vite, Vue, and Markdown. | ✅ Verified |
 
 ### Dev & Testing
 
 | Skill Name | Description | Status |
 | :--- | :--- | :--- |
 | **[agentuse-share](awesome-skills/introductions/en/agentuse-share.md)** | A standardized workflow for contributing new skills to this repository, including research, documentation, and installation guide generation. | ✅ Verified |
-| **[skill-market](awesome-skills/introductions/en/skill-market.md)** | Automated discovery and installation of specialized agent skills from the Zerone Skill Market. | ✅ Verified |
 | **[superpowers](awesome-skills/introductions/en/superpowers.md)** | Battle-tested 20+ core skills including TDD, debugging, and collaboration patterns. | ✅ Verified |
 | **[playwright-skill](awesome-skills/introductions/en/playwright-skill.md)** | Complete browser automation with Playwright. Auto-detects dev servers, performs testing, screenshots, and UX validation. | 🔍 Pending Verification |
 | **[prompt-engineering](awesome-skills/introductions/en/prompt-engineering.md)** | Advanced prompt engineering techniques including Few-Shot, CoT, and persuasion principles to maximize Agent performance. | 🔍 Pending Verification |
@@ -86,7 +86,17 @@ Each framework provides its own skill loading mechanism. Please refer to the ins
 
 | Skill Name | Description | Status |
 | :--- | :--- | :--- |
+| **[skill-market](awesome-skills/introductions/en/skill-market.md)** | Automated discovery and installation of specialized agent skills from the Zerone Skill Market. | ✅ Verified |
 | **[openclaw-config-guard](awesome-skills/introductions/en/openclaw-config-guard.md)** | A safety-first maintenance skill for auditing and repairing OpenClaw configuration with deterministic validation, backups, rollback, and change reporting. | ✅ Verified |
+
+### Productivity Tools
+
+| Skill Name | Description | Status |
+| :--- | :--- | :--- |
+| **[obsidian](awesome-skills/introductions/en/obsidian.md)** | Agent Skills for Obsidian knowledge management tool, compatible with Claude Code, Codex CLI, and other Skills-compatible AI coding agents. | ✅ Verified |
+| **[skill-creator](awesome-skills/introductions/en/skill-creator.md)** | Anthropic's official skill creation and iterative optimization tool for creating, testing, evaluating, and improving AI programming skills. | ✅ Verified |
+| **[anti-distill](awesome-skills/introductions/en/anti-distill.md)** | A tool to clean your forced-to-write employee AI Skills, keeping core knowledge assets strictly to yourself. | 🔍 Pending Verification |
+| **[colleague-skill](awesome-skills/introductions/en/colleague-skill.md)** | A tool that distills a colleague into an AI Skill by automatically collecting Feishu/DingTalk data. | 🔍 Pending Verification |
 
 ## 🛠️ Skill Development & Contribution
 

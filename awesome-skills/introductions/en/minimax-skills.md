@@ -4,7 +4,7 @@
 
 ## Tags
 
-💻 Dev & Testing | ✅ Verified
+🗂️ Document & Office | ✅ Verified
 
 ## Core Philosophy
 

@@ -55,13 +55,12 @@ AgentUse Skills 支持以下 AI Agent 框架：
 
 | 技能名称 | 描述 | 状态 |
 | :--- | :--- | :--- |
+| **[minimax-skills](awesome-skills/introductions/zh/minimax-skills.md)** | 综合技能库，覆盖前端、全栈、移动端、着色器开发及文档处理（PDF、PPTX、XLSX、DOCX）。 | ✅ 已验证 |
 | **[agent-browser](awesome-skills/introductions/zh/agent-browser.md)** | 基于 Rust 的高性能无头浏览器自动化 CLI。支持 Agent 导航、交互及快照获取。 | 🔍 待验证 |
 | **[github](awesome-skills/introductions/zh/github.md)** | GitHub 官方 CLI 集成，支持管理 Issue、PR 及监控 CI/CD 流水线运行详情。 | 🔍 待验证 |
 | **[content-research-writer](awesome-skills/introductions/zh/content-research-writer.md)** | 内容写作协作技能，帮助调研、构建大纲、撰写草稿并优化内容，支持引用管理，同时保持你独特的写作风格。 | ✅ 已验证 |
 | **[deep-research](awesome-skills/introductions/zh/deep-research.md)** | 自主多步骤深度研究技能，利用 Gemini Deep Research Agent 进行市场分析、文献综述、尽职调查等，生成带引用的详细报告。 | ✅ 已验证 |
 | **[humanizer](awesome-skills/introductions/zh/humanizer.md)** | 识别并消除文本中的 AI 写作痕迹，使文字听起来更自然、更具人情味。 | ✅ 已验证 |
-| **[tavily-search](awesome-skills/introductions/zh/tavily-search.md)** | 利用 Tavily API 为 AI Agent 优化的网络搜索技能。返回干净、相关的搜索结果。 | ✅ 已验证 |
-| **[multi-search-engine](awesome-skills/introductions/zh/multi-search-engine.md)** | 集成 17 个搜索引擎（8 个国内 + 9 个国际），支持高级搜索语法与 WolframAlpha 知识计算。 | 🔍 待验证 |
 
 ### 设计与创意
 
@@ -69,13 +68,14 @@ AgentUse Skills 支持以下 AI Agent 框架：
 | :--- | :--- | :--- |
 | **[ui-ux-pro-max-skill](awesome-skills/introductions/zh/ui-ux-pro-max-skill.md)** | AI 驱动的设计智能体，提供 67 种 UI 风格、96 种配色方案和 100 条行业特定推理规则。 | ✅ 已验证 |
 | **[imagen](awesome-skills/introductions/zh/imagen.md)** | 利用 Google Gemini 的图像生成能力，在 AI 编码会话期间直接生成图像。纯 Python 实现，零依赖。 | 🔍 待验证 |
+| **[baoyu-skills](awesome-skills/introductions/zh/baoyu-skills.md)** | 宝玉分享的效率提升技能集，涵盖内容创作、图像生成、社交媒体发布和文档处理等多个维度。 | ✅ 已验证 |
+| **[slidev](awesome-skills/introductions/zh/slidev.md)** | 基于 Vite、Vue 和 Markdown 构建的面向开发者的幻灯片制作和演示工具。 | ✅ 已验证 |
 
 ### 开发与测试
 
 | 技能名称 | 描述 | 状态 |
 | :--- | :--- | :--- |
 | **[agentuse-share](awesome-skills/introductions/zh/agentuse-share.md)** | 标准化 Skill 贡献工作流，涵盖调研、文档撰写及多平台安装指南生成。 | ✅ 已验证 |
-| **[skill-market](awesome-skills/introductions/zh/skill-market.md)** | 从 Zerone Skill Market 自动发现并安装专业 Agent 技能。 | ✅ 已验证 |
 | **[superpowers](awesome-skills/introductions/zh/superpowers.md)** | 20+ 核心技能，涵盖 TDD、调试和协作模式。 | ✅ 已验证 |
 | **[playwright-skill](awesome-skills/introductions/zh/playwright-skill.md)** | 基于 Playwright 的全功能浏览器自动化技能，支持自动探测服务器、网页测试、截图及 UX 验证。 | 🔍 待验证 |
 | **[prompt-engineering](awesome-skills/introductions/zh/prompt-engineering.md)** | 高级提示词工程模式，涵盖少样本学习、思维链及说服原则，旨在最大化 Agent 执行效率。 | 🔍 待验证 |
@@ -86,7 +86,17 @@ AgentUse Skills 支持以下 AI Agent 框架：
 
 | 技能名称 | 描述 | 状态 |
 | :--- | :--- | :--- |
+| **[skill-market](awesome-skills/introductions/zh/skill-market.md)** | 从 Zerone Skill Market 自动发现并安装专业 Agent 技能。 | ✅ 已验证 |
 | **[openclaw-config-guard](awesome-skills/introductions/zh/openclaw-config-guard.md)** | 一个以安全为优先的配置维护技能，用于对 OpenClaw 配置进行审计与修复，并提供确定性校验、备份、回滚和变更报告能力。 | ✅ 已验证 |
+
+### 效率工具
+
+| 技能名称 | 描述 | 状态 |
+| :--- | :--- | :--- |
+| **[obsidian](awesome-skills/introductions/zh/obsidian.md)** | 专为 Obsidian 知识管理工具设计的 Agent Skills，兼容 Claude Code、Codex CLI 等 AI 编码助手。 | ✅ 已验证 |
+| **[skill-creator](awesome-skills/introductions/zh/skill-creator.md)** | Anthropic 官方技能创建与迭代优化工具，实现从构思到部署的完整工作流。 | ✅ 已验证 |
+| **[anti-distill](awesome-skills/introductions/zh/anti-distill.md)** | 专为保护员工核心知识资产设计的工具，"清洗"被迫写出的工作 Skill，核心经验留给自己。 | 🔍 待验证 |
+| **[colleague-skill](awesome-skills/introductions/zh/colleague-skill.md)** | 将同事"蒸馏"为 AI Skill，通过自动采集飞书/钉钉数据生成数字化同事。 | 🔍 待验证 |
 
 ## 🛠️ 技能开发与贡献
 
