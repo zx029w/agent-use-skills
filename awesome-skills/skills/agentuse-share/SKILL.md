@@ -100,7 +100,7 @@ If no `SKILL.md` exists under `awesome-skills/skills/<skill-name>/`:
 > 2. Leave exactly one blank line between the heading and the tags.
 > 3. The tags content must be a single line in the format: `[Emoji] [Category] | [Emoji] [Status]`.
 > 4. Use a pipe character with exactly one space on each side (` | `) as the separator.
-> 5. **Common Categories (zh/en)**: `🗂️ 文档与办公` / `🗂️ Documents & Office`, `🎨 设计与创意` / `🎨 Design & Creativity`, `💻 开发与测试` / `💻 Development & Testing`, `🛠️ 效率工具` / `🛠️ Productivity Tools`.
+> 5. **Common Categories (zh/en)**: `🧘 人生与哲学` / `🧘 Life & Philosophy`, `🗂️ 文档与办公` / `🗂️ Documents & Office`, `🎨 设计与创意` / `🎨 Design & Creativity`, `💻 开发与测试` / `💻 Development & Testing`, `🛠️ 效率工具` / `🛠️ Productivity Tools`.
 > 6. **Common Statuses (zh/en)**: `✅ 已验证` / `✅ Verified`, `🔍 待验证` / `🔍 Pending Verification`.
 
 ## Core Philosophy
