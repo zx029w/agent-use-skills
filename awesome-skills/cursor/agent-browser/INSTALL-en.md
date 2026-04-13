@@ -1,8 +1,8 @@
-# Install Agent Browser in OpenClaw
+# Install Agent Browser in Cursor
 
 ## Prerequisites
 
-- [OpenClaw](https://github.com/nicepkg/openclaw) installed
+- [Cursor](https://cursor.sh) installed
 - Node.js and npm installed
 - Git installed
 
@@ -22,22 +22,22 @@ agent-browser install --with-deps
 Clone the skills library to your local machine:
 
 ```bash
-git clone https://github.com/vercel-labs/agent-browser.git ~/.openclaw/agent-browser
+git clone https://github.com/vercel-labs/agent-browser.git ~/.cursor/agent-browser
 ```
 
-### 3. Configure Skill in OpenClaw
+### 3. Configure Skill in Cursor
 
-Create a symbolic link so OpenClaw can find and use the skill:
+Create a symbolic link so Cursor can find and use the skill:
 
 ```bash
-mkdir -p ~/.openclaw/skills
-rm -rf ~/.openclaw/skills/agent-browser
-ln -s ~/.openclaw/agent-browser/skills/agent-browser ~/.openclaw/skills/agent-browser
+mkdir -p ~/.cursor/skills
+rm -rf ~/.cursor/skills/agent-browser
+ln -s ~/.cursor/agent-browser/skills/agent-browser ~/.cursor/skills/agent-browser
 ```
 
 ## Verify Installation
 
-Restart OpenClaw and try:
+Restart Cursor and try:
 
 - "Open google.com and tell me the reference ID of the search box"
 - "do you have agent-browser skill?"
@@ -45,14 +45,14 @@ Restart OpenClaw and try:
 ## Update
 
 1. **Update CLI**: `npm update -g agent-browser`
-2. **Update Skill Library**: `cd ~/.openclaw/agent-browser && git pull`
+2. **Update Skill Library**: `cd ~/.cursor/agent-browser && git pull`
 
 ## Uninstallation
 
 Just remove the symbolic link to uninstall:
 
 ```bash
-rm -rf ~/.openclaw/skills/agent-browser
+rm -rf ~/.cursor/skills/agent-browser
 ```
 
 ## Get Help

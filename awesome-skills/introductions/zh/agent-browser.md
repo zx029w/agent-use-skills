@@ -27,9 +27,14 @@
 
 ## 安装与支持
 
-Agent Browser 目前仅支持以下平台：
+Agent Browser 目前支持以下平台：
 
+- [Claude Code](../../claudecode/agent-browser/INSTALL-zh.md)
+- [Cursor](../../cursor/agent-browser/INSTALL-zh.md)
+- [Codex](../../codex/agent-browser/INSTALL-zh.md)
+- [OpenCode](../../opencode/agent-browser/INSTALL-zh.md)
 - [OpenClaw](../../openclaw/agent-browser/INSTALL-zh.md)
+- [Qoder](../../qoder/agent-browser/INSTALL-zh.md)
 
 ---
 更多信息请查看：[Agent Browser GitHub](https://github.com/vercel-labs/agent-browser)

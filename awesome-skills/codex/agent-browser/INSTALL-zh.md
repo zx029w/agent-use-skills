@@ -1,8 +1,8 @@
-# 在 OpenClaw 中安装 Agent Browser
+# 在 Codex 中安装 Agent Browser
 
 ## 前置条件
 
-- 已安装 [OpenClaw](https://github.com/nicepkg/openclaw)
+- 已安装 [Codex](https://github.com/codex-editor/codex)
 - 已安装 Node.js 和 npm
 - 已安装 Git
 
@@ -22,22 +22,22 @@ agent-browser install --with-deps
 将技能库克隆到本地：
 
 ```bash
-git clone https://github.com/vercel-labs/agent-browser.git ~/.openclaw/agent-browser
+git clone https://github.com/vercel-labs/agent-browser.git ~/.codex/agent-browser
 ```
 
-### 3. 在 OpenClaw 中配置技能
+### 3. 在 Codex 中配置技能
 
-创建符号链接，使 OpenClaw 能够调用该技能：
+创建符号链接，使 Codex 能够调用该技能：
 
 ```bash
-mkdir -p ~/.openclaw/skills
-rm -rf ~/.openclaw/skills/agent-browser
-ln -s ~/.openclaw/agent-browser/skills/agent-browser ~/.openclaw/skills/agent-browser
+mkdir -p ~/.codex/skills
+rm -rf ~/.codex/skills/agent-browser
+ln -s ~/.codex/agent-browser/skills/agent-browser ~/.codex/skills/agent-browser
 ```
 
 ## 验证安装
 
-重启 OpenClaw，尝试提问：
+重启 Codex，尝试提问：
 
 - "打开 google.com 并告诉我搜索框的引用 ID"
 - "do you have agent-browser skill?"
@@ -45,14 +45,14 @@ ln -s ~/.openclaw/agent-browser/skills/agent-browser ~/.openclaw/skills/agent-br
 ## 更新
 
 1. **更新 CLI**: `npm update -g agent-browser`
-2. **更新技能库**: `cd ~/.openclaw/agent-browser && git pull`
+2. **更新技能库**: `cd ~/.codex/agent-browser && git pull`
 
 ## 卸载
 
 删除符号链接即可卸载：
 
 ```bash
-rm -rf ~/.openclaw/skills/agent-browser
+rm -rf ~/.codex/skills/agent-browser
 ```
 
 ## 获取帮助

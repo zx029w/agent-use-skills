@@ -27,9 +27,14 @@
 
 ## Installation & Support
 
-Agent Browser currently supports the following platform:
+Agent Browser currently supports the following platforms:
 
+- [Claude Code](../../claudecode/agent-browser/INSTALL-en.md)
+- [Cursor](../../cursor/agent-browser/INSTALL-en.md)
+- [Codex](../../codex/agent-browser/INSTALL-en.md)
+- [OpenCode](../../opencode/agent-browser/INSTALL-en.md)
 - [OpenClaw](../../openclaw/agent-browser/INSTALL-en.md)
+- [Qoder](../../qoder/agent-browser/INSTALL-en.md)
 
 ---
 For more information, visit: [Agent Browser GitHub](https://github.com/vercel-labs/agent-browser)

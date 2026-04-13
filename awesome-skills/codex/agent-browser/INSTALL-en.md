@@ -1,8 +1,8 @@
-# Install Agent Browser in OpenClaw
+# Install Agent Browser in Codex
 
 ## Prerequisites
 
-- [OpenClaw](https://github.com/nicepkg/openclaw) installed
+- [Codex](https://github.com/codex-editor/codex) installed
 - Node.js and npm installed
 - Git installed
 
@@ -22,22 +22,22 @@ agent-browser install --with-deps
 Clone the skills library to your local machine:
 
 ```bash
-git clone https://github.com/vercel-labs/agent-browser.git ~/.openclaw/agent-browser
+git clone https://github.com/vercel-labs/agent-browser.git ~/.codex/agent-browser
 ```
 
-### 3. Configure Skill in OpenClaw
+### 3. Configure Skill in Codex
 
-Create a symbolic link so OpenClaw can find and use the skill:
+Create a symbolic link so Codex can find and use the skill:
 
 ```bash
-mkdir -p ~/.openclaw/skills
-rm -rf ~/.openclaw/skills/agent-browser
-ln -s ~/.openclaw/agent-browser/skills/agent-browser ~/.openclaw/skills/agent-browser
+mkdir -p ~/.codex/skills
+rm -rf ~/.codex/skills/agent-browser
+ln -s ~/.codex/agent-browser/skills/agent-browser ~/.codex/skills/agent-browser
 ```
 
 ## Verify Installation
 
-Restart OpenClaw and try:
+Restart Codex and try:
 
 - "Open google.com and tell me the reference ID of the search box"
 - "do you have agent-browser skill?"
@@ -45,14 +45,14 @@ Restart OpenClaw and try:
 ## Update
 
 1. **Update CLI**: `npm update -g agent-browser`
-2. **Update Skill Library**: `cd ~/.openclaw/agent-browser && git pull`
+2. **Update Skill Library**: `cd ~/.codex/agent-browser && git pull`
 
 ## Uninstallation
 
 Just remove the symbolic link to uninstall:
 
 ```bash
-rm -rf ~/.openclaw/skills/agent-browser
+rm -rf ~/.codex/skills/agent-browser
 ```
 
 ## Get Help

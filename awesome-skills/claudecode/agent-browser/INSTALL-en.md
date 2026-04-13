@@ -1,8 +1,8 @@
-# Install Agent Browser in OpenClaw
+# Install Agent Browser in Claude Code
 
 ## Prerequisites
 
-- [OpenClaw](https://github.com/nicepkg/openclaw) installed
+- [Claude Code](https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/overview) installed
 - Node.js and npm installed
 - Git installed
 
@@ -22,22 +22,22 @@ agent-browser install --with-deps
 Clone the skills library to your local machine:
 
 ```bash
-git clone https://github.com/vercel-labs/agent-browser.git ~/.openclaw/agent-browser
+git clone https://github.com/vercel-labs/agent-browser.git ~/.claude/agent-browser
 ```
 
-### 3. Configure Skill in OpenClaw
+### 3. Configure Skill in Claude Code
 
-Create a symbolic link so OpenClaw can find and use the skill:
+Create a symbolic link so Claude Code can find and use the skill:
 
 ```bash
-mkdir -p ~/.openclaw/skills
-rm -rf ~/.openclaw/skills/agent-browser
-ln -s ~/.openclaw/agent-browser/skills/agent-browser ~/.openclaw/skills/agent-browser
+mkdir -p ~/.claude/skills
+rm -rf ~/.claude/skills/agent-browser
+ln -s ~/.claude/agent-browser/skills/agent-browser ~/.claude/skills/agent-browser
 ```
 
 ## Verify Installation
 
-Restart OpenClaw and try:
+Restart Claude Code and try:
 
 - "Open google.com and tell me the reference ID of the search box"
 - "do you have agent-browser skill?"
@@ -45,14 +45,14 @@ Restart OpenClaw and try:
 ## Update
 
 1. **Update CLI**: `npm update -g agent-browser`
-2. **Update Skill Library**: `cd ~/.openclaw/agent-browser && git pull`
+2. **Update Skill Library**: `cd ~/.claude/agent-browser && git pull`
 
 ## Uninstallation
 
 Just remove the symbolic link to uninstall:
 
 ```bash
-rm -rf ~/.openclaw/skills/agent-browser
+rm -rf ~/.claude/skills/agent-browser
 ```
 
 ## Get Help
