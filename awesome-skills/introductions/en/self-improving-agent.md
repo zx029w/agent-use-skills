@@ -27,9 +27,10 @@
 
 ## Installation & Support
 
-Self-Improving Agent currently primarily supports the following platform:
+Self-Improving Agent currently primarily supports the following platforms:
 
 - [OpenClaw](../../openclaw/self-improving-agent/INSTALL-en.md)
+- [OpenAgent](../../openagent/self-improving-agent/INSTALL-en.md)
 
 ---
 For more information, visit: [GitHub - peterskoett/self-improving-agent](https://github.com/peterskoett/self-improving-agent)

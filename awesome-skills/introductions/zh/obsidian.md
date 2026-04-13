@@ -69,6 +69,7 @@ Obsidian Skills 支持以下 AI 编辑器和平台：
 - [Codex CLI](../../codex/obsidian/INSTALL-zh.md)
 - [OpenCode](../../opencode/obsidian/INSTALL-zh.md)
 - [OpenClaw](../../openclaw/obsidian/INSTALL-zh.md)
+- [OpenAgent](../../openagent/obsidian/INSTALL-zh.md)
 - [Qoder](../../qoder/obsidian/INSTALL-zh.md)
 
 ---

@@ -60,6 +60,7 @@
 - [Cursor](../../cursor/qiushi-skill/INSTALL-zh.md)
 - [Codex](../../codex/qiushi-skill/INSTALL-zh.md)
 - [OpenCode](../../opencode/qiushi-skill/INSTALL-zh.md)
+- [OpenAgent](../../openagent/qiushi-skill/INSTALL-zh.md)
 
 ---
 

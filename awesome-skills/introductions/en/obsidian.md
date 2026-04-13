@@ -69,6 +69,7 @@ Obsidian Skills supports the following AI editors and platforms:
 - [Codex CLI](../../codex/obsidian/INSTALL-en.md)
 - [OpenCode](../../opencode/obsidian/INSTALL-en.md)
 - [OpenClaw](../../openclaw/obsidian/INSTALL-en.md)
+- [OpenAgent](../../openagent/obsidian/INSTALL-en.md)
 - [Qoder](../../qoder/obsidian/INSTALL-en.md)
 
 ---

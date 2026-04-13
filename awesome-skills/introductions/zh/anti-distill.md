@@ -26,6 +26,7 @@ Anti-Distill 支持以下 AI 编辑器和平台：
 - [Codex](../../codex/anti-distill/INSTALL-zh.md)
 - [OpenCode](../../opencode/anti-distill/INSTALL-zh.md)
 - [OpenClaw](../../openclaw/anti-distill/INSTALL-zh.md)
+- [OpenAgent](../../openagent/anti-distill/INSTALL-zh.md)
 - [Qoder](../../qoder/anti-distill/INSTALL-zh.md)
 
 ---

@@ -60,6 +60,7 @@ Qiushi Skill supports the following AI editors and platforms:
 - [Cursor](../../cursor/qiushi-skill/INSTALL-en.md)
 - [Codex](../../codex/qiushi-skill/INSTALL-en.md)
 - [OpenCode](../../opencode/qiushi-skill/INSTALL-en.md)
+- [OpenAgent](../../openagent/qiushi-skill/INSTALL-en.md)
 
 ---
 
