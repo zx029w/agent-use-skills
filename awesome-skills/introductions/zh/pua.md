@@ -1,6 +1,6 @@
 # PUA (高能动性技能)
 
-**PUA** 是一款使用大厂 PUA 话术/PIP 绩效改进计划来逼迫 AI 穷尽所有方案才允许放弃的高能动性技能插件。支持 Claude Code、OpenAI Codex CLI、Cursor、Kiro、CodeBuddy、OpenClaw、Google Antigravity 和 OpenCode 等多个 AI 编码平台。
+**PUA** 是一款使用大厂 PUA 话术/PIP 绩效改进计划来逼迫 AI 穷尽所有方案才允许放弃的高能动性技能插件。支持 Claude Code、OpenAI Codex CLI、Cursor、Kiro、CodeBuddy、OpenClaw 和 OpenCode 等多个 AI 编码平台。
 
 ## 标签
 

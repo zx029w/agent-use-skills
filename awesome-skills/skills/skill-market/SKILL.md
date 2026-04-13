@@ -29,11 +29,11 @@ scripts/market.py info <skill-name>
 ```
 
 **Framework Matching:**
-- Check if the current agent framework (e.g., `Antigravity`, `Claude Code`, `OpenCode`) is in the `frameworks` list.
+- Check if the current agent framework (e.g., `Claude Code`, `OpenCode`) is in the `frameworks` list.
 - **If the current framework is NOT supported:**
   1. STOP and inform the user that the skill does not explicitly support the current framework.
   2. List the available frameworks from the `info` command.
-  3. Suggest the most similar/compatible framework (typically `OpenCode` for Antigravity-like environments).
+  3. Suggest the most similar/compatible framework (typically `OpenCode`).
   4. **Ask the user for permission** to proceed with the suggested framework or if they would like to pick another one.
 
 ### 4. Get Installation Instructions

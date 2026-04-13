@@ -35,6 +35,10 @@ awesome-skills/
 │   └── <skill-name>/
 │       ├── INSTALL-en.md
 │       └── INSTALL-zh.md
+├── openagent/                     # OpenAgent platform install guides
+│   └── <skill-name>/
+│       ├── INSTALL-en.md
+│       └── INSTALL-zh.md
 ├── opencode/                      # OpenCode platform install guides
 │   └── <skill-name>/
 │       ├── INSTALL-en.md
@@ -77,7 +81,7 @@ If no `SKILL.md` exists under `awesome-skills/skills/<skill-name>/`:
   - **Core philosophy**: What are the design principles.
   - **Key features and workflow**: What capabilities it provides and how it operates.
   - **Skills library composition**: What sub-skills are included.
-  - **Supported platforms**: Determine exactly which AI coding agents/platforms the Skill supports (e.g., Claude Code, Cursor, Codex, OpenCode, OpenClaw, Qoder). This is critical — only create installation guides for platforms that are explicitly supported. Skip any unsupported platforms entirely.
+  - **Supported platforms**: Determine exactly which AI coding agents/platforms the Skill supports (e.g., Claude Code, Cursor, Codex, OpenCode, OpenClaw, OpenAgent, Qoder). This is critical — only create installation guides for platforms that are explicitly supported. Skip any unsupported platforms entirely.
 
 ### Step 2: Write the Chinese Introduction Document
 
@@ -124,6 +128,7 @@ If no `SKILL.md` exists under `awesome-skills/skills/<skill-name>/`:
 - [Codex](../../codex/<skill-name>/INSTALL-zh.md)               <!-- only if supported -->
 - [OpenCode](../../opencode/<skill-name>/INSTALL-zh.md)         <!-- only if supported -->
 - [OpenClaw](../../openclaw/<skill-name>/INSTALL-zh.md)         <!-- only if supported -->
+- [OpenAgent](../../openagent/<skill-name>/INSTALL-zh.md)       <!-- only if supported -->
 - [Qoder](../../qoder/<skill-name>/INSTALL-zh.md)               <!-- only if supported -->
 
 ---
@@ -299,6 +304,7 @@ rm -rf ~/.<platform>/skills/<skill-name>
 | Codex       | `~/.codex/skills/`        | `~/.codex/`                         |
 | OpenCode    | `~/.config/opencode/skills/` | `~/.config/opencode/`           |
 | OpenClaw    | `~/.openclaw/skills/`     | `~/.openclaw/`                      |
+| OpenAgent   | `~/.openagent/skills/`    | `~/.openagent/`                     |
 | Qoder       | `~/.qoder/skills/`        | `~/.qoder/`                         |
 
 Each installation guide should include:
@@ -316,6 +322,7 @@ All available platforms and their corresponding file paths:
 | Codex       | `codex/<skill-name>/INSTALL-en.md`                 | `codex/<skill-name>/INSTALL-zh.md`                 |
 | Cursor      | `cursor/<skill-name>/INSTALL-en.md`                | `cursor/<skill-name>/INSTALL-zh.md`                |
 | OpenClaw    | `openclaw/<skill-name>/INSTALL-en.md`              | `openclaw/<skill-name>/INSTALL-zh.md`              |
+| OpenAgent   | `openagent/<skill-name>/INSTALL-en.md`             | `openagent/<skill-name>/INSTALL-zh.md`             |
 | OpenCode    | `opencode/<skill-name>/INSTALL-en.md`              | `opencode/<skill-name>/INSTALL-zh.md`              |
 | Qoder       | `qoder/<skill-name>/INSTALL-en.md`                 | `qoder/<skill-name>/INSTALL-zh.md`                 |
 

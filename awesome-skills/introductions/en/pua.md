@@ -1,6 +1,6 @@
 # PUA (High-Agency Skill)
 
-**PUA** (Performance Under Accountability) is a high-agency skill plugin that uses corporate PUA rhetoric / PIP (Performance Improvement Plan) to force AI agents to exhaust all possible solutions before giving up. Supports Claude Code, OpenAI Codex CLI, Cursor, Kiro, CodeBuddy, OpenClaw, Google Antigravity, and OpenCode.
+**PUA** (Performance Under Accountability) is a high-agency skill plugin that uses corporate PUA rhetoric / PIP (Performance Improvement Plan) to force AI agents to exhaust all possible solutions before giving up. Supports Claude Code, OpenAI Codex CLI, Cursor, Kiro, CodeBuddy, OpenClaw, and OpenCode.
 
 ## Tags
 
