@@ -28,7 +28,9 @@ def list_skills():
     url = f"{ENDPOINT}/skills?lang=en"
     data = fetch_json(url)
     if data and "data" in data:
-        print(json.dumps(data["data"], indent=2, ensure_ascii=False))
+        for skill in data["data"]:
+            if isinstance(skill, dict) and "name" in skill:
+                print(skill["name"])
     else:
         print("Failed to fetch skill list.")
 
