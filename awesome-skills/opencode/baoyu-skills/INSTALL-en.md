@@ -15,12 +15,14 @@ git clone https://github.com/JimLiu/baoyu-skills.git ~/.config/opencode/baoyu-sk
 
 ### 2. Symlink Skills
 
-Create a symlink so OpenCode discovers the Baoyu skills:
+Create symlinks so OpenCode discovers the Baoyu skills:
 
 ```bash
 mkdir -p ~/.config/opencode/skills
-rm -rf ~/.config/opencode/skills/baoyu-skills
-ln -s ~/.config/opencode/baoyu-skills/skills ~/.config/opencode/skills/baoyu-skills
+for skill in $(ls ~/.config/opencode/baoyu-skills/skills); do
+  rm -rf ~/.config/opencode/skills/$skill
+  ln -s ~/.config/opencode/baoyu-skills/skills/$skill ~/.config/opencode/skills/$skill
+done
 ```
 
 ### 3. Verify Installation
@@ -41,7 +43,9 @@ git pull
 ## Uninstallation
 
 ```bash
-rm -rf ~/.config/opencode/skills/baoyu-skills
+for skill in $(ls ~/.config/opencode/baoyu-skills/skills); do
+  rm -rf ~/.config/opencode/skills/$skill
+done
 ```
 
 ## Getting Help

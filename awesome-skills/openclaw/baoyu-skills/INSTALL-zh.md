@@ -19,8 +19,10 @@ git clone https://github.com/JimLiu/baoyu-skills.git ~/.openclaw/baoyu-skills
 
 ```bash
 mkdir -p ~/.openclaw/skills
-rm -rf ~/.openclaw/skills/baoyu-skills
-ln -s ~/.openclaw/baoyu-skills/skills ~/.openclaw/skills/baoyu-skills
+for skill in $(ls ~/.openclaw/baoyu-skills/skills); do
+  rm -rf ~/.openclaw/skills/$skill
+  ln -s ~/.openclaw/baoyu-skills/skills/$skill ~/.openclaw/skills/$skill
+done
 ```
 
 ### 3. 验证安装
@@ -47,7 +49,9 @@ git pull
 ## 卸载
 
 ```bash
-rm -rf ~/.openclaw/skills/baoyu-skills
+for skill in $(ls ~/.openclaw/baoyu-skills/skills); do
+  rm -rf ~/.openclaw/skills/$skill
+done
 ```
 
 ## 获取帮助

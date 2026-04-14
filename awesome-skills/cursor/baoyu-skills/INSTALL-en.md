@@ -15,12 +15,14 @@ git clone https://github.com/JimLiu/baoyu-skills.git ~/.cursor/baoyu-skills
 
 ### 2. Symlink Skills
 
-Create a symlink so Cursor discovers the Baoyu skills:
+Create symlinks so Cursor discovers the Baoyu skills:
 
 ```bash
 mkdir -p ~/.cursor/skills
-rm -rf ~/.cursor/skills/baoyu-skills
-ln -s ~/.cursor/baoyu-skills/skills ~/.cursor/skills/baoyu-skills
+for skill in $(ls ~/.cursor/baoyu-skills/skills); do
+  rm -rf ~/.cursor/skills/$skill
+  ln -s ~/.cursor/baoyu-skills/skills/$skill ~/.cursor/skills/$skill
+done
 ```
 
 ### 3. Verify Installation
@@ -41,7 +43,9 @@ git pull
 ## Uninstallation
 
 ```bash
-rm -rf ~/.cursor/skills/baoyu-skills
+for skill in $(ls ~/.cursor/baoyu-skills/skills); do
+  rm -rf ~/.cursor/skills/$skill
+done
 ```
 
 ## Getting Help

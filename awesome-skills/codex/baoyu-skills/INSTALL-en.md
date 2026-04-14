@@ -15,12 +15,14 @@ git clone https://github.com/JimLiu/baoyu-skills.git ~/.codex/baoyu-skills
 
 ### 2. Symlink Skills
 
-Create a symlink so Codex discovers the Baoyu skills:
+Create symlinks so Codex discovers the Baoyu skills:
 
 ```bash
 mkdir -p ~/.codex/skills
-rm -rf ~/.codex/skills/baoyu-skills
-ln -s ~/.codex/baoyu-skills/skills ~/.codex/skills/baoyu-skills
+for skill in $(ls ~/.codex/baoyu-skills/skills); do
+  rm -rf ~/.codex/skills/$skill
+  ln -s ~/.codex/baoyu-skills/skills/$skill ~/.codex/skills/$skill
+done
 ```
 
 ### 3. Verify Installation
@@ -41,7 +43,9 @@ git pull
 ## Uninstallation
 
 ```bash
-rm -rf ~/.codex/skills/baoyu-skills
+for skill in $(ls ~/.codex/baoyu-skills/skills); do
+  rm -rf ~/.codex/skills/$skill
+done
 ```
 
 ## Getting Help

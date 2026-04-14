@@ -19,8 +19,10 @@ git clone https://github.com/JimLiu/baoyu-skills.git ~/.config/opencode/baoyu-sk
 
 ```bash
 mkdir -p ~/.config/opencode/skills
-rm -rf ~/.config/opencode/skills/baoyu-skills
-ln -s ~/.config/opencode/baoyu-skills/skills ~/.config/opencode/skills/baoyu-skills
+for skill in $(ls ~/.config/opencode/baoyu-skills/skills); do
+  rm -rf ~/.config/opencode/skills/$skill
+  ln -s ~/.config/opencode/baoyu-skills/skills/$skill ~/.config/opencode/skills/$skill
+done
 ```
 
 ### 3. 验证安装
@@ -41,7 +43,9 @@ git pull
 ## 卸载
 
 ```bash
-rm -rf ~/.config/opencode/skills/baoyu-skills
+for skill in $(ls ~/.config/opencode/baoyu-skills/skills); do
+  rm -rf ~/.config/opencode/skills/$skill
+done
 ```
 
 ## 获取帮助

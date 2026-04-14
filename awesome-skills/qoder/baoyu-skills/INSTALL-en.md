@@ -15,12 +15,14 @@ git clone https://github.com/JimLiu/baoyu-skills.git ~/.qoder/baoyu-skills
 
 ### 2. Symlink Skills
 
-Create a symlink so Qoder discovers the Baoyu skills:
+Create symlinks so Qoder discovers the Baoyu skills:
 
 ```bash
 mkdir -p ~/.qoder/skills
-rm -rf ~/.qoder/skills/baoyu-skills
-ln -s ~/.qoder/baoyu-skills/skills ~/.qoder/skills/baoyu-skills
+for skill in $(ls ~/.qoder/baoyu-skills/skills); do
+  rm -rf ~/.qoder/skills/$skill
+  ln -s ~/.qoder/baoyu-skills/skills/$skill ~/.qoder/skills/$skill
+done
 ```
 
 ### 3. Verify Installation
@@ -41,7 +43,9 @@ git pull
 ## Uninstallation
 
 ```bash
-rm -rf ~/.qoder/skills/baoyu-skills
+for skill in $(ls ~/.qoder/baoyu-skills/skills); do
+  rm -rf ~/.qoder/skills/$skill
+done
 ```
 
 ## Getting Help

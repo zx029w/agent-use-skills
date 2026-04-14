@@ -15,12 +15,14 @@ git clone https://github.com/JimLiu/baoyu-skills.git ~/.openclaw/baoyu-skills
 
 ### 2. Symlink Skills
 
-Create a symlink so OpenClaw discovers the Baoyu skills:
+Create symlinks so OpenClaw discovers the Baoyu skills:
 
 ```bash
 mkdir -p ~/.openclaw/skills
-rm -rf ~/.openclaw/skills/baoyu-skills
-ln -s ~/.openclaw/baoyu-skills/skills ~/.openclaw/skills/baoyu-skills
+for skill in $(ls ~/.openclaw/baoyu-skills/skills); do
+  rm -rf ~/.openclaw/skills/$skill
+  ln -s ~/.openclaw/baoyu-skills/skills/$skill ~/.openclaw/skills/$skill
+done
 ```
 
 ### 3. Verify Installation
@@ -47,7 +49,9 @@ git pull
 ## Uninstallation
 
 ```bash
-rm -rf ~/.openclaw/skills/baoyu-skills
+for skill in $(ls ~/.openclaw/baoyu-skills/skills); do
+  rm -rf ~/.openclaw/skills/$skill
+done
 ```
 
 ## Getting Help

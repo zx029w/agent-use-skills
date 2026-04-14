@@ -19,8 +19,10 @@ git clone https://github.com/JimLiu/baoyu-skills.git ~/.codex/baoyu-skills
 
 ```bash
 mkdir -p ~/.codex/skills
-rm -rf ~/.codex/skills/baoyu-skills
-ln -s ~/.codex/baoyu-skills/skills ~/.codex/skills/baoyu-skills
+for skill in $(ls ~/.codex/baoyu-skills/skills); do
+  rm -rf ~/.codex/skills/$skill
+  ln -s ~/.codex/baoyu-skills/skills/$skill ~/.codex/skills/$skill
+done
 ```
 
 ### 3. 验证安装
@@ -41,7 +43,9 @@ git pull
 ## 卸载
 
 ```bash
-rm -rf ~/.codex/skills/baoyu-skills
+for skill in $(ls ~/.codex/baoyu-skills/skills); do
+  rm -rf ~/.codex/skills/$skill
+done
 ```
 
 ## 获取帮助

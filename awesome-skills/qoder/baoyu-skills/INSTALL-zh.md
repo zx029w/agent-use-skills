@@ -19,8 +19,10 @@ git clone https://github.com/JimLiu/baoyu-skills.git ~/.qoder/baoyu-skills
 
 ```bash
 mkdir -p ~/.qoder/skills
-rm -rf ~/.qoder/skills/baoyu-skills
-ln -s ~/.qoder/baoyu-skills/skills ~/.qoder/skills/baoyu-skills
+for skill in $(ls ~/.qoder/baoyu-skills/skills); do
+  rm -rf ~/.qoder/skills/$skill
+  ln -s ~/.qoder/baoyu-skills/skills/$skill ~/.qoder/skills/$skill
+done
 ```
 
 ### 3. 验证安装
@@ -41,7 +43,9 @@ git pull
 ## 卸载
 
 ```bash
-rm -rf ~/.qoder/skills/baoyu-skills
+for skill in $(ls ~/.qoder/baoyu-skills/skills); do
+  rm -rf ~/.qoder/skills/$skill
+done
 ```
 
 ## 获取帮助
