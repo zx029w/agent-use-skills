@@ -4,7 +4,7 @@ description: "Execute autonomous multi-step research using Google Gemini Deep Re
 license: Apache-2.0
 metadata:
   author: sanjay3290
-  version: "1.0"
+  version: "2.0"
 ---
 
 # Gemini Deep Research Skill
@@ -28,9 +28,10 @@ Run autonomous research tasks that plan, search, read, and synthesize informatio
 
 ## Usage
 
-### Start a research task
+### Start a research task (async)
 ```bash
 python3 scripts/research.py --query "Research the history of Kubernetes"
+# Returns interaction_id immediately
 ```
 
 ### With structured output format
@@ -39,24 +40,10 @@ python3 scripts/research.py --query "Compare Python web frameworks" \
   --format "1. Executive Summary\n2. Comparison Table\n3. Recommendations"
 ```
 
-### Stream progress in real-time
-```bash
-python3 scripts/research.py --query "Analyze EV battery market" --stream
-```
-
-### Start without waiting
-```bash
-python3 scripts/research.py --query "Research topic" --no-wait
-```
-
 ### Check status of running research
 ```bash
 python3 scripts/research.py --status <interaction_id>
-```
-
-### Wait for completion
-```bash
-python3 scripts/research.py --wait <interaction_id>
+# Returns: {"status": "running|completed|failed", "result": "...", ...}
 ```
 
 ### Continue from previous research
@@ -93,14 +80,26 @@ python3 scripts/research.py --list
 
 ## Workflow
 
-1. User requests research → Run `--query "..."`
-2. Inform user of estimated time (2-10 minutes)
-3. Monitor with `--stream` or poll with `--status`
-4. Return formatted results
-5. Use `--continue` for follow-up questions
+**Execute step-by-step (do NOT write polling loops):**
+
+```
+Step 1: Start research
+→ python3 scripts/research.py --query "..." --json
+→ Record the interaction_id from output
+
+Step 2: Wait 30 seconds
+→ sleep 30
+
+Step 3: Check status
+→ python3 scripts/research.py --status <interaction_id> --json
+
+Step 4: Evaluate status:
+→ If status == "completed": Output result to user
+→ If status == "failed": Report error to user
+→ If status == "running": Go back to Step 2
+```
 
 ## Exit Codes
 
 - **0**: Success
-- **1**: Error (API error, config issue, timeout)
-- **130**: Cancelled by user (Ctrl+C)
+- **1**: Error (API error, config issue)

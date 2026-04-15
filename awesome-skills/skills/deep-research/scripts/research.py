@@ -416,93 +416,36 @@ class DeepResearchClient:
         return None
 
 
-def print_progress(poll_count: int, elapsed: float, status: str):
-    """Print progress update during polling."""
-    mins = int(elapsed // 60)
-    secs = int(elapsed % 60)
-    print(f"\r[{mins:02d}:{secs:02d}] Poll #{poll_count} - Status: {status}", end="", flush=True)
-
-
 async def cmd_research(args):
-    """Execute a research query."""
+    """Execute a research query (async - returns ID immediately)."""
     client = DeepResearchClient()
 
     try:
-        if args.stream:
-            # Streaming mode
-            print(f"Starting streaming research...\n")
-            full_text = ""
+        previous_id = args.continue_from if hasattr(args, 'continue_from') else None
 
-            async for event in client.stream_research(args.query, args.format):
-                if event["type"] == "start":
-                    print(f"Interaction ID: {event['interaction_id']}\n")
-                elif event["type"] == "thought":
-                    print(f"\n[Thinking] {event['content']}\n", file=sys.stderr)
-                elif event["type"] == "text":
-                    print(event["content"], end="", flush=True)
-                    full_text += event["content"]
-                elif event["type"] == "complete":
-                    print("\n\n[Research Complete]")
-                elif event["type"] == "error":
-                    print(f"\n[Error] {event['error']}", file=sys.stderr)
-                    return 1
+        print("Starting research task...", file=sys.stderr)
+        interaction_id = await client.start_research(
+            args.query,
+            args.format,
+            previous_id
+        )
 
-            # Output JSON if requested
-            if args.json and full_text:
-                parsed = client.parse_result(full_text)
-                if parsed:
-                    print("\n\n--- Parsed JSON ---")
-                    print(json.dumps(parsed, indent=2))
+        if args.json:
+            print(json.dumps({
+                "interaction_id": interaction_id,
+                "status": "started",
+                "message": "Use --status to poll for completion"
+            }, indent=2))
         else:
-            # Polling mode
-            previous_id = args.continue_from if hasattr(args, 'continue_from') else None
-
-            print(f"Starting research task...")
-            interaction_id = await client.start_research(
-                args.query,
-                args.format,
-                previous_id
-            )
             print(f"Interaction ID: {interaction_id}")
-            print(f"Estimated time: 2-10 minutes\n")
+            print(f"Estimated time: 2-10 minutes", file=sys.stderr)
+            print(f"Check status with: python3 scripts/research.py --status {interaction_id}", file=sys.stderr)
 
-            if args.no_wait:
-                print(f"Research started. Check status with: --status {interaction_id}")
-                return 0
-
-            print("Waiting for completion (Ctrl+C to cancel)...")
-            result = await client.wait_for_completion(
-                interaction_id,
-                progress_callback=print_progress
-            )
-            print()  # New line after progress
-
-            if result["status"] == "completed":
-                text = result.get("result", "")
-
-                if args.json:
-                    parsed = client.parse_result(text)
-                    if parsed:
-                        print(json.dumps(parsed, indent=2))
-                    else:
-                        print(json.dumps({"text": text}, indent=2))
-                elif args.raw:
-                    print(json.dumps(result.get("raw", {}), indent=2))
-                else:
-                    print("\n--- Research Result ---\n")
-                    print(text)
-
-                return 0
-            else:
-                print(f"\nResearch failed: {result.get('error', 'Unknown error')}")
-                return 1
+        return 0
 
     except DeepResearchError as e:
         print(f"Error: {e}", file=sys.stderr)
         return 1
-    except KeyboardInterrupt:
-        print("\n\nCancelled by user.")
-        return 130
     finally:
         await client.close()
 
@@ -531,46 +474,6 @@ async def cmd_status(args):
     except DeepResearchError as e:
         print(f"Error: {e}", file=sys.stderr)
         return 1
-    finally:
-        await client.close()
-
-
-async def cmd_wait(args):
-    """Wait for a research task to complete."""
-    client = DeepResearchClient()
-
-    try:
-        print(f"Waiting for {args.interaction_id}...")
-        result = await client.wait_for_completion(
-            args.interaction_id,
-            progress_callback=print_progress
-        )
-        print()
-
-        if result["status"] == "completed":
-            text = result.get("result", "")
-
-            if args.json:
-                parsed = client.parse_result(text)
-                if parsed:
-                    print(json.dumps(parsed, indent=2))
-                else:
-                    print(json.dumps({"text": text}, indent=2))
-            else:
-                print("\n--- Research Result ---\n")
-                print(text)
-
-            return 0
-        else:
-            print(f"Research failed: {result.get('error', 'Unknown error')}")
-            return 1
-
-    except DeepResearchError as e:
-        print(f"Error: {e}", file=sys.stderr)
-        return 1
-    except KeyboardInterrupt:
-        print("\n\nCancelled by user.")
-        return 130
     finally:
         await client.close()
 
@@ -609,22 +512,16 @@ async def cmd_list(args):
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Gemini Deep Research - Autonomous multi-step research agent",
+        description="Gemini Deep Research - Autonomous multi-step research agent (async)",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  # Start a research task and wait for results
+  # Start a research task (returns interaction_id immediately)
   %(prog)s --query "Research the history of Kubernetes"
 
   # With structured output format
   %(prog)s --query "Compare Python web frameworks" \\
     --format "1. Executive Summary\\n2. Comparison Table\\n3. Recommendations"
-
-  # Stream progress in real-time
-  %(prog)s --query "Analyze EV battery market" --stream
-
-  # Start without waiting
-  %(prog)s --query "Research topic" --no-wait
 
   # Check status of running research
   %(prog)s --status abc123
@@ -636,16 +533,15 @@ Examples:
   %(prog)s --list
 
 Note: Research tasks typically take 2-10 minutes and cost $2-5 per task.
+Use --status to poll for completion (recommended: poll every 5 seconds).
 """
     )
 
     # Main commands (mutually exclusive)
     cmd_group = parser.add_mutually_exclusive_group(required=True)
-    cmd_group.add_argument("--query", "-q", help="Research query to execute")
+    cmd_group.add_argument("--query", "-q", help="Research query to execute (async, returns ID immediately)")
     cmd_group.add_argument("--status", "-s", dest="interaction_id", metavar="ID",
                           help="Check status of a research task")
-    cmd_group.add_argument("--wait", "-w", dest="wait_id", metavar="ID",
-                          help="Wait for a research task to complete")
     cmd_group.add_argument("--list", "-l", action="store_true",
                           help="List recent research tasks")
 
@@ -654,10 +550,6 @@ Note: Research tasks typically take 2-10 minutes and cost $2-5 per task.
                        help="Output format specification")
     parser.add_argument("--continue", dest="continue_from", metavar="ID",
                        help="Continue from previous research interaction")
-    parser.add_argument("--stream", action="store_true",
-                       help="Stream progress in real-time")
-    parser.add_argument("--no-wait", action="store_true",
-                       help="Start research without waiting for completion")
 
     # Output options
     parser.add_argument("--json", "-j", action="store_true",
@@ -676,9 +568,6 @@ Note: Research tasks typically take 2-10 minutes and cost $2-5 per task.
         exit_code = asyncio.run(cmd_research(args))
     elif args.interaction_id:
         exit_code = asyncio.run(cmd_status(args))
-    elif args.wait_id:
-        args.interaction_id = args.wait_id
-        exit_code = asyncio.run(cmd_wait(args))
     elif args.list:
         exit_code = asyncio.run(cmd_list(args))
     else:
