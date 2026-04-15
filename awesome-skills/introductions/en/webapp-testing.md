@@ -4,7 +4,7 @@
 
 ## Tags
 
-💻 Development & Testing | 🔍 Pending Verification
+💻 Dev & Testing | 🔍 Pending Verification
 
 ## Core Philosophy
 - Automated server lifecycle management (supports both single and multi-server architectures).

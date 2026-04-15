@@ -4,7 +4,7 @@
 
 ## Tags
 
-🤖 Productivity Tools | 🔍 Pending Verification
+🛠️ Productivity Tools | 🔍 Pending Verification
 
 ## Core Philosophy
 - **Comprehensive Recreation**: Restores not only work skills but also the unique personality, expression logic, and decision-making patterns of the colleague.

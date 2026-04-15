@@ -4,7 +4,7 @@
 
 ## Tags
 
-🗂️ Document & Office | 🔍 Pending Verification
+🗂️ Documents & Office | 🔍 Pending Verification
 
 ## Core Philosophy
 

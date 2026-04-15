@@ -63,7 +63,7 @@ For more information, visit: [GitHub - <repo>](<url>)
 > 2. Leave exactly one blank line between the heading and the tags.
 > 3. The tags content must be a single line in the format: `[Emoji] [Category] | [Emoji] [Status]`.
 > 4. Use a pipe character with exactly one space on each side (` | `) as the separator.
-> 5. **Common Categories**: `🧘 Life & Philosophy`, `🗂️ Documents & Office`, `🎨 Design & Creativity`, `💻 Development & Testing`, `🛠️ Productivity Tools`.
+> 5. **Common Categories**: `🧘 Life & Philosophy`, `🗂️ Documents & Office`, `🎨 Design & Creativity`, `💻 Dev & Testing`, `🛠️ Productivity Tools`.
 > 6. **Common Statuses**: `✅ Verified`, `🔍 Pending Verification`.
 
 ## Core Philosophy

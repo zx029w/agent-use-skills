@@ -4,7 +4,7 @@
 
 ## Tags
 
-🎨 Design & Creative | ✅ Verified
+🎨 Design & Creativity | ✅ Verified
 
 ## Core Philosophy
 

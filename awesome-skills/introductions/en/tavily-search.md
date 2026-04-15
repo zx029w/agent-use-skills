@@ -4,7 +4,7 @@
 
 ## Tags
 
-🗂️ Document & Office | ✅ Verified
+🗂️ Documents & Office | ✅ Verified
 
 ## Core Philosophy
 

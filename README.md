@@ -51,7 +51,7 @@ Each framework provides its own skill loading mechanism. Please refer to the ins
 
 > The skill library is being rapidly organized, and more high-quality skills will be available soon!
 
-### Document & Office
+### Documents & Office
 
 | Skill Name | Description | Status |
 | :--- | :--- | :--- |
@@ -62,7 +62,7 @@ Each framework provides its own skill loading mechanism. Please refer to the ins
 | **[deep-research](awesome-skills/introductions/en/deep-research.md)** | Autonomous multi-step deep research skill powered by Gemini Deep Research Agent for market analysis, literature reviews, due diligence, and more — producing detailed, cited reports. | ✅ Verified |
 | **[humanizer](awesome-skills/introductions/en/humanizer.md)** | Remove signs of AI-generated writing from text to make it sound more natural and human-written. | ✅ Verified |
 
-### Design & Creative
+### Design & Creativity
 
 | Skill Name | Description | Status |
 | :--- | :--- | :--- |
