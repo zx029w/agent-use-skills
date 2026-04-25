@@ -15,7 +15,7 @@
 ### 1. 克隆 agent-use-skills 仓库
 
 ```bash
-git clone https://github.com/Zerone-Agent/agent-use-skills.git ~/agent-use-skills
+git clone https://github.com/Zerone-Agent/agent-use-skills.git ~/.codex/agent-use-skills
 ```
 
 ### 2. 创建符号链接
@@ -25,7 +25,7 @@ git clone https://github.com/Zerone-Agent/agent-use-skills.git ~/agent-use-skill
 ```bash
 mkdir -p ~/.codex/skills
 rm -rf ~/.codex/skills/video-summarizer
-ln -s ~/agent-use-skills/awesome-skills/skills/video-summarizer ~/.codex/skills/video-summarizer
+ln -s ~/.codex/agent-use-skills/awesome-skills/skills/video-summarizer ~/.codex/skills/video-summarizer
 ```
 
 ### 3. 安装 Whisper
@@ -52,7 +52,7 @@ pip install openai-whisper
 ## 更新
 
 ```bash
-cd ~/agent-use-skills
+cd ~/.codex/agent-use-skills
 git pull
 ```
 

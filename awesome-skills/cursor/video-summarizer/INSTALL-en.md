@@ -15,22 +15,17 @@
 ### 1. Clone the agent-use-skills repository
 
 ```bash
-git clone https://github.com/Zerone-Agent/agent-use-skills.git ~/agent-use-skills
+git clone https://github.com/Zerone-Agent/agent-use-skills.git ~/.cursor/agent-use-skills
 ```
 
-### 2. Configure Cursor
+### 2. Create Symbolic Link
 
-In Cursor, open settings and add the skill directory to your workspace:
-
-1. Open Cursor Settings
-2. Find "Skills" or "Custom Skills" option
-3. Add skill path: `~/agent-use-skills/awesome-skills/skills/video-summarizer`
-
-Alternatively, copy the skill files to Cursor's skills directory:
+Create a symbolic link so Cursor can discover the video-summarizer skill:
 
 ```bash
 mkdir -p ~/.cursor/skills
-cp -r ~/agent-use-skills/awesome-skills/skills/video-summarizer ~/.cursor/skills/
+rm -rf ~/.cursor/skills/video-summarizer
+ln -s ~/.cursor/agent-use-skills/awesome-skills/skills/video-summarizer ~/.cursor/skills/video-summarizer
 ```
 
 ### 3. Install Whisper
@@ -54,12 +49,11 @@ Restart Cursor, then try the following commands to verify installation:
 
 If installed successfully, Cursor will automatically recognize and invoke the Video Summarizer skill workflow.
 
-## Update
+## Updating
 
 ```bash
-cd ~/agent-use-skills
+cd ~/.cursor/agent-use-skills
 git pull
-cp -r ~/agent-use-skills/awesome-skills/skills/video-summarizer ~/.cursor/skills/
 ```
 
 ## Uninstallation
@@ -70,6 +64,6 @@ Just remove the symbolic link to uninstall:
 rm -rf ~/.cursor/skills/video-summarizer
 ```
 
-## Get Help
+## Getting Help
 
 - Submit issues: https://github.com/Zerone-Agent/agent-use-skills/issues

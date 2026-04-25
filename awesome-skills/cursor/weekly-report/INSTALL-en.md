@@ -11,23 +11,17 @@
 ### 1. Clone the agent-use-skills repository
 
 ```bash
-git clone https://github.com/Zerone-Agent/agent-use-skills.git ~/agent-use-skills
+git clone https://github.com/Zerone-Agent/agent-use-skills.git ~/.cursor/agent-use-skills
 ```
 
-### 2. Configure Cursor
+### 2. Create Symbolic Link
 
-In Cursor, open settings and add the skill directory to your workspace:
-
-1. Open Cursor Settings
-2. Find "Skills" or "Custom Skills" option
-3. Add skill path: `~/agent-use-skills/awesome-skills/skills/weekly-report`
-
-Alternatively, copy the skill files to Cursor's skills directory:
+Create a symbolic link so Cursor can discover the weekly-report skill:
 
 ```bash
-# Assuming Cursor skills directory is ~/.cursor/skills
 mkdir -p ~/.cursor/skills
-cp -r ~/agent-use-skills/awesome-skills/skills/weekly-report ~/.cursor/skills/
+rm -rf ~/.cursor/skills/weekly-report
+ln -s ~/.cursor/agent-use-skills/awesome-skills/skills/weekly-report ~/.cursor/skills/weekly-report
 ```
 
 ### 3. Install Python Dependencies
@@ -45,13 +39,11 @@ Restart Cursor, then try the following commands to verify installation:
 
 If installed successfully, Cursor will automatically recognize and invoke the Weekly Report skill workflow.
 
-## Update
+## Updating
 
 ```bash
-cd ~/agent-use-skills
+cd ~/.cursor/agent-use-skills
 git pull
-# Re-copy to Cursor skills directory
-cp -r ~/agent-use-skills/awesome-skills/skills/weekly-report ~/.cursor/skills/
 ```
 
 ## Uninstallation
@@ -62,6 +54,6 @@ Just remove the symbolic link to uninstall:
 rm -rf ~/.cursor/skills/weekly-report
 ```
 
-## Get Help
+## Getting Help
 
 - Submit issues: https://github.com/Zerone-Agent/agent-use-skills/issues

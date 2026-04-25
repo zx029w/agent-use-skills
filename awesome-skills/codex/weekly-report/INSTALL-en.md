@@ -11,7 +11,7 @@
 ### 1. Clone the agent-use-skills repository
 
 ```bash
-git clone https://github.com/Zerone-Agent/agent-use-skills.git ~/agent-use-skills
+git clone https://github.com/Zerone-Agent/agent-use-skills.git ~/.codex/agent-use-skills
 ```
 
 ### 2. Create Symbolic Link
@@ -21,7 +21,7 @@ Create a symbolic link so Codex can discover the weekly-report skill:
 ```bash
 mkdir -p ~/.codex/skills
 rm -rf ~/.codex/skills/weekly-report
-ln -s ~/agent-use-skills/awesome-skills/skills/weekly-report ~/.codex/skills/weekly-report
+ln -s ~/.codex/agent-use-skills/awesome-skills/skills/weekly-report ~/.codex/skills/weekly-report
 ```
 
 ### 3. Install Python Dependencies
@@ -42,7 +42,7 @@ If installed successfully, Codex will automatically recognize and invoke the Wee
 ## Update
 
 ```bash
-cd ~/agent-use-skills
+cd ~/.codex/agent-use-skills
 git pull
 ```
 

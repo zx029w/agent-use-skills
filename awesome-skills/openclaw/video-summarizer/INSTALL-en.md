@@ -15,22 +15,17 @@
 ### 1. Clone the agent-use-skills repository
 
 ```bash
-git clone https://github.com/Zerone-Agent/agent-use-skills.git ~/agent-use-skills
+git clone https://github.com/Zerone-Agent/agent-use-skills.git ~/.openclaw/agent-use-skills
 ```
 
-### 2. Configure OpenClaw
+### 2. Create Symbolic Link
 
-In OpenClaw, add the skill directory to your workspace through settings:
-
-1. Open OpenClaw Settings
-2. Find "Skills" or "Custom Skills" option
-3. Add skill path: `~/agent-use-skills/awesome-skills/skills/video-summarizer`
-
-Alternatively, copy the skill files to OpenClaw's skills directory:
+Create a symbolic link so OpenClaw can discover the video-summarizer skill:
 
 ```bash
 mkdir -p ~/.openclaw/skills
-cp -r ~/agent-use-skills/awesome-skills/skills/video-summarizer ~/.openclaw/skills/
+rm -rf ~/.openclaw/skills/video-summarizer
+ln -s ~/.openclaw/agent-use-skills/awesome-skills/skills/video-summarizer ~/.openclaw/skills/video-summarizer
 ```
 
 ### 3. Install Whisper
@@ -54,12 +49,11 @@ Restart OpenClaw, then try the following commands to verify installation:
 
 If installed successfully, OpenClaw will automatically recognize and invoke the Video Summarizer skill workflow.
 
-## Update
+## Updating
 
 ```bash
-cd ~/agent-use-skills
+cd ~/.openclaw/agent-use-skills
 git pull
-cp -r ~/agent-use-skills/awesome-skills/skills/video-summarizer ~/.openclaw/skills/
 ```
 
 ## Uninstallation
@@ -70,6 +64,6 @@ Just remove the symbolic link to uninstall:
 rm -rf ~/.openclaw/skills/video-summarizer
 ```
 
-## Get Help
+## Getting Help
 
 - Submit issues: https://github.com/Zerone-Agent/agent-use-skills/issues

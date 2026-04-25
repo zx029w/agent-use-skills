@@ -15,7 +15,7 @@
 ### 1. Clone the agent-use-skills repository
 
 ```bash
-git clone https://github.com/Zerone-Agent/agent-use-skills.git ~/agent-use-skills
+git clone https://github.com/Zerone-Agent/agent-use-skills.git ~/.codex/agent-use-skills
 ```
 
 ### 2. Create Symbolic Link
@@ -25,7 +25,7 @@ Create a symbolic link so Codex can discover the video-summarizer skill:
 ```bash
 mkdir -p ~/.codex/skills
 rm -rf ~/.codex/skills/video-summarizer
-ln -s ~/agent-use-skills/awesome-skills/skills/video-summarizer ~/.codex/skills/video-summarizer
+ln -s ~/.codex/agent-use-skills/awesome-skills/skills/video-summarizer ~/.codex/skills/video-summarizer
 ```
 
 ### 3. Install Whisper
@@ -52,7 +52,7 @@ If installed successfully, Codex will automatically recognize and invoke the Vid
 ## Update
 
 ```bash
-cd ~/agent-use-skills
+cd ~/.codex/agent-use-skills
 git pull
 ```
 

@@ -15,22 +15,17 @@
 ### 1. Clone the agent-use-skills repository
 
 ```bash
-git clone https://github.com/Zerone-Agent/agent-use-skills.git ~/agent-use-skills
+git clone https://github.com/Zerone-Agent/agent-use-skills.git ~/.config/opencode/agent-use-skills
 ```
 
-### 2. Configure OpenCode
+### 2. Create Symbolic Link
 
-In OpenCode, add the skill directory to your workspace through settings:
-
-1. Open OpenCode Settings
-2. Find "Skills" or "Custom Skills" option
-3. Add skill path: `~/agent-use-skills/awesome-skills/skills/video-summarizer`
-
-Alternatively, copy the skill files to OpenCode's skills directory:
+Create a symbolic link so OpenCode can discover the video-summarizer skill:
 
 ```bash
 mkdir -p ~/.config/opencode/skills
-cp -r ~/agent-use-skills/awesome-skills/skills/video-summarizer ~/.config/opencode/skills/
+rm -rf ~/.config/opencode/skills/video-summarizer
+ln -s ~/.config/opencode/agent-use-skills/awesome-skills/skills/video-summarizer ~/.config/opencode/skills/video-summarizer
 ```
 
 ### 3. Install Whisper
@@ -54,12 +49,11 @@ Restart OpenCode, then try the following commands to verify installation:
 
 If installed successfully, OpenCode will automatically recognize and invoke the Video Summarizer skill workflow.
 
-## Update
+## Updating
 
 ```bash
-cd ~/agent-use-skills
+cd ~/.config/opencode/agent-use-skills
 git pull
-cp -r ~/agent-use-skills/awesome-skills/skills/video-summarizer ~/.config/opencode/skills/
 ```
 
 ## Uninstallation
@@ -70,6 +64,6 @@ Just remove the symbolic link to uninstall:
 rm -rf ~/.config/opencode/skills/video-summarizer
 ```
 
-## Get Help
+## Getting Help
 
 - Submit issues: https://github.com/Zerone-Agent/agent-use-skills/issues

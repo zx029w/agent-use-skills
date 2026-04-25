@@ -15,22 +15,17 @@
 ### 1. Clone the agent-use-skills repository
 
 ```bash
-git clone https://github.com/Zerone-Agent/agent-use-skills.git ~/agent-use-skills
+git clone https://github.com/Zerone-Agent/agent-use-skills.git ~/.qoder/agent-use-skills
 ```
 
-### 2. Configure Qoder
+### 2. Create Symbolic Link
 
-In Qoder, add the skill directory to your workspace through settings:
-
-1. Open Qoder Settings
-2. Find "Skills" or "Custom Skills" option
-3. Add skill path: `~/agent-use-skills/awesome-skills/skills/video-summarizer`
-
-Alternatively, copy the skill files to Qoder's skills directory:
+Create a symbolic link so Qoder can discover the video-summarizer skill:
 
 ```bash
 mkdir -p ~/.qoder/skills
-cp -r ~/agent-use-skills/awesome-skills/skills/video-summarizer ~/.qoder/skills/
+rm -rf ~/.qoder/skills/video-summarizer
+ln -s ~/.qoder/agent-use-skills/awesome-skills/skills/video-summarizer ~/.qoder/skills/video-summarizer
 ```
 
 ### 3. Install Whisper
@@ -54,12 +49,11 @@ Restart Qoder, then try the following commands to verify installation:
 
 If installed successfully, Qoder will automatically recognize and invoke the Video Summarizer skill workflow.
 
-## Update
+## Updating
 
 ```bash
-cd ~/agent-use-skills
+cd ~/.qoder/agent-use-skills
 git pull
-cp -r ~/agent-use-skills/awesome-skills/skills/video-summarizer ~/.qoder/skills/
 ```
 
 ## Uninstallation
@@ -70,6 +64,6 @@ Just remove the symbolic link to uninstall:
 rm -rf ~/.qoder/skills/video-summarizer
 ```
 
-## Get Help
+## Getting Help
 
 - Submit issues: https://github.com/Zerone-Agent/agent-use-skills/issues

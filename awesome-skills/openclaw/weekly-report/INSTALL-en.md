@@ -11,23 +11,17 @@
 ### 1. Clone the agent-use-skills repository
 
 ```bash
-git clone https://github.com/Zerone-Agent/agent-use-skills.git ~/agent-use-skills
+git clone https://github.com/Zerone-Agent/agent-use-skills.git ~/.openclaw/agent-use-skills
 ```
 
-### 2. Configure OpenClaw
+### 2. Create Symbolic Link
 
-In OpenClaw, add the skill directory to your workspace through settings:
-
-1. Open OpenClaw Settings
-2. Find "Skills" or "Custom Skills" option
-3. Add skill path: `~/agent-use-skills/awesome-skills/skills/weekly-report`
-
-Alternatively, copy the skill files to OpenClaw's skills directory:
+Create a symbolic link so OpenClaw can discover the weekly-report skill:
 
 ```bash
-# Assuming OpenClaw skills directory is ~/.openclaw/skills
 mkdir -p ~/.openclaw/skills
-cp -r ~/agent-use-skills/awesome-skills/skills/weekly-report ~/.openclaw/skills/
+rm -rf ~/.openclaw/skills/weekly-report
+ln -s ~/.openclaw/agent-use-skills/awesome-skills/skills/weekly-report ~/.openclaw/skills/weekly-report
 ```
 
 ### 3. Install Python Dependencies
@@ -45,13 +39,11 @@ Restart OpenClaw, then try the following commands to verify installation:
 
 If installed successfully, OpenClaw will automatically recognize and invoke the Weekly Report skill workflow.
 
-## Update
+## Updating
 
 ```bash
-cd ~/agent-use-skills
+cd ~/.openclaw/agent-use-skills
 git pull
-# Re-copy to OpenClaw skills directory
-cp -r ~/agent-use-skills/awesome-skills/skills/weekly-report ~/.openclaw/skills/
 ```
 
 ## Uninstallation
@@ -62,6 +54,6 @@ Just remove the symbolic link to uninstall:
 rm -rf ~/.openclaw/skills/weekly-report
 ```
 
-## Get Help
+## Getting Help
 
 - Submit issues: https://github.com/Zerone-Agent/agent-use-skills/issues

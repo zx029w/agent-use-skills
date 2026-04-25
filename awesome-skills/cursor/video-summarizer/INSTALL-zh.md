@@ -15,22 +15,17 @@
 ### 1. 克隆 agent-use-skills 仓库
 
 ```bash
-git clone https://github.com/Zerone-Agent/agent-use-skills.git ~/agent-use-skills
+git clone https://github.com/Zerone-Agent/agent-use-skills.git ~/.cursor/agent-use-skills
 ```
 
-### 2. 配置 Cursor
+### 2. 创建符号链接
 
-在 Cursor 中打开设置，将技能目录添加到工作区：
-
-1. 打开 Cursor Settings
-2. 找到 "Skills" 或 "Custom Skills" 选项
-3. 添加技能路径：`~/agent-use-skills/awesome-skills/skills/video-summarizer`
-
-或者，将技能文件复制到 Cursor 的 skills 目录：
+创建符号链接，使 Cursor 能够发现 video-summarizer 技能：
 
 ```bash
 mkdir -p ~/.cursor/skills
-cp -r ~/agent-use-skills/awesome-skills/skills/video-summarizer ~/.cursor/skills/
+rm -rf ~/.cursor/skills/video-summarizer
+ln -s ~/.cursor/agent-use-skills/awesome-skills/skills/video-summarizer ~/.cursor/skills/video-summarizer
 ```
 
 ### 3. 安装 Whisper
@@ -57,9 +52,8 @@ pip install openai-whisper
 ## 更新
 
 ```bash
-cd ~/agent-use-skills
+cd ~/.cursor/agent-use-skills
 git pull
-cp -r ~/agent-use-skills/awesome-skills/skills/video-summarizer ~/.cursor/skills/
 ```
 
 ## 卸载

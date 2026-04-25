@@ -11,7 +11,7 @@
 ### 1. 克隆 agent-use-skills 仓库
 
 ```bash
-git clone https://github.com/Zerone-Agent/agent-use-skills.git ~/agent-use-skills
+git clone https://github.com/Zerone-Agent/agent-use-skills.git ~/.codex/agent-use-skills
 ```
 
 ### 2. 创建符号链接
@@ -21,7 +21,7 @@ git clone https://github.com/Zerone-Agent/agent-use-skills.git ~/agent-use-skill
 ```bash
 mkdir -p ~/.codex/skills
 rm -rf ~/.codex/skills/weekly-report
-ln -s ~/agent-use-skills/awesome-skills/skills/weekly-report ~/.codex/skills/weekly-report
+ln -s ~/.codex/agent-use-skills/awesome-skills/skills/weekly-report ~/.codex/skills/weekly-report
 ```
 
 ### 3. 安装 Python 依赖
@@ -42,7 +42,7 @@ pip install python-docx markdown beautifulsoup4
 ## 更新
 
 ```bash
-cd ~/agent-use-skills
+cd ~/.codex/agent-use-skills
 git pull
 ```
 

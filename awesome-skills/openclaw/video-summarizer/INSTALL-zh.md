@@ -15,22 +15,17 @@
 ### 1. 克隆 agent-use-skills 仓库
 
 ```bash
-git clone https://github.com/Zerone-Agent/agent-use-skills.git ~/agent-use-skills
+git clone https://github.com/Zerone-Agent/agent-use-skills.git ~/.openclaw/agent-use-skills
 ```
 
-### 2. 配置 OpenClaw
+### 2. 创建符号链接
 
-在 OpenClaw 中打开设置，将技能目录添加到工作区：
-
-1. 打开 OpenClaw Settings
-2. 找到 "Skills" 或 "Custom Skills" 选项
-3. 添加技能路径：`~/agent-use-skills/awesome-skills/skills/video-summarizer`
-
-或者，将技能文件复制到 OpenClaw 的 skills 目录：
+创建符号链接，使 OpenClaw 能够发现 video-summarizer 技能：
 
 ```bash
 mkdir -p ~/.openclaw/skills
-cp -r ~/agent-use-skills/awesome-skills/skills/video-summarizer ~/.openclaw/skills/
+rm -rf ~/.openclaw/skills/video-summarizer
+ln -s ~/.openclaw/agent-use-skills/awesome-skills/skills/video-summarizer ~/.openclaw/skills/video-summarizer
 ```
 
 ### 3. 安装 Whisper
@@ -57,9 +52,8 @@ pip install openai-whisper
 ## 更新
 
 ```bash
-cd ~/agent-use-skills
+cd ~/.openclaw/agent-use-skills
 git pull
-cp -r ~/agent-use-skills/awesome-skills/skills/video-summarizer ~/.openclaw/skills/
 ```
 
 ## 卸载
