@@ -35,7 +35,6 @@ PPT Master supports the following AI editors and platforms:
 - [Codex](../../codex/ppt-master/INSTALL-en.md)
 - [OpenCode](../../opencode/ppt-master/INSTALL-en.md)
 - [OpenClaw](../../openclaw/ppt-master/INSTALL-en.md)
-- [OpenAgent](../../openagent/ppt-master/INSTALL-en.md)
 - [Qoder](../../qoder/ppt-master/INSTALL-en.md)
 
 ---

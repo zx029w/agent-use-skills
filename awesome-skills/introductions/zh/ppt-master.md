@@ -35,7 +35,6 @@ PPT Master 支持以下 AI 编辑器和平台：
 - [Codex](../../codex/ppt-master/INSTALL-zh.md)
 - [OpenCode](../../opencode/ppt-master/INSTALL-zh.md)
 - [OpenClaw](../../openclaw/ppt-master/INSTALL-zh.md)
-- [OpenAgent](../../openagent/ppt-master/INSTALL-zh.md)
 - [Qoder](../../qoder/ppt-master/INSTALL-zh.md)
 
 ---
