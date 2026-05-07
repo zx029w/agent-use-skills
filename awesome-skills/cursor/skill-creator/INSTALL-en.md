@@ -8,10 +8,10 @@
 
 ## Installation Steps
 
-### 1. Clone anthropics/skills Repository
+### 1. Clone agent-use-skills Repository
 
 ```bash
-git clone https://github.com/anthropics/skills.git ~/.cursor/anthropics-skills
+git clone https://github.com/Zerone-Agent/agent-use-skills.git ~/.cursor/agent-use-skills
 ```
 
 ### 2. Create Symlink
@@ -21,7 +21,7 @@ Create a symlink so Cursor discovers the skill-creator skill:
 ```bash
 mkdir -p ~/.cursor/skills
 rm -rf ~/.cursor/skills/skill-creator
-ln -s ~/.cursor/anthropics-skills/skills/skill-creator ~/.cursor/skills/skill-creator
+ln -s ~/.cursor/agent-use-skills/awesome-skills/skills/skill-creator ~/.cursor/skills/skill-creator
 ```
 
 ### 3. Verify Installation
@@ -35,7 +35,7 @@ If successful, Cursor will automatically recognize and invoke the Skill Creator 
 ## Updating
 
 ```bash
-cd ~/.cursor/anthropics-skills
+cd ~/.cursor/agent-use-skills
 git pull
 ```
 
@@ -49,5 +49,5 @@ rm -rf ~/.cursor/skills/skill-creator
 
 ## Getting Help
 
-- GitHub Repository: https://github.com/anthropics/skills
-- Report Issues: https://github.com/anthropics/skills/issues
+- GitHub Repository: https://github.com/Zerone-Agent/agent-use-skills
+- Report Issues: https://github.com/Zerone-Agent/agent-use-skills/issues

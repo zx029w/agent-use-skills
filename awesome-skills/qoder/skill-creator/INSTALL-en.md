@@ -8,10 +8,10 @@
 
 ## Installation Steps
 
-### 1. Clone anthropics/skills Repository
+### 1. Clone agent-use-skills Repository
 
 ```bash
-git clone https://github.com/anthropics/skills.git ~/.qoder/anthropics-skills
+git clone https://github.com/Zerone-Agent/agent-use-skills.git ~/.qoder/agent-use-skills
 ```
 
 ### 2. Create Symlink
@@ -21,7 +21,7 @@ Create a symlink so Qoder discovers the skill-creator skill:
 ```bash
 mkdir -p ~/.qoder/skills
 rm -rf ~/.qoder/skills/skill-creator
-ln -s ~/.qoder/anthropics-skills/skills/skill-creator ~/.qoder/skills/skill-creator
+ln -s ~/.qoder/agent-use-skills/awesome-skills/skills/skill-creator ~/.qoder/skills/skill-creator
 ```
 
 ### 3. Verify Installation
@@ -35,7 +35,7 @@ If successful, Qoder will automatically recognize and invoke the Skill Creator s
 ## Updating
 
 ```bash
-cd ~/.qoder/anthropics-skills
+cd ~/.qoder/agent-use-skills
 git pull
 ```
 
@@ -49,5 +49,5 @@ rm -rf ~/.qoder/skills/skill-creator
 
 ## Getting Help
 
-- GitHub Repository: https://github.com/anthropics/skills
-- Report Issues: https://github.com/anthropics/skills/issues
+- GitHub Repository: https://github.com/Zerone-Agent/agent-use-skills
+- Report Issues: https://github.com/Zerone-Agent/agent-use-skills/issues

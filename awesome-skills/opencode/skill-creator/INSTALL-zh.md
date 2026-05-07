@@ -8,10 +8,10 @@
 
 ## 安装步骤
 
-### 1. 克隆 anthropics/skills 仓库
+### 1. 克隆 agent-use-skills 仓库
 
 ```bash
-git clone https://github.com/anthropics/skills.git ~/.config/opencode/anthropics-skills
+git clone https://github.com/Zerone-Agent/agent-use-skills.git ~/.config/opencode/agent-use-skills
 ```
 
 ### 2. 创建符号链接
@@ -21,7 +21,7 @@ git clone https://github.com/anthropics/skills.git ~/.config/opencode/anthropics
 ```bash
 mkdir -p ~/.config/opencode/skills
 rm -rf ~/.config/opencode/skills/skill-creator
-ln -s ~/.config/opencode/anthropics-skills/skills/skill-creator ~/.config/opencode/skills/skill-creator
+ln -s ~/.config/opencode/agent-use-skills/awesome-skills/skills/skill-creator ~/.config/opencode/skills/skill-creator
 ```
 
 ### 3. 验证安装
@@ -45,7 +45,7 @@ Skill Creator 是一个用于创建和改进技能的技能，主要功能包括
 ## 更新
 
 ```bash
-cd ~/.config/opencode/anthropics-skills
+cd ~/.config/opencode/agent-use-skills
 git pull
 ```
 
@@ -59,5 +59,5 @@ rm -rf ~/.config/opencode/skills/skill-creator
 
 ## 获取帮助
 
-- GitHub 仓库：https://github.com/anthropics/skills
-- 提交问题：https://github.com/anthropics/skills/issues
+- GitHub 仓库：https://github.com/Zerone-Agent/agent-use-skills
+- 提交问题：https://github.com/Zerone-Agent/agent-use-skills/issues

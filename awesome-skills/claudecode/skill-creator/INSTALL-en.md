@@ -8,10 +8,10 @@
 
 ## Installation Steps
 
-### 1. Clone anthropics/skills Repository
+### 1. Clone agent-use-skills Repository
 
 ```bash
-git clone https://github.com/anthropics/skills.git ~/.claude/anthropics-skills
+git clone https://github.com/Zerone-Agent/agent-use-skills.git ~/.claude/agent-use-skills
 ```
 
 ### 2. Create Symlink
@@ -21,7 +21,7 @@ Create a symlink so Claude Code discovers the skill-creator skill:
 ```bash
 mkdir -p ~/.claude/skills
 rm -rf ~/.claude/skills/skill-creator
-ln -s ~/.claude/anthropics-skills/skills/skill-creator ~/.claude/skills/skill-creator
+ln -s ~/.claude/agent-use-skills/awesome-skills/skills/skill-creator ~/.claude/skills/skill-creator
 ```
 
 ### 3. Verify Installation
@@ -44,7 +44,7 @@ Skill Creator is a skill for creating and improving skills. Its main features in
 ## Updating
 
 ```bash
-cd ~/.claude/anthropics-skills
+cd ~/.claude/agent-use-skills
 git pull
 ```
 
@@ -58,5 +58,5 @@ rm -rf ~/.claude/skills/skill-creator
 
 ## Getting Help
 
-- GitHub Repository: https://github.com/anthropics/skills
-- Report Issues: https://github.com/anthropics/skills/issues
+- GitHub Repository: https://github.com/Zerone-Agent/agent-use-skills
+- Report Issues: https://github.com/Zerone-Agent/agent-use-skills/issues

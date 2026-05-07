@@ -55,4 +55,4 @@ Skill Creator supports the following AI editors and platforms:
 - [Qoder](../../qoder/skill-creator/INSTALL-en.md)
 
 ---
-For more information, visit: [GitHub - anthropics/skills](https://github.com/anthropics/skills)
+For more information, visit: [GitHub - agent-use-skills](https://github.com/Zerone-Agent/agent-use-skills)

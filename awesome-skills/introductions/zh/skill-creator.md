@@ -55,4 +55,4 @@ Skill Creator 支持以下 AI 编辑器和平台：
 - [Qoder](../../qoder/skill-creator/INSTALL-zh.md)
 
 ---
-了解更多信息，请访问：[GitHub - anthropics/skills](https://github.com/anthropics/skills)
+了解更多信息，请访问：[GitHub - agent-use-skills](https://github.com/Zerone-Agent/agent-use-skills)

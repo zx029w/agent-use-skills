@@ -8,10 +8,10 @@
 
 ## Installation Steps
 
-### 1. Clone anthropics/skills Repository
+### 1. Clone agent-use-skills Repository
 
 ```bash
-git clone https://github.com/anthropics/skills.git ~/.openclaw/anthropics-skills
+git clone https://github.com/Zerone-Agent/agent-use-skills.git ~/.openclaw/agent-use-skills
 ```
 
 ### 2. Create Symlink
@@ -21,7 +21,7 @@ Create a symlink so OpenClaw discovers the skill-creator skill:
 ```bash
 mkdir -p ~/.openclaw/skills
 rm -rf ~/.openclaw/skills/skill-creator
-ln -s ~/.openclaw/anthropics-skills/skills/skill-creator ~/.openclaw/skills/skill-creator
+ln -s ~/.openclaw/agent-use-skills/awesome-skills/skills/skill-creator ~/.openclaw/skills/skill-creator
 ```
 
 ### 3. Verify Installation
@@ -35,7 +35,7 @@ If successful, OpenClaw will automatically recognize and invoke the Skill Creato
 ## Updating
 
 ```bash
-cd ~/.openclaw/anthropics-skills
+cd ~/.openclaw/agent-use-skills
 git pull
 ```
 
@@ -49,5 +49,5 @@ rm -rf ~/.openclaw/skills/skill-creator
 
 ## Getting Help
 
-- GitHub Repository: https://github.com/anthropics/skills
-- Report Issues: https://github.com/anthropics/skills/issues
+- GitHub Repository: https://github.com/Zerone-Agent/agent-use-skills
+- Report Issues: https://github.com/Zerone-Agent/agent-use-skills/issues

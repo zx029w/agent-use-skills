@@ -8,10 +8,10 @@
 
 ## Installation Steps
 
-### 1. Clone Anthropic Skills
+### 1. Clone agent-use-skills Repository
 
 ```bash
-git clone https://github.com/anthropics/skills.git ~/.openagent/anthropic-skills
+git clone https://github.com/Zerone-Agent/agent-use-skills.git ~/.openagent/agent-use-skills
 ```
 
 ### 2. Symlink Skills
@@ -21,7 +21,7 @@ Create a symlink so OpenAgent discovers the skill:
 ```bash
 mkdir -p ~/.openagent/skills
 rm -rf ~/.openagent/skills/skill-creator
-ln -s ~/.openagent/anthropic-skills/skills/skill-creator ~/.openagent/skills/skill-creator
+ln -s ~/.openagent/agent-use-skills/awesome-skills/skills/skill-creator ~/.openagent/skills/skill-creator
 ```
 
 ### 3. Verify Installation
@@ -35,7 +35,7 @@ If successful, OpenAgent will automatically recognize and invoke the Skill Creat
 ## Updating
 
 ```bash
-cd ~/.openagent/anthropic-skills
+cd ~/.openagent/agent-use-skills
 git pull
 ```
 
@@ -49,4 +49,4 @@ rm -rf ~/.openagent/skills/skill-creator
 
 ## Getting Help
 
-- GitHub: https://github.com/anthropics/skills
+- GitHub: https://github.com/Zerone-Agent/agent-use-skills

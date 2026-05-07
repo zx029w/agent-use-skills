@@ -8,10 +8,10 @@
 
 ## 安装步骤
 
-### 1. 克隆 anthropics/skills 仓库
+### 1. 克隆 agent-use-skills 仓库
 
 ```bash
-git clone https://github.com/anthropics/skills.git ~/.codex/anthropics-skills
+git clone https://github.com/Zerone-Agent/agent-use-skills.git ~/.codex/agent-use-skills
 ```
 
 ### 2. 创建符号链接
@@ -21,7 +21,7 @@ git clone https://github.com/anthropics/skills.git ~/.codex/anthropics-skills
 ```bash
 mkdir -p ~/.codex/skills
 rm -rf ~/.codex/skills/skill-creator
-ln -s ~/.codex/anthropics-skills/skills/skill-creator ~/.codex/skills/skill-creator
+ln -s ~/.codex/agent-use-skills/awesome-skills/skills/skill-creator ~/.codex/skills/skill-creator
 ```
 
 ### 3. 验证安装
@@ -36,7 +36,7 @@ ln -s ~/.codex/anthropics-skills/skills/skill-creator ~/.codex/skills/skill-crea
 ## 更新
 
 ```bash
-cd ~/.codex/anthropics-skills
+cd ~/.codex/agent-use-skills
 git pull
 ```
 
@@ -50,5 +50,5 @@ rm -rf ~/.codex/skills/skill-creator
 
 ## 获取帮助
 
-- GitHub 仓库：https://github.com/anthropics/skills
-- 提交问题：https://github.com/anthropics/skills/issues
+- GitHub 仓库：https://github.com/Zerone-Agent/agent-use-skills
+- 提交问题：https://github.com/Zerone-Agent/agent-use-skills/issues
