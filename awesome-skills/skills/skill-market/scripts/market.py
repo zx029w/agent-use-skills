@@ -24,8 +24,10 @@ def fetch_json(url):
         print(f"Error fetching data: {e}", file=sys.stderr)
     return None
 
-def list_skills():
+def list_skills(framework=None):
     url = f"{ENDPOINT}/skills?lang=en"
+    if framework:
+        url += f"&framework={urllib.parse.quote(framework)}"
     data = fetch_json(url)
     if data and "data" in data:
         for skill in data["data"]:
@@ -55,12 +57,15 @@ def install_skill(name, framework):
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print("Usage: python market.py <list|info|install> [name] [framework]")
+        print("Usage: python market.py <list|info|install> [args...]")
+        print("  list [framework]           - List skills, optionally filtered by framework")
+        print("  info <skill-name>          - Get skill details")
+        print("  install <name> <framework> - Get install tutorial")
         sys.exit(1)
 
     cmd = sys.argv[1].lower()
     if cmd == "list":
-        list_skills()
+        list_skills(sys.argv[2] if len(sys.argv) > 2 else None)
     elif cmd == "info":
         if len(sys.argv) < 3:
             print("Usage: python market.py info <skill-name>")

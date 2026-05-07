@@ -12,11 +12,13 @@ This skill enables the automated discovery and installation of specialized agent
 Follow these steps to find and install a skill:
 
 ### 1. Browse and Discover
-Run the listing script to see available skills. This provides names, descriptions, and supported frameworks.
+Run the listing script to see available skills. **Always pass the current agent framework** (e.g., `opencode`, `claude-code`) to filter skills that are compatible with the current platform.
 
 ```bash
-scripts/market.py list
+scripts/market.py list <current-framework>
 ```
+
+This provides names, descriptions, and supported frameworks for skills compatible with the specified framework.
 
 ### 2. Identify the Target Skill
 Search the list for a skill that matches the user's request. Identify the exact `name` of the skill (e.g., `agent-browser`, `imagen`).
@@ -64,7 +66,7 @@ Only after explicit user approval, execute the instructions to install the skill
 
 **User:** "Can you help me install the imagen skill from the market?"
 
-1. **Agent:** Runs `scripts/market.py list`
+1. **Agent:** Runs `scripts/market.py list openagent`
 2. **Agent:** Finds `imagen` in the list.
 3. **Agent:** Runs `scripts/market.py info imagen`
 4. **Agent:** Note that `Claude Code` is supported.
