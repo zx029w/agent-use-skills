@@ -17,18 +17,27 @@ curl -fsSL https://raw.githubusercontent.com/iOfficeAI/OfficeCLI/main/install.sh
 irm https://raw.githubusercontent.com/iOfficeAI/OfficeCLI/main/install.ps1 | iex
 ```
 
-### 2. Install Skill
-
-OfficeCLI automatically detects OpenClaw during installation and deploys the skill file to `~/.openclaw/skills/officecli/`.
-
-If OpenClaw was not detected, manually install the skill file:
+### 2. Clone OfficeCLI Repository
 
 ```bash
-mkdir -p ~/.openclaw/skills/officecli
-curl -fsSL https://officecli.ai/SKILL.md -o ~/.openclaw/skills/officecli/SKILL.md
+git clone https://github.com/iOfficeAI/OfficeCLI.git ~/.openclaw/officecli
 ```
 
-### 3. Verify Installation
+### 3. Symlink Skills
+
+Create symlinks so OpenClaw discovers all OfficeCLI skills:
+
+```bash
+mkdir -p ~/.openclaw/skills
+for skill in $(ls ~/.openclaw/officecli/skills); do
+  rm -rf ~/.openclaw/skills/$skill
+  ln -s ~/.openclaw/officecli/skills/$skill ~/.openclaw/skills/$skill
+done
+```
+
+This installs all 11 skills: `officecli`, `officecli-docx`, `officecli-pptx`, `officecli-xlsx`, `officecli-academic-paper`, `officecli-pitch-deck`, `officecli-data-dashboard`, `officecli-financial-model`, `officecli-word-form`, `morph-ppt`, `morph-ppt-3d`.
+
+### 4. Verify Installation
 
 Restart OpenClaw, then try asking:
 - "do you have officecli?"
@@ -40,14 +49,19 @@ If successful, OpenClaw will automatically recognize and invoke the OfficeCLI sk
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/iOfficeAI/OfficeCLI/main/install.sh | bash
+cd ~/.openclaw/officecli
+git pull
 ```
 
-OfficeCLI checks for updates automatically. Disable with `officecli config autoUpdate false`.
+OfficeCLI checks for binary updates automatically. Disable with `officecli config autoUpdate false`.
 
 ## Uninstallation
 
 ```bash
-rm -rf ~/.openclaw/skills/officecli
+for skill in $(ls ~/.openclaw/officecli/skills); do
+  rm -rf ~/.openclaw/skills/$skill
+done
+rm -rf ~/.openclaw/officecli
 ```
 
 ## Getting Help

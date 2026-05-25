@@ -17,18 +17,27 @@ curl -fsSL https://raw.githubusercontent.com/iOfficeAI/OfficeCLI/main/install.sh
 irm https://raw.githubusercontent.com/iOfficeAI/OfficeCLI/main/install.ps1 | iex
 ```
 
-### 2. 安装技能
-
-OfficeCLI 安装时会自动检测 OpenClaw 并将技能文件部署到 `~/.openclaw/skills/officecli/`。
-
-如果未被自动检测到，可以手动安装技能文件：
+### 2. 克隆 OfficeCLI 仓库
 
 ```bash
-mkdir -p ~/.openclaw/skills/officecli
-curl -fsSL https://officecli.ai/SKILL.md -o ~/.openclaw/skills/officecli/SKILL.md
+git clone https://github.com/iOfficeAI/OfficeCLI.git ~/.openclaw/officecli
 ```
 
-### 3. 验证安装
+### 3. 创建符号链接
+
+创建符号链接，使 OpenClaw 能够发现所有 OfficeCLI 技能：
+
+```bash
+mkdir -p ~/.openclaw/skills
+for skill in $(ls ~/.openclaw/officecli/skills); do
+  rm -rf ~/.openclaw/skills/$skill
+  ln -s ~/.openclaw/officecli/skills/$skill ~/.openclaw/skills/$skill
+done
+```
+
+这将安装全部 11 个技能：`officecli`、`officecli-docx`、`officecli-pptx`、`officecli-xlsx`、`officecli-academic-paper`、`officecli-pitch-deck`、`officecli-data-dashboard`、`officecli-financial-model`、`officecli-word-form`、`morph-ppt`、`morph-ppt-3d`。
+
+### 4. 验证安装
 
 重启 OpenClaw，然后尝试询问：
 - "do you have officecli?"
@@ -40,14 +49,19 @@ curl -fsSL https://officecli.ai/SKILL.md -o ~/.openclaw/skills/officecli/SKILL.m
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/iOfficeAI/OfficeCLI/main/install.sh | bash
+cd ~/.openclaw/officecli
+git pull
 ```
 
-OfficeCLI 会自动检查更新。可通过 `officecli config autoUpdate false` 关闭。
+OfficeCLI 会自动检查二进制更新。可通过 `officecli config autoUpdate false` 关闭。
 
 ## 卸载
 
 ```bash
-rm -rf ~/.openclaw/skills/officecli
+for skill in $(ls ~/.openclaw/officecli/skills); do
+  rm -rf ~/.openclaw/skills/$skill
+done
+rm -rf ~/.openclaw/officecli
 ```
 
 ## 获取帮助

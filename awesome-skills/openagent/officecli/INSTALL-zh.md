@@ -17,16 +17,27 @@ curl -fsSL https://raw.githubusercontent.com/iOfficeAI/OfficeCLI/main/install.sh
 irm https://raw.githubusercontent.com/iOfficeAI/OfficeCLI/main/install.ps1 | iex
 ```
 
-### 2. 安装技能
-
-将 OfficeCLI 技能文件下载到 OpenAgent 的技能目录：
+### 2. 克隆 OfficeCLI 仓库
 
 ```bash
-mkdir -p ~/.openagent/skills/officecli
-curl -fsSL https://officecli.ai/SKILL.md -o ~/.openagent/skills/officecli/SKILL.md
+git clone https://github.com/iOfficeAI/OfficeCLI.git ~/.openagent/officecli
 ```
 
-### 3. 验证安装
+### 3. 创建符号链接
+
+创建符号链接，使 OpenAgent 能够发现所有 OfficeCLI 技能：
+
+```bash
+mkdir -p ~/.openagent/skills
+for skill in $(ls ~/.openagent/officecli/skills); do
+  rm -rf ~/.openagent/skills/$skill
+  ln -s ~/.openagent/officecli/skills/$skill ~/.openagent/skills/$skill
+done
+```
+
+这将安装全部 11 个技能：`officecli`、`officecli-docx`、`officecli-pptx`、`officecli-xlsx`、`officecli-academic-paper`、`officecli-pitch-deck`、`officecli-data-dashboard`、`officecli-financial-model`、`officecli-word-form`、`morph-ppt`、`morph-ppt-3d`。
+
+### 4. 验证安装
 
 重启 OpenAgent，然后尝试询问：
 - "do you have officecli?"
@@ -38,15 +49,19 @@ curl -fsSL https://officecli.ai/SKILL.md -o ~/.openagent/skills/officecli/SKILL.
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/iOfficeAI/OfficeCLI/main/install.sh | bash
-curl -fsSL https://officecli.ai/SKILL.md -o ~/.openagent/skills/officecli/SKILL.md
+cd ~/.openagent/officecli
+git pull
 ```
 
-OfficeCLI 会自动检查更新。可通过 `officecli config autoUpdate false` 关闭。
+OfficeCLI 会自动检查二进制更新。可通过 `officecli config autoUpdate false` 关闭。
 
 ## 卸载
 
 ```bash
-rm -rf ~/.openagent/skills/officecli
+for skill in $(ls ~/.openagent/officecli/skills); do
+  rm -rf ~/.openagent/skills/$skill
+done
+rm -rf ~/.openagent/officecli
 ```
 
 ## 获取帮助

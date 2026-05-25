@@ -17,18 +17,27 @@ curl -fsSL https://raw.githubusercontent.com/iOfficeAI/OfficeCLI/main/install.sh
 irm https://raw.githubusercontent.com/iOfficeAI/OfficeCLI/main/install.ps1 | iex
 ```
 
-### 2. Install Skill
-
-OfficeCLI automatically detects Codex CLI during installation and deploys the skill file to `~/.agents/skills/officecli/`.
-
-If Codex was not detected, manually install the skill file:
+### 2. Clone OfficeCLI Repository
 
 ```bash
-mkdir -p ~/.codex/skills/officecli
-curl -fsSL https://officecli.ai/SKILL.md -o ~/.codex/skills/officecli/SKILL.md
+git clone https://github.com/iOfficeAI/OfficeCLI.git ~/.codex/officecli
 ```
 
-### 3. Verify Installation
+### 3. Symlink Skills
+
+Create symlinks so Codex discovers all OfficeCLI skills:
+
+```bash
+mkdir -p ~/.codex/skills
+for skill in $(ls ~/.codex/officecli/skills); do
+  rm -rf ~/.codex/skills/$skill
+  ln -s ~/.codex/officecli/skills/$skill ~/.codex/skills/$skill
+done
+```
+
+This installs all 11 skills: `officecli`, `officecli-docx`, `officecli-pptx`, `officecli-xlsx`, `officecli-academic-paper`, `officecli-pitch-deck`, `officecli-data-dashboard`, `officecli-financial-model`, `officecli-word-form`, `morph-ppt`, `morph-ppt-3d`.
+
+### 4. Verify Installation
 
 Restart Codex, then try asking:
 - "do you have officecli?"
@@ -40,14 +49,19 @@ If successful, Codex will automatically recognize and invoke the OfficeCLI skill
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/iOfficeAI/OfficeCLI/main/install.sh | bash
+cd ~/.codex/officecli
+git pull
 ```
 
-OfficeCLI checks for updates automatically. Disable with `officecli config autoUpdate false`.
+OfficeCLI checks for binary updates automatically. Disable with `officecli config autoUpdate false`.
 
 ## Uninstallation
 
 ```bash
-rm -rf ~/.codex/skills/officecli
+for skill in $(ls ~/.codex/officecli/skills); do
+  rm -rf ~/.codex/skills/$skill
+done
+rm -rf ~/.codex/officecli
 ```
 
 ## Getting Help
